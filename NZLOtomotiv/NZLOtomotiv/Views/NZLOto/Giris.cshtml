@@ -1,0 +1,48 @@
+﻿@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>Giriş</title>
+
+    <link href="~/Components/bootstrap.css" rel="stylesheet" />
+    <link href="~/Components/jquery-ui.css" rel="stylesheet" />
+
+    <link href="~/Styles/General.min.css" rel="stylesheet" />
+    <link href="~/Styles/Giris.min.css" rel="stylesheet" />
+
+    <script src="~/Components/jquery-2.1.3.js"></script>
+    <script src="~/Components/jquery-ui.js"></script>
+    <script src="~/Components/bootstrap.js"></script>
+    <script src="~/Scripts/Giris.js"></script>
+</head>
+<body class="container">
+    <div class="row">
+        <div class="col-xs-8 col-xs-offset-2 col-sm-6 col-sm-offset-3 form-wrapper col-md-4 col-md-offset-4  ">
+            <img src="~/Images/big_206736910lgc.jpg" alt="" />
+            <form>
+                <div class="form-group">
+                    <div class="input-group">
+                        <span class="input-group-addon"><i class="glyphicon glyphicon-user"></i></span>
+                        <input name="username" type="text" class="form-control" placeholder="Kullanıcı Adı" required />
+                    </div>
+                </div>
+                <div class="form-group">
+                    <div class="input-group">
+                        <span class="input-group-addon"><i class="glyphicon glyphicon-lock"></i></span>
+                        <input name="password" type="password" class="form-control" placeholder="Şifre" required />
+                    </div>
+                </div>
+                <div class="form-group">
+                    <input type="submit" value="Giriş" class="form-control btn btn-primary" />
+                </div>
+            </form>
+        </div>
+    </div>
+</body>
+
+</html>

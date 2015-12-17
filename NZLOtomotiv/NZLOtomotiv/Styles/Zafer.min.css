@@ -1,0 +1,147 @@
+﻿.kasa-foyu-genis {
+    padding: 15px 10px;
+    text-align: center;
+    background: rgb(244, 244, 244);
+    border-bottom: 1px solid #EFEFEF;
+    border-top: 1px solid #efefef;
+    margin-bottom: 15px;
+}
+
+    .kasa-foyu-genis span {
+        font-weight: bold;
+        font-size: 16px;
+    }
+
+.kasa-foyu-baslangic {
+    float: left;
+}
+
+.kasa-foyu-toplam {
+    float: right;
+}
+
+.kasa-foyu-tablo {
+    width: 100%;
+}
+
+.kasa-gelir {
+    border: 1px solid #EFEFEF;
+    padding: 0;
+}
+
+.kasa-gider {
+    border: 1px solid #EFEFEF;
+    padding: 0;
+}
+
+.kasa-tip {
+    display: block;
+    text-align: center;
+    padding: 10px 5px;
+    font-weight: bold;
+}
+
+.kasa-tip-gelir {
+    background: rgb(76, 192, 95);
+}
+
+.kasa-tip-gider {
+    background: #CA2F2F;
+    color: #FFF;
+}
+
+.kasa-gelir-ekle {
+    background:#109B27;
+    color: #ffffff;
+    font-size: 16px;
+    float: right;
+    margin-right: 15px;
+    margin-bottom: 15px;
+    cursor: pointer;
+}
+
+.kasa-gider-ekle {
+     background: #A61D1D;
+     color: #ffffff;
+    font-size: 16px;
+    float: right;
+    margin-right: 15px;
+    margin-bottom: 15px;
+    cursor: pointer;
+}
+
+.glyphicon .kasa-text {
+    font-family: 'Open Sans', sans-serif;
+    font-size: 12px;
+    font-weight: bold;
+}
+
+#kasa-foyu-kasaSifirla {
+    float: right;
+}
+
+.modal-FooterLabel {
+    float: left;
+    margin-top: 6px;
+}
+
+.context-menu-submenu:after {
+    top: 12px;
+    font-weight: bold;
+}
+
+.maliyet-baslik-toplam {
+    float: right;
+}
+
+.maliyet-table-alan {
+    border: 1px solid #EFEFEF;
+    padding: 0;
+}
+
+.maliyet-girdi-ekle {
+    color: #109b27;
+    font-size: 16px;
+    float: right;
+    margin-right: 15px;
+    margin-bottom: 15px;
+    cursor: pointer;
+}
+
+.nav-tabs > li {
+    cursor: pointer;
+}
+
+.maliyetler-bottom {
+    position: fixed;
+    z-index: 1;
+    bottom: 0;
+}
+
+#maliyet-sifirla {
+    float: right;
+}
+
+.maliyet-tablo-not {
+    cursor: pointer;
+    margin-left: -8px;
+}
+
+.maliyet-not-ok {
+    color: rgb(10, 184, 78);
+}
+
+#maliyet-ana-tablo .dx-datagrid .dx-datagrid-rowsview .dx-datagrid-table .dx-data-row.dx-state-hover:not(.dx-selection):not(.dx-row-inserted):not(.dx-row-removed):not(.dx-edit-row) > td:not(.dx-focused),
+#maliyet-ana-tablo .dx-datagrid .dx-datagrid-rowsview .dx-datagrid-table .dx-data-row.dx-state-hover:not(.dx-selection):not(.dx-row-inserted):not(.dx-row-removed):not(.dx-edit-row) > .dx-datagrid-readonly .dx-texteditor .dx-texteditor-input {
+    background-color: rgba(0, 0, 0, 0.05);
+    color: #000;
+}
+
+.maliyet-kayitli {
+    background: rgb(128, 249, 180);
+    color: rgba(0, 0, 0, 0.49);
+}
+
+.tadilat-hesap-kes {
+    margin: 6px;
+}

@@ -1,0 +1,3263 @@
+﻿@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>NZL Otomotiv</title>
+    <link rel="icon" type="image/png" href="~/Images/favicon.png">
+
+    <link href="~/Components/bootstrap.css" rel="stylesheet" />
+    <link href="~/Components/jquery-ui.css" rel="stylesheet" />
+    <link href="~/Fonts/font-awesome.css" rel="stylesheet" />
+    <link href="~/Fonts/flaticon.css" rel="stylesheet" />
+    <link href="~/Components/bootstrap-datepicker.css" rel="stylesheet" />
+    <link href="~/Components/animate.css" rel="stylesheet" />
+    <link href="~/Components/jquery.contextMenu.css" rel="stylesheet" />
+    <link href="~/Components/bootstrap.css" rel="stylesheet" />
+    <link href="~/Components/dx.common.css" rel="stylesheet" />
+    <link href="~/Components/dx.light.css" rel="stylesheet" />
+    <link href="~/Components/sweetalert.css" rel="stylesheet" />
+
+    <link href="~/Styles/General.min.css" rel="stylesheet" />
+    <link href="~/Styles/Zafer.min.css" rel="stylesheet" />
+
+    <script src="~/Components/jquery-2.1.3.js"></script>
+    <script src="~/Components/globalize.min.js"></script>
+    <script src="~/Components/locales/globalize.culture.tr-TR.js"></script>
+    <script src="~/Components/locales/localization.tr.js"></script>
+    <script src="~/Components/locales/localization.default.js"></script>
+    <script src="~/Components/dx.all.js"></script>
+    <script src="~/Components/jszip.min.js"></script>
+    <script src="~/Components/jquery-ui.js"></script>
+    <script src="~/Components/bootstrap.js"></script>
+    <script src="~/Components/jquery.noty.packaged.js"></script>
+    <script src="~/Components/jquery.ui.position.js"></script>
+    <script src="~/Components/jquery.contextMenu.js"></script>
+    <script src="~/Components/jquery.maskedinput.js"></script>
+    <script src="~/Components/moment.js"></script>
+    <script src="~/Components/sweetalert.min.js"></script>
+    <script src="~/Components/oUploader.js"></script>
+
+    <script src="~/Scripts/General.js"></script>
+    <script src="~/Scripts/Zafer.js"></script>
+</head>
+<body>
+    <div class="main-container">
+        <div class="left-menu-container">
+            <div class="left-menu-wrapper">
+                <ul class="left-menu">
+                    <li o-target="ana-sayfa">
+                        <div class="icon flaticon-home168"></div>
+                        <span>Ana Ekran</span>
+                    </li>
+                    <li o-target="kasa-foyu">
+                        <div class="icon flaticon-vehicle18"></div>
+                        <span>Kasa Föyü</span>
+                    </li>
+                    <li>
+                        <div class="icon flaticon-car179"></div>
+                        <span>Araç İşlemleri</span>
+                        <ul>
+                            <li o-target="yeni-arac">
+                                <span>Yeni Araç</span>
+                            </li>
+                            <li class="divider"><hr /></li>
+                            <li o-target="arac-ara">
+                                <span>Araç Ara</span>
+                            </li>
+                            <li o-target="nzl-oto-liste">
+                                <span>NZL Oto Listesi</span>
+                            </li>
+                            <li o-target="misafir-arac-liste">
+                                <span>Misafir Araç Listesi</span>
+                            </li>
+                            <li class="divider"><hr /></li>
+                            <li o-target="tadilat-liste">
+                                <span>Tadilat Listesi</span>
+                            </li>
+                        </ul>
+                    </li>
+                    <li>
+                        <div class="icon flaticon-money315"></div>
+                        <span>Borçlu İşlemleri</span>
+                        <ul>
+                            <li o-target="senet-defteri">
+                                <span>Senet Defteri</span>
+                            </li>
+                            <li o-target="cek-defteri">
+                                <span>Çek Defteri</span>
+                            </li>
+                            <li o-target="risk-limit">
+                                <span>Risk Limitleri</span>
+                            </li>
+                            <li class="divider"><hr /></li>
+                            <li o-target="borclu-filtre">
+                                <span>Borçlu Filtreleri</span>
+                            </li>
+                        </ul>
+                    </li>
+                    <li o-target="aylik-hesap">
+                        <div class="icon flaticon-ascendant6"></div>
+                        <span>Aylık Hesap</span>         
+                    </li>
+                    <li o-target="iletisim-islemleri">
+                        <div class="icon flaticon-car179"></div>
+                        <span>İletişim İşlemleri</span>
+                    </li>
+                    <li o-target="ayarlar">
+                        <div class="icon flaticon-vehicle18"></div>
+                        <span>Ayarlar</span>
+                    </li>
+                    <!-- Eski Menü
+
+        <li class="anaekranadon">
+            <div>
+                <div class="icon flaticon-home168"></div>
+                <span>Ana Ekran</span>
+            </div>
+        </li>
+        <li class="kasafoyu">
+            <div>
+                <div class="icon flaticon-money315"></div>
+                <span>Kasa Föyü</span>
+            </div>
+        </li>
+        <li class="araclistele">
+            <div>
+                <div class="icon flaticon-car179"></div>
+                <span>Güncel Araç Listesi</span>
+            </div>
+        </li>
+        <li class="maliyetler">
+            <div>
+                <div class="icon flaticon-vehicle18"></div>
+                <span>Tadilat Listesi</span>
+            </div>
+        </li>
+        <li class="arackaydet">
+            <div>
+                <div class="icon flaticon-car171"></div>
+                <span>Yeni Araç Giriş</span>
+            </div>
+        </li>
+        <li class="aracara">
+            <div>
+                <div class="icon flaticon-wifi98"></div>
+                <span>Araç Arama</span>
+            </div>
+        </li>
+        <li class="aylikhesap">
+            <div>
+                <div class="icon flaticon-ascendant6"></div>
+                <span>Aylık Hesap</span>
+            </div>
+        </li>
+        <li class="borcfiltre">
+            <div>
+                <div class="icon flaticon-ascendant6"></div>
+                <span>Borçlu Filtreleri</span>
+            </div>
+        </li>
+        <li class="senetdefteri">
+            <div>
+                <div class="icon flaticon-writing17"></div>
+                <span>Senet Defteri</span>
+            </div>
+        </li>
+        <li class="cekdefteri">
+            <div>
+                <div class="icon fa flaticon-books8"></div>
+                <span>Çek Defteri</span>
+            </div>
+        </li>
+        <li class="programayarlar">
+            <div>
+                <div class="icon fa fa-gears"></div>
+                <span>Ayarlar</span>
+            </div>
+        </li>
+
+        -->
+                </ul>
+            </div>
+        </div>
+        <div class="content-container">
+            <script>
+                $(function () {
+                    $(".templates .ana-giris-template").clone().removeClass("ana-giris-template").addClass("ana-giris").appendTo(".content-container");
+                });
+            </script>
+        </div>
+        <div class="foot-bar-container">
+            <div class="page-items pull-left"></div>
+            <div class="static-items pull-right">
+                <i class="fa fa-arrows-alt icon" id="full-screen">
+                </i><i class="fa fa-power-off icon" id="panic-button">
+                </i>
+            </div>
+        </div>
+    </div>
+    <div class="templates">
+        <div class="ana-giris-template">
+            <div class="kisayol-box-container clearfix">
+                <div class="kisayol-box" o-target="araclistele">
+                    <span>Güncel Araç Listesi</span>
+                </div>
+                <div class="kisayol-box" o-target="kasafoyu">
+                    <span>Kasa Föyü</span>
+                </div>
+                <div class="kisayol-box" o-target="senetdefteri">
+                    <span>Senet Defteri</span>
+                </div>
+                <div class="kisayol-box" o-target="cekdefteri">
+                    <span>Çek Defteri</span>
+                </div>
+            </div>
+        </div>
+        <div class="arac-listesi-template">
+            <div class="datagrid"></div>
+            <div class="container-fluid detayli-gorunum" style="display:none;">
+                <div class="header-bar">
+                    <div class="navigation">
+                        <div class="buttons">
+                            <button class="goback">
+                                <i class="fa fa-undo"></i>
+                            </button>
+                            <button class="back">
+                                <i class="fa fa-long-arrow-left"></i>
+                            </button>
+                            <button class="forward">
+                                <i class="fa fa-long-arrow-right"></i>
+                            </button>
+                        </div>
+                    </div>
+                    <div class="header-title">
+                        <h3></h3>
+                    </div>
+                </div>
+                <div class="content">
+                    <div class="box">
+                        <div class="group">
+                            <div class="group-label">
+                                <span>Araç Künye Bilgileri</span>
+                            </div>
+                            <div class="group-body">
+                                <table>
+                                    <tr>
+                                        <td>Plaka</td>
+                                        <td nzl-field="Plaka"></td>
+                                    </tr>
+                                    <tr>
+                                        <td>Marka</td>
+                                        <td nzl-field="Marka"></td>
+                                    </tr>
+                                    <tr>
+                                        <td>Seri</td>
+                                        <td nzl-field="Seri"></td>
+                                    </tr>
+                                    <tr>
+                                        <td>Model</td>
+                                        <td nzl-field="Model"></td>
+                                    </tr>
+                                    <tr>
+                                        <td>Renk</td>
+                                        <td nzl-field="Renk"></td>
+                                    </tr>
+                                    <tr>
+                                        <td>Yıl</td>
+                                        <td nzl-field="Yil"></td>
+                                    </tr>
+                                    <tr>
+                                        <td>Kilometre</td>
+                                        <td nzl-field="KM" nzl-field-type="number"></td>
+                                    </tr>
+                                    <tr>
+                                        <td>Motor Hacmi</td>
+                                        <td nzl-field="MotorHacmi" nzl-field-type="number"></td>
+                                    </tr>
+                                    <tr>
+                                        <td>Motor Gücü</td>
+                                        <td nzl-field="MotorGucu"></td>
+                                    </tr>
+                                    <tr>
+                                        <td>Motor No</td>
+                                        <td nzl-field="MotorNo"></td>
+                                    </tr>
+                                    <tr>
+                                        <td>Şasi No</td>
+                                        <td nzl-field="SasiNo"></td>
+                                    </tr>
+                                    <tr>
+                                        <td>Yakıt Tipi</td>
+                                        <td nzl-field="YakitTipi"></td>
+                                    </tr>
+                                    <tr>
+                                        <td>Vites Tipi</td>
+                                        <td nzl-field="VitesTipi"></td>
+                                    </tr>
+                                    <tr>
+                                        <td>Kapı</td>
+                                        <td nzl-field="Kapi"></td>
+                                    </tr>
+                                    <tr>
+                                        <td>Yedek Anahtar</td>
+                                        <td nzl-field="YedekAnahtar"></td>
+                                    </tr>
+                                    <tr>
+                                        <td>Yedek Anahtar Verildimi</td>
+                                        <td nzl-field="YedekAnahtarVerildimi"></td>
+                                    </tr>
+                                    
+                                </table>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="box">
+                        <div class="group">
+                            <div class="group-label">
+                                <span>Araç Durum Bilgileri</span>
+                            </div>
+                            <div class="group-body">
+                                <table>
+                                    <tr>
+                                        <td>Liste</td>
+                                        <td nzl-field="Liste"></td>
+                                    </tr>
+                                    <tr>
+                                        <td>Durum</td>
+                                        <td nzl-field="Durum"></td>
+                                    </tr>
+                                    <tr>
+                                        <td>Opsiyon</td>
+                                        <td nzl-field="Opsiyon" nzl-field-type="boolean"></td>
+                                    </tr>
+                                    <tr style="display:none;">
+                                        <td>Opsiyon Tarih</td>
+                                        <td nzl-field="OpsiyonTarihi"></td>
+                                    </tr>
+                                    <tr style="display:none;">
+                                        <td>Opsiyon Koyan</td>
+                                        <td nzl-field="OpsiyonKoyan"></td>
+                                    </tr>
+                                </table>
+                            </div>
+                        </div>
+                        <div class="group">
+                            <div class="group-label">
+                                <span>Resmi Evrak Bilgileri</span>
+                            </div>
+                            <div class="group-body">
+                                <table>
+                                    <tr class="FaturaGoster">
+                                        <td>Fatura Verildi mi ?</td>
+                                        <td nzl-field="ResmiGirisFatura" nzl-field-type="FaturaGoster"></td>
+                                    </tr>
+                                    <tr>
+                                        <td>Noter Alış Tarihi</td>
+                                        <td nzl-field="NoterAlisTarihi" nzl-field-type="date"></td>
+                                    </tr>
+                                    <tr>
+                                        <td>Giriş Bedeli</td>
+                                        <td class="gizli-bilgi " nzl-field="ResmiGirisBedeli" nzl-field-type="tl"></td>
+                                    </tr>
+                                    <tr>
+                                        <td>Alınan Kişi</td>
+                                        <td nzl-field="ResmiAlınanKisi"></td>
+                                    </tr>
+                                    <tr>
+                                        <td>Alınan Kişi Kimlik / Vergi No</td>
+                                        <td nzl-field="ResmiGirisTcVergiNo"></td>
+                                    </tr>
+                                   
+                                    <tr>
+                                        <td>Noter Çıkış Tarihi</td>
+                                        <td nzl-field="ResmiCikisTarihi" nzl-field-type="date"></td>
+                                    </tr>
+                                    <tr>
+                                        <td>Çıkış Bedeli</td>
+                                        <td class="gizli-bilgi" nzl-field="ResmiCikisBedeli" nzl-field-type="tl"></td>
+                                    </tr>
+                                    <tr>
+                                        <td>Satılan Kişi</td>
+                                        <td nzl-field="ResmiCikisKisi"></td>
+                                    </tr>
+                                    <tr>
+                                        <td>Satılan Kişi Kimlik / Vergi No</td>
+                                        <td nzl-field="ResmiCikisTcVergiNo"></td>
+                                    </tr>
+                                </table>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="box">
+                        <div class="group">
+                            <div class="group-label">
+                                <span>Evrak Bilgileri</span>
+                            </div>
+                            <div class="group-body">
+                                <table>
+                                    <tr>
+                                        <td>Ruhsat Sahibi</td>
+                                        <td nzl-field="RuhsatSahibiAd"></td>
+                                    </tr>
+                                    <tr>
+                                        <td>Satıcı Ad</td>
+                                        <td nzl-field="SaticiAd"></td>
+                                    </tr>
+                                    <tr>
+                                        <td>Satıcı Telefon</td>
+                                        <td nzl-field="SaticiTelefon" nzl-field-type="array"></td>
+                                    </tr>
+                                    <tr>
+                                        <td>Satıcı Adres</td>
+                                        <td nzl-field="SaticiAdres" nzl-field-type="array"></td>
+                                    </tr>
+                                    <tr>
+                                        <td>Alıcı Ad</td>
+                                        <td></td>
+                                    </tr>
+                                    <tr>
+                                        <td>Alıcı Telefon</td>
+                                        <td class="gizli-bilgi"></td>
+                                    </tr>
+                                    <tr>
+                                        <td>Alıcı Adres</td>
+                                        <td class="gizli-bilgi"></td>
+                                    </tr>
+                                    <tr>
+                                        <td>Şahit Ad</td>
+                                        <td></td>
+                                    </tr>
+                                    <tr>
+                                        <td>Şahit Telefon</td>
+                                        <td class="gizli-bilgi"></td>
+                                    </tr>
+                                    <tr>
+                                        <td>Şahit Adres</td>
+                                        <td class="gizli-bilgi"></td>
+                                    </tr>
+                                </table>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="box">
+                        <div class="group">
+                            <div class="group-label">
+                                <span>İşlem Tarih ve Fiyatları</span>
+                            </div>
+                            <div class="group-body">
+                                <table>
+                                    <tr>
+                                        <td>Etiket Fiyatı</td>
+                                        <td nzl-field="EtiketFiyati" nzl-field-type="tl"></td>
+                                    </tr>
+                                    <tr>
+                                        <td>Sisteme Giriş Tarihi</td>
+                                        <td nzl-field="AddDate" nzl-field-type="date"></td>
+                                    </tr>
+                                    <tr>
+                                        <td>Alınış Fiyatı</td>
+                                        <td class="gizli-bilgi" nzl-field="AlinisFiyati" nzl-field-type="tl"></td>
+                                    </tr>
+                                    <tr>
+                                        <td>Alınış Tarihi</td>
+                                        <td nzl-field="AlinisTarihi" nzl-field-type="date"></td>
+                                    </tr>
+                                    <tr>
+                                        <td>Satış Fiyatı</td>
+                                        <td></td>
+                                    </tr>
+                                    <tr>
+                                        <td>Satış Tarihi</td>
+                                        <td></td>
+                                    </tr>
+                                </table>
+                            </div>
+                        </div>
+                        <div class="group">
+                            <div class="group-label">
+                                <span>Maliyet Bilgileri</span>
+                            </div>
+                            <div class="group-body">
+                                <table>
+                                    <tr>
+                                        <td>Araç Alınış Maliyeti</td>
+                                        <td class="gizli-bilgi " nzl-field="AlinisFiyati" nzl-field-type="tl"></td>
+                                    </tr>
+                                    <tr>
+                                        <td>Araç Tadilat Maliyeti</td>
+                                        <td class="gizli-bilgi " nzl-field="ToplamTadilatMaliyeti" nzl-field-type="tl"></td>
+                                    </tr>
+                                    <tr>
+                                        <td>Kasa Foyu Maliyeti</td>
+                                        <td class="gizli-bilgi " nzl-field="AracKasaFoyuMaliyeti" nzl-field-type="tl"></td>
+                                    </tr>
+                                    <tr>
+                                        <td>Toplam Maliyet</td>
+                                        <td class="gizli-bilgi " nzl-field="ToplamAracMaliyeti" nzl-field-type="tl"></td>
+                                    </tr>
+                                   
+                                </table>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="box">
+                        <div class="group">
+                            <div class="group-label">
+                                <span>Expertiz ve Muayene Bilgileri</span>
+                            </div>
+                            <div class="group-body">
+                                <table>
+                                    <tr>
+                                        <td>Araç Muayene Bitiş Tarihi</td>
+                                        <td nzl-field="AracMuayeneBitisTarihi" nzl-field-type="date"></td>
+                                    </tr>
+                                    <tr>
+                                        <td>Araç Sigorta Bitiş Tarihi</td>
+                                        <td nzl-field="AracSigortaBitisTarihi" nzl-field-type="date"></td>
+                                    </tr>
+
+
+                                </table>
+                                
+                            </div>
+                        </div>
+                    </div>
+                    <div class="box">
+                        <div class="group images">
+                            <div class="group-label">
+                                <span>Araç Resimleri</span>
+                            </div>
+                            <div class="group-body">
+                                <div nzl-field="Resimler" nzl-field-type="image"></div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="box">
+                        <div class="group actions">
+                            <div class="group-label">
+                                <span>Aksiyonlar</span>
+                            </div>
+                           
+                            <div class="group-body">
+                                <button class="btn btn-default resim-ekle">Resim Ekle</button>
+                                <button class="btn btn-default opsiyon-koy">Opsiyon Koy</button>
+                                <button class="btn btn-default satis-protokolu-yap">Satış Protokolü Yap</button>
+                                <button class="btn btn-default resmi-giris-yap">Resmi Girişini Yap</button>
+                                <button class="btn btn-default resmi-cikis-yap">Resmi Çıkışını Yap</button>
+                                <button class="btn btn-default bilgileri-goster">Bilgileri Göster</button>
+                                <button class="btn btn-default bilgileri-düzenle">Arac Düzenle</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="kasa-foyu-template">
+            <div class="container-fluid">
+                <div class="row kasa-foyu-genis kasa-foyu-header">
+                    <div class="col-md-12">
+                        <label class="kasa-foyu-baslangic">Başlangıç : <span>-</span></label>
+                        <span>Kasa Föyü</span>
+                        <div class="kasa-foyu-toplam">
+                            <table>
+                                <tr>
+                                    <td><span>Toplam : </span></td>
+                                    <td><span class="TR">345</span></td>
+                                </tr>
+                            </table>
+                        </div>
+                    </div>
+                </div>
+                <div class="row kasa-foyu-govde">
+                    <div class="col-sm-6 kasa-gelir">
+                        <span class="kasa-tip kasa-tip-gelir">Giriş</span>
+                        <table class="table table-hover table-bordered kasa-foyu-tablo">
+                            <tr>
+                                <th style="width:100px;">Fiyat</th>
+                                <th>Açıklama</th>
+                            </tr>
+                        </table>
+                        <div class="col-sm-12">
+                            <button  class="btn btn-default kasa-gelir-ekle">Giriş Ekle</button>
+                        </div>
+                    </div>
+                    <div class="col-sm-6 kasa-gider">
+                        <span class="kasa-tip kasa-tip-gider">Çıkış</span>
+                        <table class="table table-hover table-bordered kasa-foyu-tablo">
+                            <tr>
+                                <th style="width:100px;">Fiyat</th>
+                                <th>Açıklama</th>
+                            </tr>
+                        </table>
+                        <div class="col-sm-12">
+                            <button class="btn btn-default kasa-gider-ekle">Çıkış Ekle</button>
+                        </div>
+                    </div>
+                </div>
+                <div class="row kasa-foyu-genis kasa-foyu-footer">
+                    <div class="col-md-12">
+                        <button id="kasa-foyu-kasaSifirla" class="btn btn-primary">Kasayı Sıfırla</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="aylik-gider-tablosu-template">
+            <div class="form-inline ay-yil">
+                <select class="form-control ay">
+                    <option value="01">Ocak</option>
+                    <option value="02">Şubat</option>
+                    <option value="03">Mart</option>
+                    <option value="04">Nisan</option>
+                    <option value="05">Mayıs</option>
+                    <option value="06">Haziran</option>
+                    <option value="07">Temmuz</option>
+                    <option value="08">Ağustos</option>
+                    <option value="09">Eylül</option>
+                    <option value="10">Ekim</option>
+                    <option value="11">Kasım</option>
+                    <option value="12">Aralık</option>
+                </select>
+                <input type="text" class="form-control yil" />
+                <button class="btn btn-default filtrele">Giderleri Al</button>
+            </div>
+            <div class="aylik-tablo"></div>
+        </div>
+        <div class="maliyetler-template">
+            <div class="container-fluid">
+
+                <div class="row kasa-foyu-genis maliyet-header">
+                    <div class="col-md-12">
+                        <span class="maliyet-baslik-yazi">Tadilat Listesi</span>
+                    </div>
+                </div>
+
+                <div class="row maliyet-govde">
+                    <div class="col-sm-12 maliyet-table-alan">
+                        <div id="maliyet-ana-tablo"></div>
+                    </div>
+                </div>
+
+                <div class="row kasa-foyu-genis kasa-foyu-footer">
+                    <div id="TadilatListesi_HesapButtonlar" class="col-md-12">
+                        <button id="maliyetKes_KaportaBoya" class="btn btn-primary" disabled>Kaporta-Boya Hesabını Kes</button>
+                        <button id="maliyetKes_Yikama" class="btn btn-primary" disabled>Yıkama Hesabını Kes</button>
+                        <button id="maliyetKes_Mekanik" class="btn btn-primary" disabled>Mekanik Hesabını Kes</button>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+        <div class="senet-defteri-template">
+            <div id="s-senet-defteri" class="container-fluid">
+                <div class="row">
+                    <div class="col-sm-12 col-md-offset-3 col-md-6 senet-profil">
+                        <div class="header-bar">
+                            <div class="header-title">
+                                <h3>Senet Defteri</h3>
+                            </div>
+                        </div>
+                        <div class="senet-profil-list-actions">
+                            <button class="btn btn-default senet-profil-ekle">Yeni Borçlu Ekle</button>
+                            <div class="btn-group sort-by">
+                                <button type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown">
+                                    Sırala <span class="caret"></span>
+                                </button>
+                                <ul class="dropdown-menu">
+                                    <li><a href="#" class="ad">Ada Göre</a></li>
+                                    <li role="separator" class="divider"></li>
+                                    <li><a href="#" class="senet-risk">Senet Riskine Göre</a></li>
+                                    <li><a href="#" class="toplam-risk">Toplam Riske Göre</a></li>
+                                </ul>
+                            </div>
+                            <button class="btn btn-default risk-toggle">Riskler</button>
+                        </div>
+                        <div class="senet-profil-ara"></div>
+                        <div class="senet-profil-list"></div>
+                    </div>
+                    <div class="col-sm-12 senet-bloklari">
+                        <div class="header-bar">
+                            <div class="navigation">
+                                <div class="buttons">
+                                    <button class="goback">
+                                        <i class="fa fa-undo"></i>
+                                    </button>
+                                    <button class="back">
+                                        <i class="fa fa-long-arrow-left"></i>
+                                    </button>
+                                    <button class="forward">
+                                        <i class="fa fa-long-arrow-right"></i>
+                                    </button>
+                                </div>
+                            </div>
+                            <div class="header-title">
+                                <h3>Senet Defteri</h3>
+                            </div>
+                        </div>
+                        <div class="profil-bilgileri-wrap">
+                            <div class="profil-bilgileri"></div>
+                            <div class="senetriskler">
+                                <h4>Risk ve Limit</h4>
+                                <div>
+                                    <span class="o-label">Senet Riski</span>
+                                    <span class="senet"></span>
+                                </div>
+                                <div>
+                                    <span class="o-label">Çek Riski</span>
+                                    <span class="cek"></span>
+                                </div>
+                                <div>
+                                    <span class="o-label">Toplam Risk</span>
+                                    <span class="toplam"></span>
+                                </div>
+                                <div>
+                                    <span class="o-label">Risk Limiti</span>
+                                    <span class="limit"></span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="senet-bloklari-list container-fluid">
+                            <div class="header clearfix">
+                                <h4>Senet Blokları</h4>
+                                <button class="btn btn-default senet-blok-ekle">Yeni Senet Bloğu Ekle</button>
+                                <button class="btn btn-default senet-blok-export">Excell'e Aktar</button>
+                            </div>
+
+                            <div class="blok-butonlari"></div>
+                            <div class="body row-fluid">
+
+                            </div>
+                           
+                            
+                        </div>
+                        <hr />
+                        <div class="cek-list">
+                            <div class="header clearfix">
+                                <h4>Çekler</h4>
+                                <div class="cek-riski">
+                                    Çek Riski :
+                                    <span class="symbol-TL"></span>
+                                </div>
+                            </div>
+                            <div class="body">
+                                <table class="cek-table"></table>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="yeni-senet-blok-template">
+            <div class="clearfix" style="border-bottom:1px solid #ccf">
+                <table class="senet-blok-bilgiler">
+                    <tr>
+                        <td>
+                            <span>Kefil</span>
+                        </td>
+                        <td>
+                            <button class="btn btn-default kefil-sec">Seç</button>
+                            <span class="kefil"></span>
+                            <input type="text" nzl-field="Kefil" style="display:none" />
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <span>Seneti İmzalayan</span>
+                        </td>
+                        <td>
+                            <button class="btn btn-default seneti-imzalayan-sec">Seç</button>
+                            <span class="seneti-imzalayan"></span>
+                            <input type="text" nzl-field="SenetiImzalayan" style="display:none" />
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <span>Taksit Sayısı</span>
+                        </td>
+                        <td>
+                            <input type="text" id="yeni-senet-blok-taksit-sayisi" class="sayi form-control required" />
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <span>Taksit Miktarı</span>
+                        </td>
+                        <td>
+                            <input type="text" id="yeni-senet-blok-taksit-miktari" class="sayi form-control required" />
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <span>Başlangıç Tarihi</span>
+                        </td>
+                        <td>
+                            <input type="text" id="yeni-senet-blok-baslangic" class="tarih form-control required" />
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <span>Vade Oranı</span>
+                        </td>
+                        <td>
+                            <div class="input-group">
+                                <input type="text" nzl-field="VadeOrani" class="float-sayi form-control required" />
+                                <span class="input-group-addon">%</span>
+                            </div>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <span>Ana Para</span>
+                        </td>
+                        <td>
+                            <input type="text" nzl-field="AnaPara" value="" class="sayi form-control required" />
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <span>Senet Oluşturulma Tarihi</span>
+                        </td>
+                        <td>
+                            <input type="text" nzl-field="SenetOlusturulmaTarihi" class="tarih today form-control required" />
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <span>Aldığı Aracın Plakası</span>
+                        </td>
+                        <td>
+                            <input type="text" nzl-field="AracPlakasi" value="" class="form-control uppercase" />
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <span>Aldığı Aracın Başlığı</span>
+                        </td>
+                        <td>
+                            <input type="text" nzl-field="AracBasligi" value="" class="form-control uppercase" />
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <span>Alacak Tipi</span>
+                        </td>
+                        <td>
+                            <select class="form-control" id="yeni-senet-blok-alacak-tipi">
+                                <option>ŞİRKET</option>
+                                <option>BATAK</option>
+                                <option>ELLE GİR</option>
+                            </select>
+                            <input type="text" id="yeni-senet-blok-alacak-tipi2" value="" class="form-control uppercase" style="display: none" />
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <span>Not</span>
+                        </td>
+                        <td>
+                            <textarea nzl-field="SenetBlokNot" class="form-control"></textarea>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td colspan="2">
+                            <button class="btn btn-info listelestir">Listeleştir</button>
+                        </td>
+                    </tr>
+                </table>
+            </div>
+            <div class="senetler">
+                <table class="senet-table">
+                    <thead>
+                        <tr>
+                            <th>No</th>
+                            <th>Tarih</th>
+                            <th>Miktar</th>
+                            <th>Not</th>
+                        </tr>
+                    </thead>
+                    <tbody></tbody>
+                    <tfoot>
+                        <tr>
+                            <td></td>
+                            <td></td>
+                            <td class="symbol-TL"></td>
+                            <td></td>
+                        </tr>
+                    </tfoot>
+                </table>
+                <div class="yeni-senet-blok-kontroller clearfix">
+                    <button class="btn btn-default iptal">İptal</button>
+                    <button class="btn btn-success kaydet">Senetleri Kaydet</button>
+                </div>
+            </div>
+        </div>
+        <div class="cek-defteri-template">
+            <div id="s-cek-listesi" class="container-fluid">
+                <div class="row">
+                    <h3 class="sayfa-header">Çek Defteri</h3>
+                </div>
+                <div class="row">
+                    <div class="col-sm-12 yeni-cek">
+                        <table>
+                            <tr>
+                                <th>Tarih</th>
+                                <th>Miktar</th>
+                                <th>Çek Alınan Kişi</th>
+                                <th>Çekin Asıl Sahibi</th>
+                                <th>Banka</th>
+                                <th>Şube</th>
+                                <th>Çek No</th>
+                                <th>Takasta Old. Hesap</th>
+                                <th>Not</th>
+                            </tr>
+                            <tr>
+                                <td class="required">
+                                    <input id="yeni-cek-tarih" type="text" value="" class="form-control tarih" />
+                                </td>
+                                <td class="required">
+                                    <input id="yeni-cek-miktar" type="text" value="" class="form-control sayi" />
+                                </td>
+                                <td class="required">
+                                    <button class="btn btn-default cek-alinan-kisi-sec">Seç</button>
+                                    <span id="yeni-cek-alinan-kisi"></span>
+                                </td>
+                                <td>
+                                    <input id="yeni-cek-asil-sahibi" type="text" value="" class="form-control uppercase" />
+                                </td>
+                                <td class="required">
+                                    <input id="yeni-cek-banka" type="text" value="" class="form-control uppercase" />
+                                </td>
+                                <td class="required">
+                                    <input id="yeni-cek-sube" type="text" value="" class="form-control uppercase" />
+                                </td>
+                                <td class="required">
+                                    <input id="yeni-cek-cek-no" type="text" value="" class="form-control sayi" />
+                                </td>
+                                <td>
+                                    <input id="yeni-cek-takasta-old-hesap" type="text" value="" class="form-control uppercase" />
+                                </td>
+                                <td>
+                                    <input id="yeni-cek-not" type="text" value="" class="form-control" />
+                                </td>
+                                <td>
+                                    <button class="btn btn-success ekle">Ekle</button>
+                                </td>
+                            </tr>
+                        </table>
+                    </div>
+                    <div class="col-sm-12 cek-listesi">
+                        <div id="cek-datagrid"></div>
+                    </div>
+                </div>
+            </div>
+            <div id="s-cek-odenmis" class="container-fluid" style="display:none">
+                <div class="row">
+                    <h3 class="sayfa-header">Ödenmiş Çekler</h3>
+                </div>
+                <div class="row">
+                    <div class="col-sm-12 odenmis-cek-listesi">
+                        <div id="odenmis-cek-datagrid"></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="program-ayarlar-template">
+            <div class="container-fluid clearfix">
+                <div class="row">
+                    <h3 class="sayfa-header">Ayarlar</h3>
+                </div>
+                <div class="ayarlar-list-menu">
+                    <ul class="list-unstyled">
+                        <li id="a-li-personeller">Personel</li>
+                        <li id="a-li-risk-tanimla">Gelecek Olan Menu 1</li>
+                        <li id="a-li-risk-tanimla">Gelecek Olan Menu 2</li>
+                        <li id="a-li-risk-tanimla">Gelecek Olan Menu 3</li>
+                        <li id="a-li-risk-tanimla">Gelecek Olan Menu 4</li>
+                    </ul>
+                </div>
+                <div class="ayarlar-content">
+                    <div class="Personel-Kayit">
+                        <div class="group">
+                            <div class="group-label">
+                                <span>Personel Kayıt</span>
+                            </div>
+                            <div class="group-body">
+                                <div class="form-horizontal clearfix">
+                                    <div class="form-group visible">
+                                        <label for="personel-kayit-kullaniciadi" class="control-label col-xs-2">Kullanıcı Adı</label>
+                                        <div class="col-xs-3">
+                                            <input id="personel-kayit-kullaniciadi" type="text" class="form-control required" />
+                                        </div>
+                                        <label for="personel-kayit-sifre" class="control-label col-xs-1">Şifre</label>
+                                        <div class="col-xs-3">
+                                            <input id="personel-kayit-sifre" type="text" class="form-control " />
+                                        </div>
+                                    </div>
+
+                                    <div class="form-group visible">
+                                        <label for="personel-kayit-email" class="control-label col-xs-2">E-mail</label>
+                                        <div class="col-xs-3">
+                                            <input id="personel-kayit-email" type="text" class="form-control required" />
+                                        </div>
+                                        <label for="personel-kayit-telefon" class="control-label col-xs-1">Telefon</label>
+                                        <div class="col-xs-3">
+                                            <input id="personel-kayit-telefon" type="text" class="form-control sayi" />
+                                        </div>
+                                    </div>
+                                    <button type="button" class="btn btn-primary kaydet">Kaydet</button>
+                                </div>
+                            </div>
+                             
+                            </div>
+                        </div> 
+                    <div class="Personel-Bilgiler">
+                        <div class="group">
+                            <div class="group-label">
+                                <span>Personel Bilgileri</span>
+                            </div>
+                            <div class="group-body">
+                                <div class="personel-lookup"></div>
+
+                                <div class="bilgiler row">
+                                    <div class="col-sm-12 col-md-12">
+                                        <table>
+                                            <tr>
+                                                <td>Kullanıcı Adı</td>
+                                                <td nzl-field="username" class="personel-bilgileri personel-bilgi-kullaniciadi"></td>
+                                                <td class="personel-bilgi-duzenle">
+                                                    <div class="col-xs-3">
+                                                        <input id="personel-bilgi-kullaniciadi" nzl-field="username" type="text" class="form-control required" />
+                                                    </div>
+
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <td>Şifre</td>
+                                                <td class="personel-bilgileri"></td>
+                                                <td class="personel-bilgi-duzenle ">
+                                                    <div class="col-xs-3">
+                                                        <input id="personel-bilgi-sifre" type="text" placeholder="Şifre Yenileme Alanı" class="form-control " />
+                                                    </div>
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <td>E-mail</td>
+                                                <td nzl-field="email" class="personel-bilgileri personel-bilgi-email"></td>
+                                                <td class="personel-bilgi-duzenle">
+                                                    <div class="col-xs-3">
+                                                        <input id="personel-bilgi-email" type="text" class="form-control required" />
+                                                    </div>
+
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <td>Telefon</td>
+                                                <td nzl-field="phone" class="personel-bilgileri personel-bilgi-telefon"></td>
+                                                <td class="personel-bilgi-duzenle">
+                                                    <div class="col-xs-3">
+                                                        <input id="personel-bilgi-telefon" type="text" class="form-control  sayi" />
+                                                    </div>
+
+                                                </td>
+                                            </tr>
+                                        </table>
+                                       
+                                   </div>
+                                    <div class="actions">
+                                       
+                                        <button class="btn btn-info duzenle" disabled>Düzenle</button>
+                                        <button class="btn btn-danger sil" disabled>Sil</button>
+                                    </div>
+
+                                    
+                                </div>
+                        </div>
+                        </div>
+                   </div>
+                  
+                </div>
+            </div>
+        </div>
+        <div class="risk-limitleri-template">
+            <div class="container-fluid clearfix">
+                <div class="row">
+                    <h3 class="sayfa-header">Risk Limitleri</h3>
+                </div>
+                <div id="risk-tanimla" class="risk-tanimla">
+                    <div id="risk-lookup"></div>
+                    <table class="risk-bilgileri">
+                        <tr class="senet">
+                            <td>Senet Riski</td>
+                            <td class="symbol-TL"></td>
+                        </tr>
+                        <tr class="cek">
+                            <td>Çek Riski</td>
+                            <td class="symbol-TL"></td>
+                        </tr>
+                        <tr class="toplam">
+                            <td>Toplam Risk</td>
+                            <td class="symbol-TL"></td>
+                        </tr>
+                        <tr class="limit">
+                            <td>Risk Limiti</td>
+                            <td></td>
+                        </tr>
+                        <tfoot>
+                            <tr>
+                                <td colspan="2">
+                                    <button class="btn btn-success kaydet">Kaydet</button>
+                                </td>
+                            </tr>
+                        </tfoot>
+                    </table>
+                </div>
+            </div>
+        </div>
+        <div class="genelrisk-limitleri-template">
+            <div class="container-fluid clearfix">
+
+                <br />
+                <div id="genelrisk-tanimla" class="genelrisk-tanimla">
+                    <table class="genelrisk-bilgileri">
+                        <tr class="genellimit">
+                            <td>Genel Risk Limit</td>
+                            <td>&nbsp; &nbsp;:  &nbsp; &nbsp;</td>
+                            <td></td>
+                        </tr>
+                        <br />
+                        <tfoot>
+                            <tr>
+                                <td colspan="3">
+                                    <button class="btn btn-success guncelle">Güncelle</button>
+                                </td>
+                            </tr>
+                        </tfoot>
+
+                    </table>
+                </div>
+            </div>
+        </div>
+        <div class="borclu-filtre-template">
+            <div class="container-fluid">
+                <div class="row">
+                    <h3 class="sayfa-header">Borçlu Filtreleri</h3>
+                </div>
+                <div class="row filter-row">
+                    <div class="col-xs-12">
+                        <select class="form-control filtre-tipi">
+                            <option value="null">Seçiniz...</option>
+                            <optgroup label="SENET">
+                                <option value="senet-tarihi-gecmis">Tarihi Geçmiş Ödenmemiş Senetler</option>
+                                <option value="senet-tarih-araligi">Tarih Aralığındaki Senetler</option>
+                                <option value="senet-alacak-tipi">Alacak Tipine Göre Senetler</option>
+                                <option value="senet-alacak-tipi-ozet">Alacak Tipine Göre Senet Özeti</option>
+                            </optgroup>
+                            <optgroup label="RİSK">
+                                <option value="risk-limit-asan">Risk Limitini Aşanlar</option>
+                                <option value="risk-aralik">Risk Aralığında Olanlar</option>
+                            </optgroup>
+                        </select>
+                        <div class="inputs">
+                            <div class="tarih-araligi">
+                                <div class="ta1"></div>
+                                <div class="ta2"></div>
+                                <button class="btn btn-success ara">Ara</button>
+                            </div>
+                            <div class="alacak-tipi">
+                                <input type="text" class="form-control" placeholder="Alacak Tipi Giriniz..." />
+                                <button class="btn btn-success ara">Ara</button>
+                            </div>
+                            <div class="risk-aralik">
+                                <input type="text" class="form-control ra1" placeholder="Min. Risk" />
+                                <input type="text" class="form-control ra2" placeholder="Max. Risk" />
+                                <button class="btn btn-success ara">Ara</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="row result-row">
+                    <div class="col-xs-12 result-wrapper">
+                        <div id="borclu-filtre-result"></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="yeni-arac-template">
+            <div class="container-fluid">
+                <div class="row">
+                    <h3 class="sayfa-header">Yeni Araç Kayıt</h3>
+                </div>
+                <div class="col-panel-wrapper">
+                    <div class="col-panel">
+                        <div class="col-panel-inner">
+                            <div class="form-group">
+                                <label class="control-label">
+                                    Plaka
+                                    <input id="ya-plaka" class="form-control uppercase" type="text" />
+                                </label>
+                            </div>
+
+                            <div class="form-group">
+                                <label class="control-label">
+                                    Marka
+                                    <input id="ya-marka" class="form-control uppercase" type="text" />
+                                </label>
+                            </div>
+
+                            <div class="form-group">
+                                <label class="control-label">
+                                    Seri
+                                    <input id="ya-seri" class="form-control uppercase" type="text" />
+                                </label>
+                            </div>
+
+                            <div class="form-group">
+                                <label class="control-label">
+                                    Model
+                                    <input id="ya-model" class="form-control uppercase" type="text" />
+                                </label>
+                            </div>
+
+                            <div class="form-group">
+                                <label class="control-label">
+                                    Renk
+                                    <input id="ya-renk" class="form-control uppercase" type="text" />
+                                </label>
+                            </div>
+
+                            <div class="form-group">
+                                <label class="control-label">
+                                    Yıl
+                                    <input id="ya-yil" class="form-control yil" type="text" />
+                                </label>
+
+                            </div>
+
+                            <div class="form-group">
+                                <label class="control-label" for="ya-km">
+                                    KM
+                                </label>
+                                <div class="input-group">
+                                    <input id="ya-km" class="form-control sayi" type="text" />
+                                    <span class="input-group-addon">KM</span>
+                                </div>
+                            </div>
+
+                            <div class="form-group">
+                                <label class="control-label">
+                                   Yedek Anahtar
+                                    <select id="ya-anahtar" class="form-control">
+                                        <option class="null"></option>
+                                        <option value="Var">Var</option>
+                                        <option value="Yok">Yok</option>                                     
+                                    </select>
+                                </label>
+                            </div>
+                          
+                        </div>
+                    </div>
+                    <div class="col-panel">
+                        <div class="col-panel-inner">
+                            <div class="form-group">
+                                <label class="control-label">
+                                    Yakıt Tipi
+                                    <select id="ya-yakit" class="form-control">
+                                        <option class="null"></option>
+                                        <option>Benzin</option>
+                                        <option>Benzin ve LPG</option>
+                                        <option>Dizel</option>
+                                        <option>Hybrid</option>
+                                    </select>
+                                </label>
+                            </div>
+
+                            <div class="form-group">
+                                <label class="control-label">
+                                    Vites Tipi
+                                    <select id="ya-vites" class="form-control">
+                                        <option class="null"></option>
+                                        <option>Manuel</option>
+                                        <option>Yarı Otomatik</option>
+                                        <option>Otomatik</option>
+                                    </select>
+                                </label>
+                            </div>
+
+                            <div class="form-group">
+                                <label class="control-label">
+                                    Kapı
+                                    <input id="ya-kapi" class="form-control sayi type=" text" />
+                                </label>
+                            </div>
+
+                            <div class="form-group">
+                                <label class="control-label">
+                                    Çekiş
+                                    <input id="ya-cekis" class="form-control uppercase" type="text" />
+                                </label>
+                            </div>
+
+                            <div class="form-group">
+                                <label class="control-label" for="ya-motor-hacim">
+                                    Motor Hacmi
+                                </label>
+                                <div class="input-group">
+                                    <input id="ya-motor-hacim" class="form-control sayi" type="text" />
+                                    <span class="input-group-addon">cm<sup>3</sup></span>
+                                </div>
+                            </div>
+
+                            <div class="form-group">
+                                <label class="control-label" for="ya-motor-guc">
+                                    Motor Gücü
+                                </label>
+                                <div class="input-group">
+                                    <input id="ya-motor-guc" class="form-control sayi" type="text" />
+                                    <span class="input-group-addon">HP</span>
+                                </div>
+                            </div>
+
+                            <div class="form-group">
+                                <label class="control-label">
+                                    Motor No
+                                    <input id="ya-motor-no" class="form-control uppercase" type="text" />
+                                </label>
+                            </div>
+
+                            <div class="form-group">
+                                <label class="control-label">
+                                    Şase No
+                                    <input id="ya-sasi-no" class="form-control uppercase" type="text" />
+                                </label>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-panel">
+                        <div class="col-panel-inner">
+                            <div class="form-group">
+                                <label class="control-label">
+                                    Araç Muayene Bitiş Tarihi
+                                    <input id="ya-aracmuayene-tarih" class="form-control tarih" type="text" />
+                                </label>
+                            </div>
+                            <div class="form-group">
+                                <label class="control-label">
+                                    Araç Sigorta Bitiş Tarihi
+                                    <input id="ya-sigorta-tarih" class="form-control tarih" type="text" />
+                                </label>
+                            </div>
+                            <div class="form-group">
+                                <label class="control-label">
+                                    Alınış Tarihi
+                                    <input id="ya-alinis-tarih" class="form-control tarih" type="text" />
+                                </label>
+                            </div>
+
+                            <div class="form-group">
+                                <label class="control-label" for="ya-alinis-fiyat">
+                                    Alınış Fiyatı
+                                </label>
+                                <div class="input-group">
+                                    <input id="ya-alinis-fiyat" class="form-control sayi" type="text" />
+                                    <span class="input-group-addon">TL</span>
+                                </div>
+                            </div>
+
+                            <div class="form-group">
+                                <label class="control-label">
+                                    Liste
+                                    <select id="ya-liste" class="form-control">
+                                        <option class="null"></option>
+                                        <option>NZL Oto Listesi</option>
+                                        <option>Misafir Araç Listesi</option>
+                                    </select>
+                                </label>
+                            </div>
+
+                            <div class="form-group">
+                                <label class="control-label">
+                                    Durum
+                                    <select id="ya-durum" class="form-control">
+                                        <option>Belirsiz</option>
+                                        <option>Vekaleten (Vekaleti Alınmış)</option>
+                                        <option>Vekaleten (Vekaleti Alınmamış)</option>
+                                    </select>
+                                </label>
+                            </div>
+
+                            <div class="form-group" style="display:none;">
+                                <label class="control-label">
+                                    Vekalet Bitiş Tarihi
+                                    <input id="ya-vekalet-bitis" type="text" class="form-control tarih" />
+                                </label>
+                            </div>
+
+                            <div class="form-group">
+                                <label class="control-label" for="ya-etiket">
+                                    Etiket Fiyatı
+                                </label>
+                                <div class="input-group">
+                                    <input id="ya-etiket" class="form-control sayi" type="text" />
+                                    <span class="input-group-addon">TL</span>
+                                </div>
+                            </div>
+
+                            <div class="form-group">
+                                <label class="control-label">
+                                    Ruhsat Sahibi
+                                    <input type="button" class="kisi-kurum-sec btn btn-default" value="SEÇ" />
+                                    <span id="ya-ruhsat" contact-uid=""></span>
+                                </label>
+                            </div>
+
+                            <div class="form-group">
+                                <label class="control-label">
+                                    Satıcı
+                                    <input type="button" class="kisi-kurum-sec btn btn-default" value="SEÇ" />
+                                    <span id="ya-satici" contact-uid=""></span>
+                                </label>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="actions">
+                    <button class="btn btn-success kaydet">KAYDET</button>
+                </div>
+            </div>
+        </div>
+        <div class="duzenle-arac-template">
+            <div class="container-fluid">
+                <div class="row">
+                    <h3 class="sayfa-header">Araç Düzenle</h3>
+                </div>
+                <div class="col-panel-wrapper">
+                    <div class="col-panel">
+                        <div class="col-panel-inner">
+                            <div class="form-group">
+                                <label class="control-label">
+                                    Plaka
+                                    <input id="ya-plaka" class="form-control uppercase" type="text" />
+                                </label>
+                            </div>
+
+                            <div class="form-group">
+                                <label class="control-label">
+                                    Marka
+                                    <input id="ya-marka" class="form-control uppercase" type="text" />
+                                </label>
+                            </div>
+
+                            <div class="form-group">
+                                <label class="control-label">
+                                    Seri
+                                    <input id="ya-seri" class="form-control uppercase" type="text" />
+                                </label>
+                            </div>
+
+                            <div class="form-group">
+                                <label class="control-label">
+                                    Model
+                                    <input id="ya-model" class="form-control uppercase" type="text" />
+                                </label>
+                            </div>
+
+                            <div class="form-group">
+                                <label class="control-label">
+                                    Renk
+                                    <input id="ya-renk" class="form-control uppercase" type="text" />
+                                </label>
+                            </div>
+
+                            <div class="form-group">
+                                <label class="control-label">
+                                    Yıl
+                                    <input id="ya-yil" class="form-control yil" type="text" />
+                                </label>
+
+                            </div>
+
+                            <div class="form-group">
+                                <label class="control-label" for="ya-km">
+                                    KM
+                                </label>
+                                <div class="input-group">
+                                    <input id="ya-km" class="form-control sayi" type="text" />
+                                    <span class="input-group-addon">KM</span>
+                                </div>
+                            </div>
+
+                            <div class="form-group">
+                                <label class="control-label">
+                                   Yedek Anahtar
+                                    <select id="ya-anahtar" class="form-control">
+                                        <option class="null"></option>
+                                        <option value="Var">Var</option>
+                                        <option value="Yok">Yok</option>                                     
+                                    </select>
+                                </label>
+                            </div>
+                          
+                        </div>
+                    </div>
+                    <div class="col-panel">
+                        <div class="col-panel-inner">
+                            <div class="form-group">
+                                <label class="control-label">
+                                    Yakıt Tipi
+                                    <select id="ya-yakit" class="form-control">
+                                        <option class="null"></option>
+                                        <option>Benzin</option>
+                                        <option>Benzin ve LPG</option>
+                                        <option>Dizel</option>
+                                        <option>Hybrid</option>
+                                    </select>
+                                </label>
+                            </div>
+
+                            <div class="form-group">
+                                <label class="control-label">
+                                    Vites Tipi
+                                    <select id="ya-vites" class="form-control">
+                                        <option class="null"></option>
+                                        <option>Manuel</option>
+                                        <option>Yarı Otomatik</option>
+                                        <option>Otomatik</option>
+                                    </select>
+                                </label>
+                            </div>
+
+                            <div class="form-group">
+                                <label class="control-label">
+                                    Kapı
+                                    <input id="ya-kapi" class="form-control sayi type=" text" />
+                                </label>
+                            </div>
+
+                            <div class="form-group">
+                                <label class="control-label">
+                                    Çekiş
+                                    <input id="ya-cekis" class="form-control uppercase" type="text" />
+                                </label>
+                            </div>
+
+                            <div class="form-group">
+                                <label class="control-label" for="ya-motor-hacim">
+                                    Motor Hacmi
+                                </label>
+                                <div class="input-group">
+                                    <input id="ya-motor-hacim" class="form-control sayi" type="text" />
+                                    <span class="input-group-addon">cm<sup>3</sup></span>
+                                </div>
+                            </div>
+
+                            <div class="form-group">
+                                <label class="control-label" for="ya-motor-guc">
+                                    Motor Gücü
+                                </label>
+                                <div class="input-group">
+                                    <input id="ya-motor-guc" class="form-control sayi" type="text" />
+                                    <span class="input-group-addon">HP</span>
+                                </div>
+                            </div>
+
+                            <div class="form-group">
+                                <label class="control-label">
+                                    Motor No
+                                    <input id="ya-motor-no" class="form-control uppercase" type="text" />
+                                </label>
+                            </div>
+
+                            <div class="form-group">
+                                <label class="control-label">
+                                    Şase No
+                                    <input id="ya-sasi-no" class="form-control uppercase" type="text" />
+                                </label>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-panel">
+                        <div class="col-panel-inner">
+                            <div class="form-group">
+                                <label class="control-label">
+                                    Araç Muayene Bitiş Tarihi
+                                    <input id="ya-aracmuayene-tarih" class="form-control tarih" type="text" />
+                                </label>
+                            </div>
+                            <div class="form-group">
+                                <label class="control-label">
+                                    Alınış Tarihi
+                                    <input id="ya-alinis-tarih" class="form-control tarih" type="text" />
+                                </label>
+                            </div>
+
+                            <div class="form-group">
+                                <label class="control-label">
+                                    Araç Sigorta Bitiş Tarihi
+                                    <input id="ya-sigorta-tarih" class="form-control tarih" type="text" />
+                                </label>
+                            </div>
+
+                            <div class="form-group">
+                                <label class="control-label" for="ya-alinis-fiyat">
+                                    Alınış Fiyatı
+                                </label>
+                                <div class="input-group">
+                                    <input id="ya-alinis-fiyat" class="form-control sayi" type="text" />
+                                    <span class="input-group-addon">TL</span>
+                                </div>
+                            </div>
+
+                            <div class="form-group">
+                                <label class="control-label">
+                                    Liste
+                                    <select id="ya-liste" class="form-control">
+                                        <option class="null"></option>
+                                        <option>NZL Oto Listesi</option>
+                                        <option>Misafir Araç Listesi</option>
+                                    </select>
+                                </label>
+                            </div>
+
+                            <div class="form-group">
+                                <label class="control-label">
+                                    Durum
+                                    <select id="ya-durum" class="form-control">
+                                        <option>Belirsiz</option>
+                                        <option>Vekaleten (Vekaleti Alınmış)</option>
+                                        <option>Vekaleten (Vekaleti Alınmamış)</option>
+                                    </select>
+                                </label>
+                            </div>
+
+                            <div class="form-group" style="display:none;">
+                                <label class="control-label">
+                                    Vekalet Bitiş Tarihi
+                                    <input id="ya-vekalet-bitis" type="text" class="form-control tarih" />
+                                </label>
+                            </div>
+
+                            <div class="form-group">
+                                <label class="control-label" for="ya-etiket">
+                                    Etiket Fiyatı
+                                </label>
+                                <div class="input-group">
+                                    <input id="ya-etiket" class="form-control sayi" type="text" />
+                                    <span class="input-group-addon">TL</span>
+                                </div>
+                            </div>
+
+                            <div class="form-group">
+                                <label class="control-label">
+                                    Ruhsat Sahibi
+                                    <input type="button" class="kisi-kurum-sec btn btn-default" value="SEÇ" />
+                                    <span id="ya-ruhsat" contact-uid=""></span>
+                                </label>
+                            </div>
+
+                            <div class="form-group">
+                                <label class="control-label">
+                                    Satıcı
+                                    <input type="button" class="kisi-kurum-sec btn btn-default" value="SEÇ" />
+                                    <span id="ya-satici" contact-uid=""></span>
+                                </label>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="actions">
+                    <button class="btn btn-danger sil">Sil</button>
+                    <button class="btn btn-success kaydet">KAYDET</button>
+                </div>
+
+            </div>
+        </div>
+        <div class="arac-arama-template">
+            <div class="container-fluid">
+                <div class="header-bar">
+                    <div class="header-title">
+                        <h3>Araç Arama</h3>
+                    </div>
+                </div>
+                <div class="col-panel-wrapper">
+                    <div class="col-panel">
+                        <div class="col-panel-inner">
+                            <table>
+                                <tr class="form-row">
+                                    <td>
+                                        <label>Plaka</label>
+                                    </td>
+                                    <td>
+                                        <select class="form-control"></select>
+                                    </td>
+                                    <td>
+                                        <input class="form-control" type="text" nzl-field="Plaka" nzl-field-type="text" />
+                                    </td>
+                                </tr>
+                                <tr class="form-row">
+                                    <td>
+                                        <label>Marka</label>
+                                    </td>
+                                    <td>
+                                        <select class="form-control"></select>
+                                    </td>
+                                    <td>
+                                        <input class="form-control" type="text" nzl-field="Marka" nzl-field-type="text" />
+                                    </td>
+                                </tr>
+                                <tr class="form-row">
+                                    <td>
+                                        <label>Seri</label>
+                                    </td>
+                                    <td>
+                                        <select class="form-control"></select>
+                                    </td>
+                                    <td>
+                                        <input class="form-control" type="text" nzl-field="Seri" nzl-field-type="text" />
+                                    </td>
+                                </tr>
+                                <tr class="form-row">
+                                    <td>
+                                        <label>Model</label>
+                                    </td>
+                                    <td>
+                                        <select class="form-control"></select>
+                                    </td>
+                                    <td>
+                                        <input class="form-control" type="text" nzl-field="Model" nzl-field-type="text" />
+                                    </td>
+                                </tr>
+                                <tr class="form-row">
+                                    <td>
+                                        <label>Renk</label>
+                                    </td>
+                                    <td>
+                                        <select class="form-control"></select>
+                                    </td>
+                                    <td>
+                                        <input class="form-control" type="text" nzl-field="Renk" nzl-field-type="text" />
+                                    </td>
+                                </tr>
+                                <tr class="form-row">
+                                    <td>
+                                        <label>Yıl</label>
+                                    </td>
+                                    <td>
+                                        <select class="form-control"></select>
+                                    </td>
+                                    <td>
+                                        <input class="form-control yil" type="text" nzl-field="Yil" nzl-field-type="number" />
+                                    </td>
+                                </tr>
+                                <tr class="form-row">
+                                    <td>
+                                        <label>KM</label>
+                                    </td>
+                                    <td>
+                                        <select class="form-control"></select>
+                                    </td>
+                                    <td>
+                                        <input class="form-control sayi" type="text" nzl-field="KM" nzl-field-type="number" />
+                                    </td>
+                                </tr>
+                            </table>
+                        </div>
+                    </div>
+                    <div class="col-panel">
+                        <div class="col-panel-inner">
+                            <table>
+                                <tr class="form-row">
+                                    <td>
+                                        <label>Yakıt Tipi</label>
+                                    </td>
+                                    <td>
+                                        <select class="form-control"></select>
+                                    </td>
+                                    <td>
+                                        <select class="form-control" nzl-field="YakitTipi" nzl-field-type="enum">
+                                            <option class="null"></option>
+                                            <option>Benzin</option>
+                                            <option>Benzin ve LPG</option>
+                                            <option>Dizel</option>
+                                            <option>Hybrid</option>
+                                        </select>
+                                    </td>
+                                </tr>
+                                <tr class="form-row">
+                                    <td>
+                                        <label>Vites Tipi</label>
+                                    </td>
+                                    <td>
+                                        <select class="form-control"></select>
+                                    </td>
+                                    <td>
+                                        <select class="form-control" nzl-field="VitesTipi" nzl-field-type="enum">
+                                            <option class="null"></option>
+                                            <option>Manuel</option>
+                                            <option>Yarı Otomatik</option>
+                                            <option>Otomatik</option>
+                                        </select>
+                                    </td>
+                                </tr>
+                                <tr class="form-row">
+                                    <td>
+                                        <label>Kapı</label>
+                                    </td>
+                                    <td>
+                                        <select class="form-control"></select>
+                                    </td>
+                                    <td>
+                                        <input class="form-control sayi" type="text" nzl-field="Kapi" nzl-field-type="number" />
+                                    </td>
+                                </tr>
+                                <tr class="form-row">
+                                    <td>
+                                        <label>Çekiş</label>
+                                    </td>
+                                    <td>
+                                        <select class="form-control"></select>
+                                    </td>
+                                    <td>
+                                        <input class="form-control" type="text" nzl-field="Cekis" nzl-field-type="text" />
+                                    </td>
+                                </tr>
+                                <tr class="form-row">
+                                    <td>
+                                        <label>Motor Hacmi</label>
+                                    </td>
+                                    <td>
+                                        <select class="form-control"></select>
+                                    </td>
+                                    <td>
+                                        <input class="form-control sayi" type="text" nzl-field="MotorHacmi" nzl-field-type="number" />
+                                    </td>
+                                </tr>
+                                <tr class="form-row">
+                                    <td>
+                                        <label>Motor Gücü</label>
+                                    </td>
+                                    <td>
+                                        <select class="form-control"></select>
+                                    </td>
+                                    <td>
+                                        <input class="form-control sayi" type="text" nzl-field="MotorGucu" nzl-field-type="number" />
+                                    </td>
+                                </tr>
+                                <tr class="form-row">
+                                    <td>
+                                        <label>Motor No</label>
+                                    </td>
+                                    <td>
+                                        <select class="form-control"></select>
+                                    </td>
+                                    <td>
+                                        <input class="form-control" type="text" nzl-field="MotorNo" nzl-field-type="text" />
+                                    </td>
+                                </tr>
+                                <tr class="form-row">
+                                    <td>
+                                        <label>Şasi No</label>
+                                    </td>
+                                    <td>
+                                        <select class="form-control"></select>
+                                    </td>
+                                    <td>
+                                        <input class="form-control" type="text" nzl-field="SasiNo" nzl-field-type="text" />
+                                    </td>
+                                </tr>
+                                <tr class="form-row">
+                                    <td>
+                                        <label>Opsiyon</label>
+                                    </td>
+                                    <td>
+                                        <select class="form-control"></select>
+                                    </td>
+                                    <td>
+                                        <select class="form-control" type="text" nzl-field="Opsiyon" nzl-field-type="enum">
+                                            <option class="null"></option>
+                                            <option value="True">Var</option>
+                                            <option value="False">Yok</option>
+                                        </select>
+                                    </td>
+                                </tr>
+                            </table>
+                        </div>
+                    </div>
+                    <div class="col-panel">
+                        <div class="col-panel-inner">
+                            <table>
+                                <tr class="form-row">
+                                    <td>
+                                        <label>Sisteme Giriş Tarihi</label>
+                                    </td>
+                                    <td>
+                                        <select class="form-control"></select>
+                                    </td>
+                                    <td>
+                                        <div nzl-field="AddDate" nzl-field-type="date" />
+                                    </td>
+                                </tr>
+                                <tr class="form-row">
+                                    <td>
+                                        <label>Alınış Tarihi</label>
+                                    </td>
+                                    <td>
+                                        <select class="form-control"></select>
+                                    </td>
+                                    <td>
+                                        <div nzl-field="AlinisTarihi" nzl-field-type="date" />
+                                    </td>
+                                </tr>
+                                <tr class="form-row">
+                                    <td>
+                                        <label>Alınış Fiyatı</label>
+                                    </td>
+                                    <td>
+                                        <select class="form-control"></select>
+                                    </td>
+                                    <td>
+                                        <input class="form-control sayi" type="text" nzl-field="AlinisFiyati" nzl-field-type="number" />
+                                    </td>
+                                </tr>
+                                <tr class="form-row">
+                                    <td>
+                                        <label>Liste</label>
+                                    </td>
+                                    <td>
+                                        <select class="form-control"></select>
+                                    </td>
+                                    <td>
+                                        <select class="form-control" nzl-field="Liste" nzl-field-type="enum">
+                                            <option class="null"></option>
+                                            <option>NZL Oto Listesi</option>
+                                            <option>Misafir Araç Listesi</option>
+                                            <option>Satılmış Araç Listesi</option>
+                                        </select>
+                                    </td>
+                                </tr>
+                                <tr class="form-row">
+                                    <td>
+                                        <label>Durum</label>
+                                    </td>
+                                    <td>
+                                        <select class="form-control"></select>
+                                    </td>
+                                    <td>
+                                        <select class="form-control" nzl-field="Durum" nzl-field-type="enum">
+                                            <option class="null"></option>
+                                            <option>Belirsiz</option>
+                                            <option>Vekaleten (Vekaleti Alınmış)</option>
+                                            <option>Vekaleten (Vekaleti Alınmamış)</option>
+                                        </select>
+                                    </td>
+                                </tr>
+                                <tr class="form-row">
+                                    <td>
+                                        <label>Ruhsat Sahibi</label>
+                                    </td>
+                                    <td>
+                                        <select class="form-control"></select>
+                                    </td>
+                                    <td>
+                                        <input class="btn btn-default kisi-kurum-sec" type="button" value="SEÇ" />
+                                        <span nzl-field="RuhsatSahibi" nzl-field-type="id" nzl-field-value=""></span>
+                                    </td>
+                                </tr>
+                                <tr class="form-row">
+                                    <td>
+                                        <label>Satıcı</label>
+                                    </td>
+                                    <td>
+                                        <select class="form-control"></select>
+                                    </td>
+                                    <td>
+                                        <input class="btn btn-default kisi-kurum-sec" type="button" value="SEÇ" />
+                                        <span nzl-field="Satici" nzl-field-type="id" nzl-field-value=""></span>
+                                    </td>
+                                </tr>
+                                <tr class="form-row">
+                                    <td>
+                                        <label>Alıcı</label>
+                                    </td>
+                                    <td>
+                                        <select class="form-control"></select>
+                                    </td>
+                                    <td>
+                                        <input class="btn btn-default kisi-kurum-sec" type="button" value="SEÇ" />
+                                        <span nzl-field="Alici" nzl-field-type="id" nzl-field-value=""></span>
+                                    </td>
+                                </tr>
+                                <tr class="form-row">
+                                    <td>
+                                        <label>Şahit</label>
+                                    </td>
+                                    <td>
+                                        <select class="form-control"></select>
+                                    </td>
+                                    <td>
+                                        <input class="btn btn-default kisi-kurum-sec" type="button" value="SEÇ" />
+                                        <span nzl-field="Sahit" nzl-field-type="id" nzl-field-value=""></span>
+                                    </td>
+                                </tr>
+                            </table>
+                        </div>
+                    </div>
+                </div>
+                <div class="actions clearfix">
+                    <button class="btn btn-default temizle">TEMİZLE</button>
+                    <button class="btn btn-success ara">ARA</button>
+                </div>
+                <script>
+                    $(".arac-arama-template .col-panel .form-row [nzl-field-type]").each(function (i, el) {
+                        var type = $(this).attr("nzl-field-type"),
+                            opts = [];
+                        switch (type) {
+                            default:
+                                break;
+                            case "text":
+                                {
+                                    opts = [
+                                        { text: "Eşit", value: "=" },
+                                        { text: "Eşit Değil", value: "!=" },
+                                        { text: "İçinde Geçen", value: "%" },
+                                        { text: "İçinde Geçmeyen", value: "!%" }
+                                    ];
+                                }
+                                break;
+                            case "number":
+                            case "date":
+                                {
+                                    opts = [
+                                        { text: "Eşit ( = )", value: "=" },
+                                        { text: "Büyük ( > )", value: ">" },
+                                        { text: "Küçük ( < )", value: "<" },
+                                        { text: "Büyük-Eşit ( >= )", value: ">=" },
+                                        { text: "Küçük-Eşit ( <= )", value: "<=" }
+
+                                    ];
+                                }
+                                break;
+                            case "enum":
+                            case "id":
+                                {
+                                    opts = [
+                                        { text: "Eşit", value: "=" },
+                                        { text: "Eşit Değil", value: "!=" }
+                                    ]
+                                }
+                                break;
+                        }
+                        $.each(opts, function (i, v) {
+                            $(el).closest(".form-row").find("td:nth-child(2) select").append($("<option>").text(v.text).attr("value", v.value));
+                        });
+                    });
+                </script>
+            </div>
+        </div>
+        <div class="iletisim-islemleri-template">
+            <div class="container-fluid">
+                <div class="header-bar">
+                    <div class="header-title">
+                        <h3>İletişim İşlemleri</h3>
+                    </div>
+                </div>
+                <div class="iletisim-lookup">
+                    <div class="lookup"></div>
+                </div>
+                <div class="bilgiler row">
+                    <div class="col-sm-12 col-md-6">
+                        <table>
+                            <tr>
+                                <td>Tip</td>
+                                <td nzl-field="Type"></td>
+                            </tr>
+                            <tr>
+                                <td>Ad</td>
+                                <td nzl-field="Ad"></td>
+                            </tr>
+                            <tr>
+                                <td>Birincil Telefon</td>
+                                <td nzl-field="BirincilTelefon"></td>
+                            </tr>
+                            <tr>
+                                <td>Telefonlar</td>
+                                <td nzl-field="Telefonlar"></td>
+                            </tr>
+                            <tr>
+                                <td>Not</td>
+                                <td nzl-field="IletisimNot" nzl-field-type="text"></td>
+                            </tr>
+                        </table>
+                    </div>
+                    <div class="col-sm-12 col-md-6">
+                        <table>
+                            <tr>
+                                <td>Kimlik No</td>
+                                <td nzl-field="KimlikNo"></td>
+                            </tr>
+                            <tr>
+                                <td>Birincil Adres</td>
+                                <td nzl-field="BirincilAdres"></td>
+                            </tr>
+                            <tr>
+                                <td>Adresler</td>
+                                <td nzl-field="Adresler"></td>
+                            </tr>
+                            <tr>
+                                <td>Vergi Dairesi</td>
+                                <td nzl-field="VergiDairesi"></td>
+                            </tr>
+                            <tr>
+                                <td>Vergi No</td>
+                                <td nzl-field="VergiNo"></td>
+                            </tr>
+                        </table>
+                    </div>
+                </div>
+                <div class="actions">
+                    <button class="btn btn-default ekle">Yeni Ekle</button>
+                    <button class="btn btn-info duzenle" disabled>Düzenle</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="modal kasa-foyu-ekle">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header clearfix">
+                    <button type="button" class="close" data-dismiss="modal">&times;</button>
+                    <h4 class="modal-title">Araç Arama</h4>
+                </div>
+                <div class="modal-body">
+                    <div class="form-horizontal clearfix">
+                        <div class="form-group">
+                            <label for="kasa-ekle-kayitTipi" class="control-label col-xs-3">Kayıt Tipi</label>
+                            <div class="col-xs-9">
+                                <input id="kasa-ekle-kayitTipi" type="text" class="form-control required" readonly />
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label for="kasa-ekle-kayitMiktar" class="control-label col-xs-3">Miktar</label>
+                            <div class="col-xs-9">
+                                <input id="kasa-ekle-kayitMiktar" type="text" class="form-control required sayi-gir" />
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label for="kasa-ekle-kayitAciklama" class="control-label col-xs-3">Açıklama</label>
+                            <div class="col-xs-9">
+                                <input id="kasa-ekle-kayitAciklama" type="text" class="form-control required" />
+                            </div>
+                        </div>
+                    </div>
+                    <div class="modal-feedback">
+
+                    </div>
+                </div>
+                <div class="modal-footer">
+                    <label class="modal-FooterLabel"><span></span></label>
+                    <button type="button" class="btn btn-primary kaydet">Kaydet</button>
+                    <button type="button" data-dismiss="modal" class="btn btn-default">Kapat</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="modal arac-sec">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header clearfix">
+                    <button type="button" class="close" data-dismiss="modal">&times;</button>
+                    <h4 class="modal-title">Araç Seç</h4>
+                </div>
+                <div class="modal-body">
+                    <div class="arac-sec-lookup"></div>
+                    <div class="secili-iletisim-bilgileri">
+                        <table>
+                            <tr class="plaka visible">
+                                <td>Plaka</td>
+                                <td></td>
+                            </tr>
+                            <tr class="marka visible">
+                                <td>Marka</td>
+                                <td></td>
+                            </tr>
+                            <tr class="seri visible">
+                                <td>Seri</td>
+                                <td></td>
+                            </tr>
+                            <tr class="model visible">
+                                <td>Model</td>
+                                <td></td>
+                            </tr>
+                            <tr class="alinis-tarih visible">
+                                <td>Alınış Tarihi</td>
+                                <td></td>
+                            </tr>
+                           
+                        </table>
+                    </div>
+                    <div class="modal-feedback"></div>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-primary sec">Seç</button>
+                    <button type="button" data-dismiss="modal" class="btn btn-default">Kapat</button>
+                 
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="modal arac-arama">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header clearfix">
+                    <button type="button" class="close" data-dismiss="modal">&times;</button>
+                    <h4 class="modal-title">Araç Arama</h4>
+                </div>
+                <div class="modal-body">
+                    <div class="form-horizontal clearfix">
+                        <div class="form-group">
+                            <label for="arac-ad" class="control-label col-xs-3">Araç Adı</label>
+                            <div class="col-xs-9">
+                                <input id="arac-ad" type="text" value="" class="form-control" />
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label class="control-label col-xs-3">Fiyat</label>
+                            <div class="col-xs-9">
+                                <input id="arac-fiyat-min" type="text" min="0" class="form-control" />
+                                -
+                                <input id="arac-fiyat-max" type="text" min="0" class="form-control" />
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label for="arac-plaka" class="control-label col-xs-3">Plaka</label>
+                            <div class="col-xs-9">
+                                <input id="arac-plaka" type="text" value="" class="form-control" />
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label for="arac-marka" class="control-label col-xs-3">Marka</label>
+                            <div class="col-xs-9">
+                                <input id="arac-marka" type="text" value="" class="form-control" />
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label for="arac-seri" class="control-label col-xs-3">Seri</label>
+                            <div class="col-xs-9">
+                                <input id="arac-seri" type="text" value="" class="form-control" />
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label for="arac-model" class="control-label col-xs-3">Model</label>
+                            <div class="col-xs-9">
+                                <input id="arac-model" type="text" value="" class="form-control" />
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label for="arac-renk" class="control-label col-xs-3">Renk</label>
+                            <div class="col-xs-9">
+                                <input id="arac-renk" type="text" value="" class="form-control" />
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label class="control-label col-xs-3">Yil</label>
+                            <div class="col-xs-9">
+                                <input id="arac-yil-min" type="text" min="0" class="form-control yil" />
+                                -
+                                <input id="arac-yil-max" type="text" min="0" class="form-control yil" />
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label class="control-label col-xs-3">KM</label>
+                            <div class="col-xs-9">
+                                <input id="arac-km-min" type="text" min="0" class="form-control" />
+                                -
+                                <input id="arac-km-max" type="text" min="0" class="form-control" />
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label class="control-label col-xs-3">Yakit Tipi</label>
+                            <div class="col-xs-9">
+                                <select id="arac-yakit-tipi" class="form-control">
+                                    <option></option>
+                                    <option value="Benzin">Benzin</option>
+                                    <option value="Benzin ve LPG">Benzin ve LPG</option>
+                                    <option value="Dizel">Dizel</option>
+                                    <option value="Hybrid">Hybrid</option>
+                                </select>
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label class="control-label col-xs-3">Vites Tipi</label>
+                            <div class="col-xs-9">
+                                <select id="arac-vites-tipi" class="form-control">
+                                    <option></option>
+                                    <option value="Manuel">Manuel</option>
+                                    <option value="Yarı Otomatik">Yarı Otomatik</option>
+                                    <option value="Otomatik">Otomatik</option>
+                                </select>
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label class="control-label col-xs-3">Motor Hacmi</label>
+                            <div class="col-xs-9">
+                                <input id="arac-motor-hacmi-min" type="text" min="0" class="form-control" />
+                                -
+                                <input id="arac-motor-hacmi-max" type="text" min="0" class="form-control" />
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label class="control-label col-xs-3">Araç Durumu</label>
+                            <div class="col-xs-9">
+                                <select id="arac-durum" class="form-control">
+                                    <option></option>
+                                    <option value="Eldeki Araç">Eldeki Araç</option>
+                                    <option value="Satışı Yapılmış Araç">Satışı Yapılmış Araç</option>
+                                    <option value="Misafir Araç">Misafir Araç</option>
+                                </select>
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label class="control-label col-xs-3">Araç Giriş Durumu</label>
+                            <div class="col-xs-9">
+                                <select id="arac-giris-durumu" class="form-control">
+                                    <option></option>
+                                    <option value="NZL Üzerine Alınmış">NZL Üzerine Alınmış</option>
+                                    <option value="Vekaleten (Vekaleti Alınmış)">Vekaleten (Vekaleti Alınmış)</option>
+                                    <option value="Vekaleten (Vekaleti Henüz Alınmamış)">Vekaleten (Vekaleti Henüz Alınmamış)</option>
+                                </select>
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label class="control-label col-xs-3">Araç Çıkış Durumu</label>
+                            <div class="col-xs-9">
+                                <select id="arac-cikis-durumu" class="form-control">
+                                    <option></option>
+                                    <option value="1">NZL Çıkışı (Devri Yapılmış)</option>
+                                    <option value="2">NZL Çıkışı (Devri Yapılmamış)</option>
+                                    <option value="3">Vekaleten (Devri Yapılmış)</option>
+                                    <option value="4">Vekaleten (Devri Yapılmamış)</option>
+                                </select>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-primary ara">Araç Ara</button>
+                    <button type="button" data-dismiss="modal" class="btn btn-info">Temizle</button>
+                    <button type="button" data-dismiss="modal" class="btn btn-default">Kapat</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="modal arac-kayit">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header clearfix">
+                    <button type="button" class="close" data-dismiss="modal">&times;</button>
+                    <h4 class="modal-title">Araç Kayıt</h4>
+                </div>
+                <div class="modal-body">
+                    <div class="form-horizontal clearfix">
+                        <div class="form-group">
+                            <label for="arac-kayit-ad" class="control-label col-xs-3">Araç Adı</label>
+                            <div class="col-xs-9">
+                                <input id="arac-kayit-ad" type="text" class="form-control uppercase" />
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label for="arac-kayit-plaka" class="control-label col-xs-3">Plaka</label>
+                            <div class="col-xs-9">
+                                <input id="arac-kayit-plaka" type="text" class="form-control required uppercase" />
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label for="arac-kayit-marka" class="control-label col-xs-3">Marka</label>
+                            <div class="col-xs-9">
+                                <input id="arac-kayit-marka" type="text" class="form-control required uppercase" />
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label for="arac-kayit-seri" class="control-label col-xs-3">Seri</label>
+                            <div class="col-xs-9">
+                                <input id="arac-kayit-seri" type="text" class="form-control required uppercase" />
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label for="arac-kayit-model" class="control-label col-xs-3">Model</label>
+                            <div class="col-xs-9">
+                                <input id="arac-kayit-model" type="text" class="form-control required uppercase" />
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label for="arac-kayit-renk" class="control-label col-xs-3">Renk</label>
+                            <div class="col-xs-9">
+                                <input id="arac-kayit-renk" type="text" class="form-control required uppercase" />
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label for="arac-kayit-yil" class="control-label col-xs-3">Yıl</label>
+                            <div class="col-xs-9">
+                                <div class="input-group date">
+                                    <span class="input-group-addon"><i class="glyphicon glyphicon-th"></i></span>
+                                    <input id="arac-kayit-yil" type="text" class="form-control yil required">
+                                </div>
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label for="arac-kayit-km" class="control-label col-xs-3">KM</label>
+                            <div class="col-xs-9">
+                                <input id="arac-kayit-km" type="text" class="form-control required" />
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label class="control-label col-xs-3">Yakit Tipi</label>
+                            <div class="col-xs-9">
+                                <select id="arac-kayit-yakit-tipi" class="form-control">
+                                    <option></option>
+                                    <option value="Benzin">Benzin</option>
+                                    <option value="Benzin ve LPG">Benzin ve LPG</option>
+                                    <option value="Dizel">Dizel</option>
+                                    <option value="Hybrid">Hybrid</option>
+                                </select>
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label class="control-label col-xs-3">Vites Tipi</label>
+                            <div class="col-xs-9">
+                                <select id="arac-kayit-vites-tipi" class="form-control">
+                                    <option></option>
+                                    <option value="Manuel">Manuel</option>
+                                    <option value="Yarı Otomatik">Yarı Otomatik</option>
+                                    <option value="Otomatik">Otomatik</option>
+                                </select>
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label for="arac-kayit-kapi" class="control-label col-xs-3">Kapı</label>
+                            <div class="col-xs-9">
+                                <input id="arac-kayit-kapi" type="text" class="form-control" />
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label for="arac-kayit-cekis" class="control-label col-xs-3">Çekiş</label>
+                            <div class="col-xs-9">
+                                <input id="arac-kayit-cekis" type="text" class="form-control" />
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label class="control-label col-xs-3">Motor Hacmi</label>
+                            <div class="col-xs-9">
+                                <div class="input-group">
+                                    <input id="arac-kayit-motor-hacmi" type="text" class="form-control" />
+                                    <span class="input-group-addon">cm&sup3;</span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label class="control-label col-xs-3">Motor Gücü</label>
+                            <div class="col-xs-9">
+                                <div class="input-group">
+                                    <input id="arac-kayit-motor-gucu" type="text" class="form-control" />
+                                    <span class="input-group-addon">hp</span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label for="arac-kayit-motor-no" class="control-label col-xs-3">Motor No</label>
+                            <div class="col-xs-9">
+                                <input id="arac-kayit-motor-no" type="text" class="form-control" />
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label for="arac-kayit-sasi-no" class="control-label col-xs-3">Şasi No</label>
+                            <div class="col-xs-9">
+                                <input id="arac-kayit-sasi-no" type="text" class="form-control" />
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label for="arac-kayit-alinis-tarihi" class="control-label col-xs-3">Alınış Tarihi</label>
+                            <div class="col-xs-9">
+                                <input id="arac-kayit-alinis-tarihi" type="text" class="form-control tarih" />
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label for="arac-kayit-alinis-fiyatı" class="control-label col-xs-3">Alınış Fiyatı</label>
+                            <div class="col-xs-9">
+                                <div class="input-group">
+                                    <input id="arac-kayit-alinis-fiyatı" type="text" class="form-control" />
+                                    <span class="input-group-addon"><i class="fa fa-turkish-lira"></i></span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label class="control-label col-xs-3">Araç Durumu</label>
+                            <div class="col-xs-9">
+                                <select id="arac-kayit-durum" class="form-control required">
+                                    <option></option>
+                                    <option value="Eldeki Araç">Eldeki Araç</option>
+                                    <option value="Satışı Yapılmış Araç">Satışı Yapılmış Araç</option>
+                                    <option value="Misafir Araç">Misafir Araç</option>
+                                </select>
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label class="control-label col-xs-3">Araç Giriş Durumu</label>
+                            <div class="col-xs-9">
+                                <select id="arac-kayit-giris-durumu" class="form-control required">
+                                    <option></option>
+                                    <option value="NZL Üzerine Alınmış">NZL Üzerine Alınmış</option>
+                                    <option value="Vekaleten (Vekaleti Alınmış)">Vekaleten (Vekaleti Alınmış)</option>
+                                    <option value="Vekaleten (Vekaleti Henüz Alınmamış)">Vekaleten (Vekaleti Henüz Alınmamış)</option>
+                                </select>
+                            </div>
+                        </div>
+                        <div class="form-group vekalet-bitis-tarihi" style="display:none;">
+                            <label for="arac-kayit-vekalet-bitis-tarihi" class="control-label col-xs-3">Vekalet Bitiş Tarihi</label>
+                            <div class="col-xs-9">
+                                <div class="input-group date">
+                                    <span class="input-group-addon"><i class="glyphicon glyphicon-th"></i></span>
+                                    <input id="arac-kayit-vekalet-bitis-tarihi" type="text" class="form-control tarih">
+                                </div>
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label for="arac-kayit-belirlenen-satis-fiyati" class="control-label col-xs-3">Belirlenen Satış Fiyatı</label>
+                            <div class="col-xs-9">
+                                <div class="input-group">
+                                    <input id="arac-kayit-belirlenen-satis-fiyati" type="text" class="form-control required" />
+                                    <span class="input-group-addon"><i class="fa fa-turkish-lira"></i></span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label class="control-label col-xs-3">Ruhsat Sahibi</label>
+                            <div class="col-xs-9">
+                                <button class="btn btn-default ruhsat-sahibi-sec">Seç</button>
+                                <span id="arac-kayit-ruhsat-sahibi" kisi-id=""></span>
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label class="control-label col-xs-3">Satıcı</label>
+                            <div class="col-xs-9">
+                                <button class="btn btn-default satici-sec">Seç</button>
+                                <span id="arac-kayit-satici" kisi-id=""></span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="modal-feedback">
+
+                    </div>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-primary kaydet">Kaydet</button>
+                    <button type="button" class="btn btn-info temizle">Temizle</button>
+                    <button type="button" data-dismiss="modal" class="btn btn-default">Kapat</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="modal satis-yap">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header clearfix">
+                    <button type="button" class="close" data-dismiss="modal">&times;</button>
+                    <h4 class="modal-title">Satış Yap</h4>
+                </div>
+                <div class="modal-body">
+                    <div class="form-horizontal clearfix">
+                        <div class="form-group">
+                            <label class="control-label col-xs-3">Satılan Kişi (Alıcı)</label>
+                            <div class="col-xs-9">
+                                <button class="btn btn-default alici-sec">Seç</button>
+                                <span id="arac-satis-alici"></span>
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label for="arac-satis-satis-fiyati" class="control-label col-xs-3">Satış Fiyatı</label>
+                            <div class="col-xs-9">
+                                <div class="input-group">
+                                    <input id="arac-satis-satis-fiyati" type="text" class="form-control required" />
+                                    <span class="input-group-addon"><i class="fa fa-turkish-lira"></i></span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label for="arac-satis-satis-tarihi" class="control-label col-xs-3">Satış Tarihi</label>
+                            <div class="col-xs-9">
+                                <input id="arac-satis-satis-tarihi" type="text" class="form-control tarih required" />
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label for="arac-satis-noter-devir-tarihi" class="control-label col-xs-3">Noter Devir Tarihi</label>
+                            <div class="col-xs-9">
+                                <input id="arac-satis-noter-devir-tarihi" type="text" class="form-control tarih required" />
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label for="arac-satis-resmi-satis-fiyati" class="control-label col-xs-3">Resmi Satış Fiyatı</label>
+                            <div class="col-xs-9">
+                                <input id="arac-satis-resmi-satis-fiyati" type="text" class="form-control required" />
+                            </div>
+                        </div>
+                        <hr />
+                        <div class="row">
+                            <div class="col-xs-3">Durum</div>
+                            <div class="col-xs-9 durum"></div>
+                        </div>
+                        <div class="row">
+                            <div class="col-xs-3">Giriş Durumu</div>
+                            <div class="col-xs-9 giris-durumu"></div>
+                        </div>
+                        <div class="row">
+                            <div class="col-xs-3">Araç</div>
+                            <div class="col-xs-9 arac"></div>
+                        </div>
+                        <div class="row">
+                            <div class="col-xs-3">Plaka</div>
+                            <div class="col-xs-9 plaka"></div>
+                        </div>
+                        <div class="row">
+                            <div class="col-xs-3">Belirlenen Satış Fiyatı</div>
+                            <div class="col-xs-9 belirlenen-satis-fiyati"></div>
+                        </div>
+                    </div>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-primary kaydet">Satış Yap</button>
+                    <button type="button" data-dismiss="modal" class="btn btn-default">Kapat</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="modal satis-sozlesmesi">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header clearfix">
+                    <button type="button" class="close" data-dismiss="modal">&times;</button>
+                    <h4 class="modal-title">Satış Sözleşmesi</h4>
+                </div>
+                <div class="modal-body">
+
+                    <div class="kisi-kurum-lookup"></div>
+                    <div class="secili-iletisim-bilgileri">
+                        <table>
+                            <tr class="satis-sozlesmesi-marka visible">
+                                <td>Marka</td>
+                                <td></td>
+                            </tr>
+                            <tr class="satis-sozlesmesi-model visible">
+                                <td>Model</td>
+                                <td></td>
+                            </tr>
+                            <tr class="satis-sozlesmesi-plaka visible">
+                                <td>Plaka</td>
+                                <td></td>
+                            </tr>
+                            <tr class="satis-sozlesmesi-km visible">
+                                <td>KM</td>
+                                <td></td>
+                            </tr>
+                            <tr class="satis-sozlesmesi-motorno visible">
+                                <td>Motor No</td>
+                                <td></td>
+                            </tr>
+                            <tr class="satis-sozlesmesi-saseno visible">
+                                <td>Şase No</td>
+                                <td></td>
+                            </tr>
+                            <tr class="satis-sozlesmesi-yakit visible">
+                                <td>Yakıtı</td>
+                                <td></td>
+                            </tr>
+                            <tr class="satis-sozlesmesi-saticiad visible">
+                                <td>Satıcı Ad</td>
+                                <td></td>
+                            </tr>
+                            <tr class="satis-sozlesmesi-saticitc visible">
+                                <td>Satıcı KimlikNo</td>
+                                <td></td>
+                            </tr>
+                            <tr class="satis-sozlesmesi-saticitel visible">
+                                <td>Satıcı Telefon</td>
+                                <td></td>
+                            </tr>
+                            <tr class="satis-sozlesmesi-saticiadres visible">
+                                <td>Satıcı Adres</td>
+                                <td></td>
+                            </tr>
+
+                        </table>
+                        <div class="form-horizontal clearfix">
+
+                            <div class="form-group ruhsatsahibi visible">
+                                <label for="ruhsatsahibi-ad" class="control-label col-xs-3">Ruhsat Sahibi</label>
+                                <div class="col-xs-9">
+                                    <input id="ruhsatsahibi-ad" type="text" class="form-control uppercase" />
+                                </div>
+                            </div>
+                            <div class="form-group satisbedeli visible">
+                                <label for="satis-sozlesmesi-satisbedeli" class="control-label col-xs-3">Satış Bedeli</label>
+                                <div class="col-xs-9">
+                                    <input id="satis-sozlesmesi-satisbedeli" type="text" class="form-control sayi" />
+                                </div>
+                            </div>
+                            <div class="form-group alinanpara visible">
+                                <label for="satis-sozlesmesi-alinanpara" class="control-label col-xs-3">Alınan Para</label>
+                                <div class="col-xs-9">
+                                    <input id="satis-sozlesmesi-alinanpara" type="text" class="form-control sayi" />
+                                </div>
+                            </div>
+                            <div class="form-group kalanvade visible">
+                                <label for="satis-sozlesmesi-kalanvade" class="control-label col-xs-3">Kalan Vade</label>
+                                <div class="col-xs-9">
+                                    <input id="satis-sozlesmesi-kalanvade" type="text" class="form-control" />
+                                </div>
+                            </div>
+                            <div class="form-group not visible">
+                                <label for="satis-sozlesmesi-not" class="control-label col-xs-3">Not</label>
+                                <div class="col-xs-9">
+                                    <input id="satis-sozlesmesi-not" type="text" class="form-control" />
+                                </div>
+                            </div>
+                            <div class="form-group alici visible">
+                                <label for="satis-sozlesmesi-alici" class="control-label col-xs-3"></label>
+                                <div class="col-xs-9">
+                                    <span id="ya-alici" contact-uid=""></span>
+                                    <input type="button" class="btn btn-default kisisec" value="Alıcı Seç">
+
+                                </div>
+                            </div>
+                            <div class="form-group sahit visible">
+                                <label for="satis-sozlesmesi-sahit" class="control-label col-xs-3"></label>
+                                <div class="col-xs-9">
+                                    <span id="ya-sahit" contact-uid=""></span>
+                                    <input type="button" class="btn btn-default sahitkisisec" value="Şahit Seç">
+
+                                </div>
+                            </div>
+                            <div class="form-group senetolustur visible">
+                                <label for="satis-sozlesmesi-senetolustur" class="control-label col-xs-3"></label>
+                                <div class="col-xs-9">
+                                    <span id="ya-senetolustur" contact-uid=""></span>
+                                    <input type="button" class="btn btn-default senetolustur" value="Senet Oluştur">
+
+                                </div>
+                            </div>
+
+
+
+                            <div class="modal-feedback">
+
+                            </div>
+
+                        </div>
+                    </div>
+                    <div class="modal-feedback"></div>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-primary sec">Seç</button>
+                    <button type="button" data-dismiss="modal" class="btn btn-default">Kapat</button>
+
+                </div>
+            </div>
+        </div>
+
+    </div>
+    <div class="modal senet-yazdir">
+        <div class="modal-dialog" >
+            <div class="modal-content">
+                <div class="modal-header clearfix">
+                    <button type="button" class="close" data-dismiss="modal">&times;</button>
+                    <h4 class="modal-title">SENET OLUŞTUR /YAZDIR</h4>
+                </div>
+                <div class="modal-body">
+                    <div class="form-horizontal clearfix">
+                        <div class="form-group senet-yapilan visible">
+                            <label class="control-label col-xs-5">Senet Yapılan</label>
+                            <div class="col-xs-7">
+                                <select id="senet-yapilan" class="form-control required">
+                                    <option></option>
+                                    <option value="kisi">Kişi</option>
+                                    <option value="kurum">Kurum</option>
+                                </select>
+                            </div>
+                        </div>
+                        <div class="form-group senetsayisi visible">
+                            <label for="senetsayisi" class="control-label col-xs-5">Senet Sayısı</label>
+                            <div class="col-xs-7">
+                                <input id="senetsayisi" type="text" class="form-control  sayi required" />
+                            </div>
+                        </div>
+                        <div class="form-group odeyecekisim visible">
+                            <label for="odeyecekisim" class="control-label col-xs-5">Ödeyecek İsim / Ünvan</label>
+                            <div class="col-xs-7">
+                                <input id="odeyecekisim" type="text" class="form-control  required" />
+                            </div>
+                        </div>
+                        <div class="form-group odeyecekadres visible">
+                            <label for="odeyecekadres" class="control-label col-xs-5">Ödeyecek Adres</label>
+                            <div class="col-xs-7">
+                                <input id="odeyecekadres" type="text" class="form-control  required" />
+                            </div>
+                        </div>
+                        <div class="form-group odeyecektcvergino visible">
+                            <label for="odeyecektcvergino" class="control-label col-xs-5">Ödeyecek Tc / Vergi No</label>
+                            <div class="col-xs-7">
+                                <input id="odeyecektcvergino" type="text" class="form-control  required sayi" />
+                            </div>
+                        </div>
+                        <div class="form-group kefilisim visible">
+                            <label for="kefilisim" class="control-label col-xs-5">Kefil İsim / Ünvan</label>
+                            <div class="col-xs-7">
+                                <input id="kefilisim" type="text" class="form-control" />
+                            </div>
+                        </div>
+                        <div class="form-group kefiltcvergino visible">
+                            <label for="kefiltcvergino" class="control-label col-xs-5">Kefil Tc / Vergi No</label>
+                            <div class="col-xs-7">
+                                <input id="kefiltcvergino" type="text" class="form-control sayi" />
+                            </div>
+                        </div>
+                        <div class="form-group duzenlenmetarihi visible">
+                            <label for="duzenlenmetarihi" class="control-label col-xs-5">Düzenlenme Tarihi</label>
+                            <div class="col-xs-7">
+                                <input id="duzenlenmetarihi" type="text" class="form-control tarih required" />
+                            </div>
+                        </div>
+                        <div class="form-group duzenlenmeyeri visible">
+                            <label for="duzenlenmeyeri" class="control-label col-xs-5">Düzenlenme Yeri</label>
+                            <div class="col-xs-7">
+                                <input id="duzenlenmeyeri" type="text" class="form-control required" />
+                            </div>
+                        </div>
+                        <div class="form-group senetvukuu visible">
+                            <label for="senetvukuu" class="control-label col-xs-5">Senet Vukuu Yeri</label>
+                            <div class="col-xs-7">
+                                <input id="senetvukuu" type="text" class="form-control required" />
+                            </div>
+                        </div>
+
+                        <div class="form-group senet-olustur visible">
+                            <label for="senet-olustur-olustur" class=""></label>
+                            <div class="col-xs-12">
+
+                                <input type="button" class="btn btn-default olustur" value="Senet Oluştur">
+
+                            </div>
+                        </div>
+                        <div class="senetleryazdir visible">
+                           
+                        </div>
+                    </div>
+                    <div class="modal-feedback">
+
+                    </div>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-primary yazdir">Yazdır</button>
+                    <button type="button" data-dismiss="modal" class="btn btn-default">Kapat</button>
+                </div>
+            </div>
+       </div>
+   </div>
+    <div class="modal kisi-kurum-sec">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header clearfix">
+                    <button type="button" class="close" data-dismiss="modal">&times;</button>
+                    <h4 class="modal-title">Kişi / Kurum Seç</h4>
+                </div>
+                <div class="modal-body">
+                    <div class="clearfix">
+                        <button class="btn btn-default ekle">Yeni Ekle</button>
+                    </div>
+                    <div class="kisi-kurum-lookup"></div>
+                    <div class="secili-iletisim-bilgileri">
+                        <table>
+                            <tr class="tip visible">
+                                <td>Tip</td>
+                                <td></td>
+                            </tr>
+                            <tr class="ad visible">
+                                <td>Ad</td>
+                                <td></td>
+                            </tr>
+                            <tr class="vergi-dairesi">
+                                <td>Vergi Dairesi</td>
+                                <td></td>
+                            </tr>
+                            <tr class="kimlik-no">
+                                <td>TC Kimlik No</td>
+                                <td></td>
+                            </tr>
+                            <tr class="vergi-no">
+                                <td>Vergi No</td>
+                                <td></td>
+                            </tr>
+                            <tr class="birincil-adres visible">
+                                <td>Birincil Adres</td>
+                                <td></td>
+                            </tr>
+                            <tr class="adres visible">
+                                <td>Adresler</td>
+                                <td></td>
+                            </tr>
+                            <tr class="birincil-telefon visible">
+                                <td>Birincil Telefon</td>
+                                <td></td>
+                            </tr>
+                            <tr class="telefon visible">
+                                <td>Telefonlar</td>
+                                <td></td>
+                            </tr>
+                            <tr class="iletisim-not visible">
+                                <td>İletişim Notu</td>
+                                <td></td>
+                            </tr>
+                        </table>
+                    </div>
+                    <div class="modal-feedback"></div>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-primary sec">Seç</button>
+                    <button type="button" data-dismiss="modal" class="btn btn-default">Kapat</button>
+                    <button class="btn btn-info duzenle pull-left">Düzenle</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+    <div class="modal kisi-kurum-ekle">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header clearfix">
+                    <button type="button" class="close" data-dismiss="modal">&times;</button>
+                    <h4 class="modal-title">Kişi / Kurum Ekle</h4>
+                </div>
+                <div class="modal-body">
+                    <div class="form-horizontal clearfix">
+                        <div class="form-group tip visible">
+                            <label for="kisi-kurum-ekle-tip" class="control-label col-xs-3">Tip</label>
+                            <div class="col-xs-9">
+                                <select id="kisi-kurum-ekle-tip" class="form-control">
+                                    <option>Kişi</option>
+                                    <option>Kurum</option>
+                                </select>
+                            </div>
+                        </div>
+                        <div class="form-group ad visible">
+                            <label for="kisi-kurum-ekle-ad" class="control-label col-xs-3">Ad</label>
+                            <div class="col-xs-9">
+                                <input id="kisi-kurum-ekle-ad" type="text" class="form-control uppercase" />
+                            </div>
+                        </div>
+                        <div class="form-group kimlik-no visible">
+                            <label for="kisi-kurum-ekle-kimlik-no" class="control-label col-xs-3">TC Kimlik No</label>
+                            <div class="col-xs-9">
+                                <input id="kisi-kurum-ekle-kimlik-no" type="text" class="form-control sayi" />
+                            </div>
+                        </div>
+                        <div class="form-group vergi-dairesi">
+                            <label for="kisi-kurum-ekle-vergi-dairesi" class="control-label col-xs-3">Vergi Dairesi</label>
+                            <div class="col-xs-9">
+                                <input id="kisi-kurum-ekle-vergi-dairesi" type="text" class="form-control uppercase" />
+                            </div>
+                        </div>
+                        <div class="form-group vergi-no">
+                            <label for="kisi-kurum-ekle-vergi-no" class="control-label col-xs-3">Vergi No</label>
+                            <div class="col-xs-9">
+                                <input id="kisi-kurum-ekle-vergi-no" type="text" class="form-control sayi" />
+                            </div>
+                        </div>
+                        <div class="form-group b-telefon visible">
+                            <label for="kisi-kurum-ekle-birincil-telefon" class="control-label col-xs-3">Birincil Telefon</label>
+                            <div class="col-xs-9">
+                                <input id="kisi-kurum-ekle-birincil-telefon" type="text" class="form-control telefon" />
+                            </div>
+                        </div>
+                        <div class="form-group telefonlar visible">
+                            <label for="kisi-kurum-ekle-telefon" class="control-label col-xs-3">Telefon</label>
+                            <div class="col-xs-9">
+                                <div class="input-group">
+                                    <input id="kisi-kurum-ekle-telefon" type="text" class="form-control telefon" />
+                                    <span class="input-group-btn">
+                                        <button class="btn btn-default telefon-ekle">
+                                            <i class="glyphicon glyphicon-plus"></i>
+                                        </button>
+                                    </span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="form-group b-adres visible">
+                            <label for="kisi-kurum-ekle-birincil-adres" class="control-label col-xs-3">Birincil Adres</label>
+                            <div class="col-xs-9">
+                                <input id="kisi-kurum-ekle-birincil-adres" type="text" class="form-control adres uppercase" />
+                            </div>
+                        </div>
+                        <div class="form-group adresler visible">
+                            <label for="kisi-kurum-ekle-adres" class="control-label col-xs-3">Adres</label>
+                            <div class="col-xs-9">
+                                <div class="input-group">
+                                    <input id="kisi-kurum-ekle-adres" type="text" class="form-control adres uppercase" />
+                                    <span class="input-group-btn">
+                                        <button class="btn btn-default adres-ekle">
+                                            <i class="glyphicon glyphicon-plus"></i>
+                                        </button>
+                                    </span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="form-group iletisim-not visible">
+                            <label for="kisi-kurum-ekle-iletisim-not" class="control-label col-xs-3">İletişim Notu</label>
+                            <div class="col-xs-9">
+                                <textarea id="kisi-kurum-ekle-iletisim-not" class="form-control"></textarea>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="modal-feedback">
+
+                    </div>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-primary kaydet">Kaydet ve Seç</button>
+                    <button type="button" data-dismiss="modal" class="btn btn-default">Kapat</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="modal maliyet-not-goruntule">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header clearfix">
+                    <button type="button" class="close" data-dismiss="modal">&times;</button>
+                    <h4 class="modal-title">Araç Maliyeti Notu Görüntüle</h4>
+                </div>
+                <div class="modal-body">
+                    <div class="form-horizontal clearfix">
+                        <div class="form-group">
+                            <div class="col-xs-12">
+                                <textarea id="maliyetNot_TextArea" style="width:100%; height:255px; resize:none;"></textarea>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="modal-feedback">
+
+                    </div>
+                </div>
+                <div class="modal-footer">
+                    <label class="modal-FooterLabel"><span></span></label>
+                    <button id="maliyetNot_Kaydet" type="button" class="btn btn-primary">Kaydet</button>
+                    <button type="button" data-dismiss="modal" class="btn btn-default">Kapat</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="modal text-goruntule">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header clearfix">
+                    <button type="button" class="close" data-dismiss="modal">&times;</button>
+                    <h4 class="modal-title"></h4>
+                </div>
+                <div class="modal-body">
+
+                </div>
+                <div class="modal-footer">
+                    <button type="button" data-dismiss="modal" class="btn btn-default">Kapat</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="modal maliyet-column-ekle">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header clearfix">
+                    <button type="button" class="close" data-dismiss="modal">&times;</button>
+                    <h4 class="modal-title">Tabloya Sütun Ekle</h4>
+                </div>
+                <div class="modal-body">
+                    <div class="form-horizontal clearfix">
+                        <div class="form-group">
+                            <label for="maliyet-column-ad" class="control-label col-xs-3">Sütun Adı</label>
+                            <div class="col-xs-9">
+                                <input id="maliyet-column-ad" type="text" class="form-control" />
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label for="maliyet-column-tip" class="control-label col-xs-3">Sütun Tipi</label>
+                            <div class="col-xs-9">
+                                <select id="maliyet-column-tip" class="form-control">
+                                    <option>Kaporta-Boya</option>
+                                    <option>Yıkama</option>
+                                    <option>Mekanik</option>
+                                    <option>Diğer</option>
+                                </select>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="modal-feedback">
+
+                    </div>
+                </div>
+                <div class="modal-footer">
+                    <label class="modal-FooterLabel"><span></span></label>
+                    <button id="maliyetColumn_Kaydet" type="button" class="btn btn-primary">Kaydet</button>
+                    <button type="button" data-dismiss="modal" class="btn btn-default">Kapat</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="modal maliyet-column-sil">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header clearfix">
+                    <button type="button" class="close" data-dismiss="modal">&times;</button>
+                    <h4 class="modal-title">Tabloya Sütun Sil</h4>
+                </div>
+                <div class="modal-body">
+                    <div class="form-horizontal clearfix">
+                        <div class="form-group">
+                            <label for="maliyet-column-tip" class="control-label col-xs-3">Silinecek Sütun</label>
+                            <div class="col-xs-9">
+                                <select id="maliyet-column-silinecek" class="form-control"></select>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="modal-feedback">
+
+                    </div>
+                </div>
+                <div class="modal-footer">
+                    <label class="modal-FooterLabel"><span></span></label>
+                    <button id="maliyetColumn_Sil" type="button" class="btn btn-primary">Sil</button>
+                    <button type="button" data-dismiss="modal" class="btn btn-default">Kapat</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="modal resmi-giris-ekle">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header clearfix">
+                    <button type="button" class="close" data-dismiss="modal">&times;</button>
+                    <h4 class="modal-title">Resmi Girişi Yap</h4>
+                </div>
+                <div class="modal-body">
+                    <div class="form-horizontal clearfix">
+                        <div class="form-group tip visible">
+                            <label for="resmi-giris-ekle-tip" class="control-label col-xs-4">Tip</label>
+                            <div class="col-xs-8">
+                                <select id="resmi-giris-ekle-tip" class="form-control">
+                                    <option>Kişi</option>
+                                    <option>Kurum</option>
+                                </select>
+                            </div>
+                        </div>
+                        <div class="form-group ad visible">
+                            <label for="resmi-giris-ekle-ad" class="control-label col-xs-4">Alınan Kişi</label>
+                            <div class="col-xs-8">
+                                <input id="resmi-giris-ekle-ad" type="text" class="form-control uppercase" />
+                            </div>
+                        </div>
+                        <div class="form-group resmigiristcvergino visible">
+                            <label for="resmi-giris-ekle-resmigiristcvergino" class="control-label col-xs-4">Kimlik / Vergi No</label>
+                            <div class="col-xs-8">
+                                <input id="resmi-giris-ekle-resmigiristcvergino" type="text" class="form-control uppercase" />
+                            </div>
+                        </div>
+                        <div class="form-group faturaverildimi">
+                            <label for="resmi-giris-ekle-faturaverildimi" class="control-label col-xs-4">Fatura Verildimi ?</label>
+                            <div class="col-xs-8">
+                                <select id="resmi-giris-ekle-faturaverildimi" class="form-control">
+                                    <option>Evet</option>
+                                    <option>Hayır</option>
+                                </select>
+                            </div>
+                        </div>
+                        <div class="form-group alistarihi visible">
+                            <label for="resmi-giris-ekle-alistarihi" class="control-label col-xs-4">Resmi Alış Tarihi</label>
+                            <div class="col-xs-8">
+                                <input id="resmi-giris-ekle-alistarihi" type="text" class="form-control tarih" />
+                            </div>
+                        </div>
+                        <div class="form-group girisbedeli visible">
+                            <label for="resmi-giris-ekle-girisbedeli" class="control-label col-xs-4">Resmi Giriş Bedeli</label>
+                            <div class="col-xs-8">
+                                <input id="resmi-giris-ekle-girisbedeli" type="text" class="form-control sayi" />
+                            </div>
+                        </div>
+
+                        <div class="modal-feedback">
+
+                        </div>
+
+                    </div> 
+                    <div class="modal-feedback">
+
+                    </div>    
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-primary kaydet">Kaydet</button>
+                    <button type="button" data-dismiss="modal" class="btn btn-default">Kapat</button>
+                </div>
+            </div>
+        </div>
+
+    </div>
+       
+    <div class="modal resmi-cikis-ekle">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header clearfix">
+                    <button type="button" class="close" data-dismiss="modal">&times;</button>
+                    <h4 class="modal-title">Resmi Çıkış Yap</h4>
+                </div>
+                <div class="modal-body">
+                    <div class="form-horizontal clearfix">
+                        <div class="form-group ad visible">
+                            <label for="resmi-cikis-ekle-ad" class="control-label col-xs-4">Satılan Kişi</label>
+                            <div class="col-xs-8">
+                                <input id="resmi-cikis-ekle-ad" type="text" class="form-control uppercase" />
+                            </div>
+
+                        </div>
+                        <div class="form-group resmicikistcvergino visible">
+                            <label for="resmi-cikis-ekle-resmicikistcvergino" class="control-label col-xs-4">Kimlik / Vergi No</label>
+                            <div class="col-xs-8">
+                                <input id="resmi-cikis-ekle-resmicikistcvergino" type="text" class="form-control uppercase" />
+                            </div>
+                        </div>
+                        <div class="form-group cikistarihi visible">
+                            <label for="resmi-cikis-ekle-cikistarihi" class="control-label col-xs-4">Resmi Çıkış Tarihi</label>
+                            <div class="col-xs-8">
+                                <input id="resmi-cikis-ekle-cikistarihi" type="text" class="form-control tarih" />
+                            </div>
+                        </div>
+                        <div class="form-group cikisbedeli visible">
+                            <label for="resmi-cikis-ekle-cikisbedeli" class="control-label col-xs-4">Resmi Çıkış Bedeli</label>
+                            <div class="col-xs-8">
+                                <input id="resmi-cikis-ekle-cikisbedeli" type="text" class="form-control sayi" />
+                            </div>
+                        </div>
+
+                        <div class="modal-feedback">
+
+                        </div>
+                    </div>
+                        <div class="modal-footer">
+                            <button type="button" class="btn btn-primary kaydet">Kaydet</button>
+                            <button type="button" data-dismiss="modal" class="btn btn-default">Kapat</button>
+                        </div>
+                    </div>
+               
+            </div>
+        </div>
+    </div>
+
+  
+</body>
+</html>

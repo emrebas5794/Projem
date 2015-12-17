@@ -1,0 +1,1 @@
+ALTER TABLE Tadilatlar ADD Maliyet_Kaporta_Boya_v INT, Not_Kaporta_Boya_v NVARCHAR(255), Hesap_Kaporta_Boya_v BIT, Kayit_Kaporta_Boya_v BIT, Kesim_Kaporta_Boya_v DATE
