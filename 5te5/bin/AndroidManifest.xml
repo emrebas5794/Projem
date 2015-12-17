@@ -1,0 +1,100 @@
+<manifest xmlns:android="http://schemas.android.com/apk/res/android" android:versionCode="2" android:versionName="2.0" package="com.teknoem.bestebe">
+
+    <uses-sdk android:minSdkVersion="10" android:targetSdkVersion="22"/>
+
+    <uses-permission android:name="android.permission.INTERNET"/>
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE"/>
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE"/>
+
+    <permission android:name="com.example.te5.permission.C2D_MESSAGE" android:protectionLevel="signature"/>
+
+    <uses-permission android:name="com.example.te5.permission.C2D_MESSAGE"/>
+    <uses-permission android:name="com.example.te5.pushnotification.RECEIVER"/>
+
+    <permission android:name="com.example.te5.pushnotification.RECEIVER" android:protectionLevel="signature"/>
+
+    <application android:allowBackup="true" android:icon="@drawable/ic_launcher" android:label="@string/app_name" android:theme="@style/AppTheme">
+        <meta-data android:name="com.google.android.gms.version" android:value="@integer/google_play_services_version"/>
+
+        <activity android:label="@string/app_name" android:name="com.teknoem.bestebes.MainActivity" android:screenOrientation="portrait">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN"/>
+
+                <category android:name="android.intent.category.LAUNCHER"/>
+            </intent-filter>
+        </activity>
+        <activity android:label="@string/title_activity_anasayfa" android:name="com.teknoem.bestebes.Anasayfa" android:screenOrientation="portrait">
+        </activity>
+        <activity android:label="@string/title_activity_kayit1" android:name="com.teknoem.bestebes.Kayit1" android:screenOrientation="portrait">
+        </activity>
+        <activity android:label="@string/title_activity_kayit2" android:name="com.teknoem.bestebes.Kayit2" android:screenOrientation="portrait">
+        </activity>
+        <activity android:label="@string/title_activity_kayit3" android:name="com.teknoem.bestebes.Kayit3" android:screenOrientation="portrait">
+        </activity>
+        <activity android:label="@string/title_activity_kayit4" android:name="com.teknoem.bestebes.Kayit4" android:screenOrientation="portrait">
+        </activity>
+        <activity android:label="@string/title_activity_kayit5" android:name="com.teknoem.bestebes.Kayit5" android:screenOrientation="portrait">
+        </activity>
+        <activity android:label="@string/title_activity_soru1" android:name="com.teknoem.bestebes.Soru1" android:screenOrientation="portrait">
+        </activity>
+        <activity android:label="@string/title_activity_dogru" android:name="com.teknoem.bestebes.Dogru" android:screenOrientation="portrait">
+        </activity>
+        <activity android:label="@string/title_activity_yanlis" android:name="com.teknoem.bestebes.Yanlis" android:screenOrientation="portrait">
+        </activity>
+        <activity android:label="@string/title_activity_soru2" android:name="com.teknoem.bestebes.Soru2" android:screenOrientation="portrait">
+        </activity>
+        <activity android:label="@string/title_activity_soru3" android:name="com.teknoem.bestebes.Soru3" android:screenOrientation="portrait">
+        </activity>
+        <activity android:label="@string/title_activity_soru4" android:name="com.teknoem.bestebes.Soru4" android:screenOrientation="portrait">
+        </activity>
+        <activity android:label="@string/title_activity_soru5" android:name="com.teknoem.bestebes.Soru5" android:screenOrientation="portrait">
+        </activity>
+        <activity android:label="@string/title_activity_puan_durumu" android:name="com.teknoem.bestebes.PuanDurumu" android:screenOrientation="portrait">
+        </activity>
+        <activity android:label="@string/title_activity_puan_siralamasi" android:name="com.teknoem.bestebes.PuanSiralamasi" android:screenOrientation="portrait">
+        </activity>
+        <activity android:label="@string/title_activity_gpuan_siralamasi" android:name="com.teknoem.bestebes.GPuanSiralamasi" android:screenOrientation="portrait">
+        </activity>
+        <activity android:label="@string/title_activity_profil" android:name="com.teknoem.bestebes.Profil" android:screenOrientation="portrait">
+        </activity>
+        <activity android:label="@string/title_activity_bilgiler" android:name="com.teknoem.bestebes.Bilgiler" android:screenOrientation="portrait">
+        </activity>
+        <activity android:label="@string/title_activity_soruyu_paylas" android:name="com.teknoem.bestebes.SoruyuPaylas">
+        </activity>
+
+        <receiver android:name="tr.com.turkcellteknoloji.pushnotificationsdk.GcmBroadcastReceiver" android:permission="com.google.android.c2dm.permission.SEND">
+            <intent-filter>
+                <action android:name="com.google.android.c2dm.intent.RECEIVE"/>
+
+                <category android:name="com.example.te5"/>
+            </intent-filter>
+        </receiver>
+        <receiver android:name="com.teknoem.bestebes.PushNotificationReceiver" android:permission="com.example.te5.pushnotification.RECEIVER">
+            <intent-filter>
+                <action android:name="tr.com.turkcellteknoloji.pushnotificationsdk.RECEIVER"/>
+
+                <category android:name="com.example.te5"/>
+            </intent-filter>
+        </receiver>
+
+        <activity android:label="@string/title_activity_surenizdoldu" android:name="com.teknoem.bestebes.Surenizdoldu">
+        </activity>
+        <activity android:configChanges="keyboard|keyboardHidden|orientation|screenLayout|uiMode|screenSize|smallestScreenSize" android:name="com.google.android.gms.ads.AdActivity"/>
+        <activity android:label="@string/title_activity_networkkontrol" android:name="com.teknoem.bestebes.Networkkontrol">
+        </activity>
+        <activity android:label="@string/title_activity_hata" android:name="com.teknoem.bestebes.Hata">
+        </activity>
+        <activity android:label="@string/title_activity_oduller" android:name="com.teknoem.bestebes.Oduller">
+        </activity>
+        <activity android:label="@string/title_activity_face" android:name="com.teknoem.bestebes.Face">
+        </activity>
+        <activity android:label="@string/title_activity_kullanici_soru" android:name="com.teknoem.bestebes.KullaniciSoru">
+        </activity>
+        <service android:name="tr.com.turkcellteknoloji.pushnotificationsdk.GcmIntentService"/>
+    </application>
+
+    <uses-permission android:name="android.permission.GET_ACCOUNTS"/>
+    <uses-permission android:name="android.permission.WAKE_LOCK"/>
+    <uses-permission android:name="com.google.android.c2dm.permission.RECEIVE"/>
+
+</manifest>

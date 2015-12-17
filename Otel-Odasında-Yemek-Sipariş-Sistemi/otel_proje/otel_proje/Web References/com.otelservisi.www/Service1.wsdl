@@ -1,0 +1,996 @@
+<?xml version="1.0" encoding="utf-8"?>
+<wsdl:definitions xmlns:soapenc="http://schemas.xmlsoap.org/soap/encoding/" xmlns:mime="http://schemas.xmlsoap.org/wsdl/mime/" xmlns:tns="http://tempuri.org/" xmlns:s="http://www.w3.org/2001/XMLSchema" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:tm="http://microsoft.com/wsdl/mime/textMatching/" xmlns:http="http://schemas.xmlsoap.org/wsdl/http/" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" targetNamespace="http://tempuri.org/" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">
+  <wsdl:types>
+    <s:schema elementFormDefault="qualified" targetNamespace="http://tempuri.org/">
+      <s:element name="HelloWorld">
+        <s:complexType />
+      </s:element>
+      <s:element name="HelloWorldResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="HelloWorldResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="login">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="odano" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="loginResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="loginResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="asd">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="odano" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="asdResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="asdResult">
+              <s:complexType>
+                <s:sequence>
+                  <s:element ref="s:schema" />
+                  <s:any />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="calistir">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="sql" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="calistirResponse">
+        <s:complexType />
+      </s:element>
+      <s:element name="sipariskayit">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="odano" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="yemekadi" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="yemekadet" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="yemekfiyat" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="sipariskayitResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="sipariskayitResult" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="yemekhanesil">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="id" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="yemekhanesilResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="yemekhanesilResult" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="servissil">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="id" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="servissilResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="servissilResult" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="servisekle">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="odano" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="servisekleResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="servisekleResult" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="yemekgosterid">
+        <s:complexType />
+      </s:element>
+      <s:element name="yemekgosteridResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="yemekgosteridResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="yemekgosterisim">
+        <s:complexType />
+      </s:element>
+      <s:element name="yemekgosterisimResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="yemekgosterisimResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="yemekgosterresim">
+        <s:complexType />
+      </s:element>
+      <s:element name="yemekgosterresimResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="yemekgosterresimResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="vericekme">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="sql" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="vericekmeResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="vericekmeResult">
+              <s:complexType>
+                <s:sequence>
+                  <s:element ref="s:schema" />
+                  <s:any />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="yemeklerigosterid">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="menuidsi" type="s:int" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="yemeklerigosteridResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="yemeklerigosteridResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="yemeklerigosterisim">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="menuidsi" type="s:int" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="yemeklerigosterisimResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="yemeklerigosterisimResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="yemeklerigosterfiyat">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="menuidsi" type="s:int" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="yemeklerigosterfiyatResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="yemeklerigosterfiyatResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="yemeklerigosterresim">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="menuidsi" type="s:int" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="yemeklerigosterresimResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="yemeklerigosterresimResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="yemekhaneodano">
+        <s:complexType />
+      </s:element>
+      <s:element name="yemekhaneodanoResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="yemekhaneodanoResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="yemekhaneyemekid">
+        <s:complexType />
+      </s:element>
+      <s:element name="yemekhaneyemekidResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="yemekhaneyemekidResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="yemekhaneyemekadi">
+        <s:complexType />
+      </s:element>
+      <s:element name="yemekhaneyemekadiResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="yemekhaneyemekadiResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="yemekhaneyemekadet">
+        <s:complexType />
+      </s:element>
+      <s:element name="yemekhaneyemekadetResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="yemekhaneyemekadetResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="serviselamanid">
+        <s:complexType />
+      </s:element>
+      <s:element name="serviselamanidResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="serviselamanidResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="serviselamanoda">
+        <s:complexType />
+      </s:element>
+      <s:element name="serviselamanodaResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="serviselamanodaResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="kullaniciid">
+        <s:complexType />
+      </s:element>
+      <s:element name="kullaniciidResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="kullaniciidResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="kullaniciadi">
+        <s:complexType />
+      </s:element>
+      <s:element name="kullaniciadiResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="kullaniciadiResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+    </s:schema>
+  </wsdl:types>
+  <wsdl:message name="HelloWorldSoapIn">
+    <wsdl:part name="parameters" element="tns:HelloWorld" />
+  </wsdl:message>
+  <wsdl:message name="HelloWorldSoapOut">
+    <wsdl:part name="parameters" element="tns:HelloWorldResponse" />
+  </wsdl:message>
+  <wsdl:message name="loginSoapIn">
+    <wsdl:part name="parameters" element="tns:login" />
+  </wsdl:message>
+  <wsdl:message name="loginSoapOut">
+    <wsdl:part name="parameters" element="tns:loginResponse" />
+  </wsdl:message>
+  <wsdl:message name="asdSoapIn">
+    <wsdl:part name="parameters" element="tns:asd" />
+  </wsdl:message>
+  <wsdl:message name="asdSoapOut">
+    <wsdl:part name="parameters" element="tns:asdResponse" />
+  </wsdl:message>
+  <wsdl:message name="calistirSoapIn">
+    <wsdl:part name="parameters" element="tns:calistir" />
+  </wsdl:message>
+  <wsdl:message name="calistirSoapOut">
+    <wsdl:part name="parameters" element="tns:calistirResponse" />
+  </wsdl:message>
+  <wsdl:message name="sipariskayitSoapIn">
+    <wsdl:part name="parameters" element="tns:sipariskayit" />
+  </wsdl:message>
+  <wsdl:message name="sipariskayitSoapOut">
+    <wsdl:part name="parameters" element="tns:sipariskayitResponse" />
+  </wsdl:message>
+  <wsdl:message name="yemekhanesilSoapIn">
+    <wsdl:part name="parameters" element="tns:yemekhanesil" />
+  </wsdl:message>
+  <wsdl:message name="yemekhanesilSoapOut">
+    <wsdl:part name="parameters" element="tns:yemekhanesilResponse" />
+  </wsdl:message>
+  <wsdl:message name="servissilSoapIn">
+    <wsdl:part name="parameters" element="tns:servissil" />
+  </wsdl:message>
+  <wsdl:message name="servissilSoapOut">
+    <wsdl:part name="parameters" element="tns:servissilResponse" />
+  </wsdl:message>
+  <wsdl:message name="servisekleSoapIn">
+    <wsdl:part name="parameters" element="tns:servisekle" />
+  </wsdl:message>
+  <wsdl:message name="servisekleSoapOut">
+    <wsdl:part name="parameters" element="tns:servisekleResponse" />
+  </wsdl:message>
+  <wsdl:message name="yemekgosteridSoapIn">
+    <wsdl:part name="parameters" element="tns:yemekgosterid" />
+  </wsdl:message>
+  <wsdl:message name="yemekgosteridSoapOut">
+    <wsdl:part name="parameters" element="tns:yemekgosteridResponse" />
+  </wsdl:message>
+  <wsdl:message name="yemekgosterisimSoapIn">
+    <wsdl:part name="parameters" element="tns:yemekgosterisim" />
+  </wsdl:message>
+  <wsdl:message name="yemekgosterisimSoapOut">
+    <wsdl:part name="parameters" element="tns:yemekgosterisimResponse" />
+  </wsdl:message>
+  <wsdl:message name="yemekgosterresimSoapIn">
+    <wsdl:part name="parameters" element="tns:yemekgosterresim" />
+  </wsdl:message>
+  <wsdl:message name="yemekgosterresimSoapOut">
+    <wsdl:part name="parameters" element="tns:yemekgosterresimResponse" />
+  </wsdl:message>
+  <wsdl:message name="vericekmeSoapIn">
+    <wsdl:part name="parameters" element="tns:vericekme" />
+  </wsdl:message>
+  <wsdl:message name="vericekmeSoapOut">
+    <wsdl:part name="parameters" element="tns:vericekmeResponse" />
+  </wsdl:message>
+  <wsdl:message name="yemeklerigosteridSoapIn">
+    <wsdl:part name="parameters" element="tns:yemeklerigosterid" />
+  </wsdl:message>
+  <wsdl:message name="yemeklerigosteridSoapOut">
+    <wsdl:part name="parameters" element="tns:yemeklerigosteridResponse" />
+  </wsdl:message>
+  <wsdl:message name="yemeklerigosterisimSoapIn">
+    <wsdl:part name="parameters" element="tns:yemeklerigosterisim" />
+  </wsdl:message>
+  <wsdl:message name="yemeklerigosterisimSoapOut">
+    <wsdl:part name="parameters" element="tns:yemeklerigosterisimResponse" />
+  </wsdl:message>
+  <wsdl:message name="yemeklerigosterfiyatSoapIn">
+    <wsdl:part name="parameters" element="tns:yemeklerigosterfiyat" />
+  </wsdl:message>
+  <wsdl:message name="yemeklerigosterfiyatSoapOut">
+    <wsdl:part name="parameters" element="tns:yemeklerigosterfiyatResponse" />
+  </wsdl:message>
+  <wsdl:message name="yemeklerigosterresimSoapIn">
+    <wsdl:part name="parameters" element="tns:yemeklerigosterresim" />
+  </wsdl:message>
+  <wsdl:message name="yemeklerigosterresimSoapOut">
+    <wsdl:part name="parameters" element="tns:yemeklerigosterresimResponse" />
+  </wsdl:message>
+  <wsdl:message name="yemekhaneodanoSoapIn">
+    <wsdl:part name="parameters" element="tns:yemekhaneodano" />
+  </wsdl:message>
+  <wsdl:message name="yemekhaneodanoSoapOut">
+    <wsdl:part name="parameters" element="tns:yemekhaneodanoResponse" />
+  </wsdl:message>
+  <wsdl:message name="yemekhaneyemekidSoapIn">
+    <wsdl:part name="parameters" element="tns:yemekhaneyemekid" />
+  </wsdl:message>
+  <wsdl:message name="yemekhaneyemekidSoapOut">
+    <wsdl:part name="parameters" element="tns:yemekhaneyemekidResponse" />
+  </wsdl:message>
+  <wsdl:message name="yemekhaneyemekadiSoapIn">
+    <wsdl:part name="parameters" element="tns:yemekhaneyemekadi" />
+  </wsdl:message>
+  <wsdl:message name="yemekhaneyemekadiSoapOut">
+    <wsdl:part name="parameters" element="tns:yemekhaneyemekadiResponse" />
+  </wsdl:message>
+  <wsdl:message name="yemekhaneyemekadetSoapIn">
+    <wsdl:part name="parameters" element="tns:yemekhaneyemekadet" />
+  </wsdl:message>
+  <wsdl:message name="yemekhaneyemekadetSoapOut">
+    <wsdl:part name="parameters" element="tns:yemekhaneyemekadetResponse" />
+  </wsdl:message>
+  <wsdl:message name="serviselamanidSoapIn">
+    <wsdl:part name="parameters" element="tns:serviselamanid" />
+  </wsdl:message>
+  <wsdl:message name="serviselamanidSoapOut">
+    <wsdl:part name="parameters" element="tns:serviselamanidResponse" />
+  </wsdl:message>
+  <wsdl:message name="serviselamanodaSoapIn">
+    <wsdl:part name="parameters" element="tns:serviselamanoda" />
+  </wsdl:message>
+  <wsdl:message name="serviselamanodaSoapOut">
+    <wsdl:part name="parameters" element="tns:serviselamanodaResponse" />
+  </wsdl:message>
+  <wsdl:message name="kullaniciidSoapIn">
+    <wsdl:part name="parameters" element="tns:kullaniciid" />
+  </wsdl:message>
+  <wsdl:message name="kullaniciidSoapOut">
+    <wsdl:part name="parameters" element="tns:kullaniciidResponse" />
+  </wsdl:message>
+  <wsdl:message name="kullaniciadiSoapIn">
+    <wsdl:part name="parameters" element="tns:kullaniciadi" />
+  </wsdl:message>
+  <wsdl:message name="kullaniciadiSoapOut">
+    <wsdl:part name="parameters" element="tns:kullaniciadiResponse" />
+  </wsdl:message>
+  <wsdl:portType name="Service1Soap">
+    <wsdl:operation name="HelloWorld">
+      <wsdl:input message="tns:HelloWorldSoapIn" />
+      <wsdl:output message="tns:HelloWorldSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="login">
+      <wsdl:input message="tns:loginSoapIn" />
+      <wsdl:output message="tns:loginSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="asd">
+      <wsdl:input message="tns:asdSoapIn" />
+      <wsdl:output message="tns:asdSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="calistir">
+      <wsdl:input message="tns:calistirSoapIn" />
+      <wsdl:output message="tns:calistirSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="sipariskayit">
+      <wsdl:input message="tns:sipariskayitSoapIn" />
+      <wsdl:output message="tns:sipariskayitSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="yemekhanesil">
+      <wsdl:input message="tns:yemekhanesilSoapIn" />
+      <wsdl:output message="tns:yemekhanesilSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="servissil">
+      <wsdl:input message="tns:servissilSoapIn" />
+      <wsdl:output message="tns:servissilSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="servisekle">
+      <wsdl:input message="tns:servisekleSoapIn" />
+      <wsdl:output message="tns:servisekleSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="yemekgosterid">
+      <wsdl:input message="tns:yemekgosteridSoapIn" />
+      <wsdl:output message="tns:yemekgosteridSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="yemekgosterisim">
+      <wsdl:input message="tns:yemekgosterisimSoapIn" />
+      <wsdl:output message="tns:yemekgosterisimSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="yemekgosterresim">
+      <wsdl:input message="tns:yemekgosterresimSoapIn" />
+      <wsdl:output message="tns:yemekgosterresimSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="vericekme">
+      <wsdl:input message="tns:vericekmeSoapIn" />
+      <wsdl:output message="tns:vericekmeSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="yemeklerigosterid">
+      <wsdl:input message="tns:yemeklerigosteridSoapIn" />
+      <wsdl:output message="tns:yemeklerigosteridSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="yemeklerigosterisim">
+      <wsdl:input message="tns:yemeklerigosterisimSoapIn" />
+      <wsdl:output message="tns:yemeklerigosterisimSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="yemeklerigosterfiyat">
+      <wsdl:input message="tns:yemeklerigosterfiyatSoapIn" />
+      <wsdl:output message="tns:yemeklerigosterfiyatSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="yemeklerigosterresim">
+      <wsdl:input message="tns:yemeklerigosterresimSoapIn" />
+      <wsdl:output message="tns:yemeklerigosterresimSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="yemekhaneodano">
+      <wsdl:input message="tns:yemekhaneodanoSoapIn" />
+      <wsdl:output message="tns:yemekhaneodanoSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="yemekhaneyemekid">
+      <wsdl:input message="tns:yemekhaneyemekidSoapIn" />
+      <wsdl:output message="tns:yemekhaneyemekidSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="yemekhaneyemekadi">
+      <wsdl:input message="tns:yemekhaneyemekadiSoapIn" />
+      <wsdl:output message="tns:yemekhaneyemekadiSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="yemekhaneyemekadet">
+      <wsdl:input message="tns:yemekhaneyemekadetSoapIn" />
+      <wsdl:output message="tns:yemekhaneyemekadetSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="serviselamanid">
+      <wsdl:input message="tns:serviselamanidSoapIn" />
+      <wsdl:output message="tns:serviselamanidSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="serviselamanoda">
+      <wsdl:input message="tns:serviselamanodaSoapIn" />
+      <wsdl:output message="tns:serviselamanodaSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="kullaniciid">
+      <wsdl:input message="tns:kullaniciidSoapIn" />
+      <wsdl:output message="tns:kullaniciidSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="kullaniciadi">
+      <wsdl:input message="tns:kullaniciadiSoapIn" />
+      <wsdl:output message="tns:kullaniciadiSoapOut" />
+    </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:binding name="Service1Soap" type="tns:Service1Soap">
+    <soap:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <wsdl:operation name="HelloWorld">
+      <soap:operation soapAction="http://tempuri.org/HelloWorld" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="login">
+      <soap:operation soapAction="http://tempuri.org/login" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="asd">
+      <soap:operation soapAction="http://tempuri.org/asd" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="calistir">
+      <soap:operation soapAction="http://tempuri.org/calistir" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="sipariskayit">
+      <soap:operation soapAction="http://tempuri.org/sipariskayit" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="yemekhanesil">
+      <soap:operation soapAction="http://tempuri.org/yemekhanesil" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="servissil">
+      <soap:operation soapAction="http://tempuri.org/servissil" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="servisekle">
+      <soap:operation soapAction="http://tempuri.org/servisekle" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="yemekgosterid">
+      <soap:operation soapAction="http://tempuri.org/yemekgosterid" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="yemekgosterisim">
+      <soap:operation soapAction="http://tempuri.org/yemekgosterisim" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="yemekgosterresim">
+      <soap:operation soapAction="http://tempuri.org/yemekgosterresim" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="vericekme">
+      <soap:operation soapAction="http://tempuri.org/vericekme" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="yemeklerigosterid">
+      <soap:operation soapAction="http://tempuri.org/yemeklerigosterid" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="yemeklerigosterisim">
+      <soap:operation soapAction="http://tempuri.org/yemeklerigosterisim" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="yemeklerigosterfiyat">
+      <soap:operation soapAction="http://tempuri.org/yemeklerigosterfiyat" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="yemeklerigosterresim">
+      <soap:operation soapAction="http://tempuri.org/yemeklerigosterresim" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="yemekhaneodano">
+      <soap:operation soapAction="http://tempuri.org/yemekhaneodano" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="yemekhaneyemekid">
+      <soap:operation soapAction="http://tempuri.org/yemekhaneyemekid" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="yemekhaneyemekadi">
+      <soap:operation soapAction="http://tempuri.org/yemekhaneyemekadi" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="yemekhaneyemekadet">
+      <soap:operation soapAction="http://tempuri.org/yemekhaneyemekadet" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="serviselamanid">
+      <soap:operation soapAction="http://tempuri.org/serviselamanid" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="serviselamanoda">
+      <soap:operation soapAction="http://tempuri.org/serviselamanoda" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="kullaniciid">
+      <soap:operation soapAction="http://tempuri.org/kullaniciid" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="kullaniciadi">
+      <soap:operation soapAction="http://tempuri.org/kullaniciadi" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:binding name="Service1Soap12" type="tns:Service1Soap">
+    <soap12:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <wsdl:operation name="HelloWorld">
+      <soap12:operation soapAction="http://tempuri.org/HelloWorld" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="login">
+      <soap12:operation soapAction="http://tempuri.org/login" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="asd">
+      <soap12:operation soapAction="http://tempuri.org/asd" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="calistir">
+      <soap12:operation soapAction="http://tempuri.org/calistir" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="sipariskayit">
+      <soap12:operation soapAction="http://tempuri.org/sipariskayit" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="yemekhanesil">
+      <soap12:operation soapAction="http://tempuri.org/yemekhanesil" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="servissil">
+      <soap12:operation soapAction="http://tempuri.org/servissil" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="servisekle">
+      <soap12:operation soapAction="http://tempuri.org/servisekle" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="yemekgosterid">
+      <soap12:operation soapAction="http://tempuri.org/yemekgosterid" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="yemekgosterisim">
+      <soap12:operation soapAction="http://tempuri.org/yemekgosterisim" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="yemekgosterresim">
+      <soap12:operation soapAction="http://tempuri.org/yemekgosterresim" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="vericekme">
+      <soap12:operation soapAction="http://tempuri.org/vericekme" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="yemeklerigosterid">
+      <soap12:operation soapAction="http://tempuri.org/yemeklerigosterid" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="yemeklerigosterisim">
+      <soap12:operation soapAction="http://tempuri.org/yemeklerigosterisim" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="yemeklerigosterfiyat">
+      <soap12:operation soapAction="http://tempuri.org/yemeklerigosterfiyat" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="yemeklerigosterresim">
+      <soap12:operation soapAction="http://tempuri.org/yemeklerigosterresim" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="yemekhaneodano">
+      <soap12:operation soapAction="http://tempuri.org/yemekhaneodano" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="yemekhaneyemekid">
+      <soap12:operation soapAction="http://tempuri.org/yemekhaneyemekid" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="yemekhaneyemekadi">
+      <soap12:operation soapAction="http://tempuri.org/yemekhaneyemekadi" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="yemekhaneyemekadet">
+      <soap12:operation soapAction="http://tempuri.org/yemekhaneyemekadet" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="serviselamanid">
+      <soap12:operation soapAction="http://tempuri.org/serviselamanid" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="serviselamanoda">
+      <soap12:operation soapAction="http://tempuri.org/serviselamanoda" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="kullaniciid">
+      <soap12:operation soapAction="http://tempuri.org/kullaniciid" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="kullaniciadi">
+      <soap12:operation soapAction="http://tempuri.org/kullaniciadi" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:service name="Service1">
+    <wsdl:port name="Service1Soap" binding="tns:Service1Soap">
+      <soap:address location="http://www.otelservisi.com/demo/Service1.asmx" />
+    </wsdl:port>
+    <wsdl:port name="Service1Soap12" binding="tns:Service1Soap12">
+      <soap12:address location="http://www.otelservisi.com/demo/Service1.asmx" />
+    </wsdl:port>
+  </wsdl:service>
+</wsdl:definitions>

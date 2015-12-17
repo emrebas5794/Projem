@@ -1,0 +1,21 @@
+﻿
+@model Calisma_DTO.CategoryDTO
+<br /><br />
+<table align="center">
+    @using (Html.BeginForm("Create", "Category", FormMethod.Post))
+    {
+        <tr>
+            <td>Kategori Adı Giriniz</td>
+            <td>@Html.TextBoxFor(m => m.CategoryName)</td>
+        </tr>
+      
+        <tr>
+            <td></td>
+            <td><input id="Submit1" type="submit" value="Ekle" /></td>
+        </tr>
+    }
+
+</table>
+
+
+

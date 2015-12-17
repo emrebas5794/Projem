@@ -1,0 +1,4 @@
+c:\Users\hp\documents\visual studio 2013\Projects\Calisma\Calisma_DTO\bin\Debug\Calisma_DTO.dll
+c:\Users\hp\documents\visual studio 2013\Projects\Calisma\Calisma_DTO\bin\Debug\Calisma_DTO.pdb
+c:\Users\hp\documents\visual studio 2013\Projects\Calisma\Calisma_DTO\obj\Debug\Calisma_DTO.dll
+c:\Users\hp\documents\visual studio 2013\Projects\Calisma\Calisma_DTO\obj\Debug\Calisma_DTO.pdb

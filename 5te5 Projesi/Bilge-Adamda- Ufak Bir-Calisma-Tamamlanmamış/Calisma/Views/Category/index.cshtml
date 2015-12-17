@@ -1,0 +1,52 @@
+﻿@model List<Calisma_DTO.CategoryDTO>
+
+
+<!-- Page Heading -->
+<div class="row">
+    <div class="col-lg-12">
+        <h1 class="page-header">
+            Kategori
+        </h1>
+        <ol class="breadcrumb">
+            <li>
+                <i class="fa fa-dashboard"></i>  <a href="/Admin">Giriş</a>
+            </li>
+            <li class="active">
+                <i class="fa fa-table"></i> Kategoriler
+            </li>
+        </ol>
+    </div>
+</div>
+<!-- /.row -->
+
+<div class="row">
+    <div class="col-sm-12">
+        @Html.ActionLink("Yeni ekle", "Create")
+        @*<a href="/Admin/Category/Create">Yeni ekle</a>*@
+
+        <div class="table-responsive">
+            <table class="table table-bordered table-hover">
+                <thead>
+                    <tr>
+                        <th>Adı</th>
+                        <th></th>
+                        <th></th>
+                    </tr>
+                </thead>
+                <tbody>
+                    @foreach (Calisma_DTO.CategoryDTO cat in Model)
+                    {
+                        <tr>
+                            <td>@cat.CategoryName</td>
+                            <td>@Html.ActionLink("Düzenle", "Edit", new { id = cat.id })</td>
+                            <td>@Html.ActionLink("Sil", "Delete", new { id = cat.id })</td>
+                        </tr>
+                    }
+                </tbody>
+
+            </table>
+        </div>
+    </div>
+</div>
+<!-- /.row -->
+

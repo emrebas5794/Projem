@@ -1,0 +1,24 @@
+﻿@model Calisma_DTO.UserDTO
+<br /><br />
+<table align="center">
+@using (Html.BeginForm("Create", "Home", FormMethod.Post))
+            {
+    <tr>
+        <td>Ad</td>
+        <td>@Html.TextBoxFor(m => m.Name)</td>
+    </tr>
+    <tr>
+        <td>Soyad</td>
+        <td>@Html.TextBoxFor(m => m.Surname)</td>
+    </tr>
+    <tr>
+        <td>E_Postanı Gir</td>
+        <td>@Html.TextBoxFor(m => m.Email)</td>
+    </tr>
+    <tr>
+        <td></td>
+        <td><input id="Submit1" type="submit" value="Üye Ol" /></td>
+    </tr>
+}
+
+</table>

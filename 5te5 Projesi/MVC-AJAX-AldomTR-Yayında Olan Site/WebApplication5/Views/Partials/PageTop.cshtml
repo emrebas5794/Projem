@@ -1,0 +1,19 @@
+﻿<div class="page-top clearfix">
+    <div class="left-container">
+        <div class="image">
+            <img src="@Url.Content(ViewBag.ImgUrl)" />
+        </div>
+        <div class="box">
+            <h2 class="title dot-before">@ViewBag.Title</h2>
+            @if (!string.IsNullOrEmpty(ViewBag.PageTitle))
+            {
+                <h3 class="subtitle">@ViewBag.PageTitle</h3>
+            }
+        </div>
+    </div>
+    <div class="right-container">
+        <div class="uncsaal">
+            
+        </div>
+    </div>
+</div>

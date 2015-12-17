@@ -1,0 +1,130 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/LinearLayout1"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/futbol"
+    android:gravity="top"
+    android:orientation="vertical"
+    tools:context="${relativePackage}.${activityClass}" >
+
+    <LinearLayout 
+     android:layout_width="match_parent"
+    android:layout_height="match_parent"
+     android:orientation="vertical"
+     android:gravity="center"
+     android:layout_weight="4"
+     >
+      
+    <ImageView
+        android:id="@+id/button1"
+        android:layout_width="95dp"
+        android:layout_height="95dp"
+   
+        android:background="@drawable/logo" />
+         </LinearLayout>
+         
+    <LinearLayout 
+     android:layout_width="match_parent"
+    android:layout_height="match_parent"
+     android:orientation="vertical"
+     android:layout_weight="1"
+     >
+
+        <EditText
+            android:id="@+id/keditText11"
+            android:layout_width="match_parent"
+            android:layout_height="35dp"
+            android:layout_marginBottom="23dp"
+            android:layout_marginLeft="@dimen/anasayfaedittext"
+            android:layout_marginRight="@dimen/anasayfaedittext"
+            android:background="@drawable/menu2"
+             android:layout_marginTop="20dp"
+            android:ems="10"
+             android:singleLine="true"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:hint="@string/ad"
+            android:textColor="#000000"
+            android:textColorHint="#000000" />
+
+        <EditText
+            android:id="@+id/keditText22"
+            android:layout_width="match_parent"
+            android:layout_height="35dp"
+            android:layout_marginBottom="21dp"
+            android:layout_marginLeft="@dimen/anasayfaedittext"
+            android:layout_marginRight="@dimen/anasayfaedittext"
+            android:background="@drawable/menu2"
+            android:ems="10"
+             android:singleLine="true"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:hint="@string/soyad"
+            android:textColor="#000000"
+            android:textColorHint="#000000" />
+
+    <EditText
+        android:id="@+id/keditText33"
+        android:layout_width="match_parent"
+        android:layout_height="35dp"
+        android:layout_marginBottom="23dp"
+        android:layout_marginLeft="@dimen/anasayfaedittext"
+        android:layout_marginRight="@dimen/anasayfaedittext"
+        android:background="@drawable/menu2"
+        android:ems="10"
+         android:singleLine="true"
+        android:layout_weight="1"
+        android:gravity="center"
+        android:hint="@string/kuladi"
+        android:textColor="#000000"
+        android:textColorHint="#000000" />
+
+    <EditText
+        android:id="@+id/keditText44"
+        android:layout_width="match_parent"
+        android:layout_height="35dp"
+        android:layout_marginBottom="26dp"
+          android:layout_marginLeft="@dimen/anasayfaedittext"
+        android:layout_marginRight="@dimen/anasayfaedittext"
+        android:background="@drawable/menu2"
+        android:ems="10"
+         android:singleLine="true"
+        android:gravity="center"
+        android:layout_weight="1"
+        android:hint="@string/sifre"
+        android:textColor="#000000"
+        android:textColorHint="#000000" />
+
+    <EditText
+        android:id="@+id/keditText55"
+        android:layout_width="match_parent"
+        android:layout_height="35dp"
+        android:layout_marginBottom="28dp"
+        android:layout_weight="1"
+         android:singleLine="true"
+        android:layout_marginLeft="@dimen/anasayfaedittext"
+        android:layout_marginRight="@dimen/anasayfaedittext"
+       
+        android:background="@drawable/menu2"
+        android:ems="10"
+        android:gravity="center"
+        android:hint="@string/mail"
+        android:inputType="textEmailAddress"
+        android:textColor="#000000"
+        android:textColorHint="#000000" />
+
+    <Button
+        android:id="@+id/kuyekaydet"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:layout_marginBottom="20dp"
+        android:layout_weight="1"
+          android:layout_marginLeft="@dimen/anasayfaedittext"
+        android:layout_marginRight="@dimen/anasayfaedittext"
+        android:background="@drawable/kayitol"
+        android:text="KAYDET"
+        android:textColor="#ffffff" />
+        
+         </LinearLayout>
+            </LinearLayout>

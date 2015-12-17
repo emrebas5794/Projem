@@ -1,0 +1,123 @@
+﻿
+<div class="d-top-header">
+    <a href="/">Ana Sayfa</a>
+    <a href="#">Site Haritası</a>
+    <a href="~/Home/Iletisim">İletişim</a>
+</div>
+<div class="d-top-logo-bar">
+    <a href="/"> <img class="logo" src="~/images/logo aldom_baseline.jpg" /> </a>
+</div>
+<div class="d-main-menu">
+    <ul class="main-menu clearfix">
+        <li class="menu-item">
+            <a href="~/Home/Aldom">Aldom</a>
+            <ul>
+                @{
+
+                    System.Data.SqlClient.SqlConnection con = new System.Data.SqlClient.SqlConnection(WebApplication5.Models.General.ConnectionString);
+                    System.Data.SqlClient.SqlCommand com = new System.Data.SqlClient.SqlCommand("SELECT * FROM Pages where Controller=@cont AND Action= @act", con);
+                    com.Parameters.AddWithValue("act", "Aldom");
+                    com.Parameters.AddWithValue("cont", "Home");
+                    con.Open();
+                    System.Data.SqlClient.SqlDataReader rdr = com.ExecuteReader();
+                    while (rdr.Read())
+                    {
+                        <li>
+                            <a href="~/Home/Aldom/@rdr["SubID"].ToString()">@rdr["PageTitle"].ToString()</a>
+                        </li>
+                    }
+                    rdr.Close();
+                    con.Close();
+
+                }
+            </ul>
+        </li>
+        <li class="menu-item">
+            <a href="~/Referans">Referanslar</a>
+            <ul>
+                <li>
+                    <a href="~/Referans/Kamu_Binalari">Kamu Binaları</a>
+                </li>
+                <li>
+                    <a href="~/Referans/Konutlar">Konutlar</a>
+                </li>
+                <li>
+                    <a href="~/Referans/Ticari_Binalar">Ticari Binalar</a>
+                </li>
+                <li>
+                    <a href="~/Referans/Endustriyel_Binalar">Endüstriyel Binalar</a>
+                </li>
+            </ul>
+        </li>
+        <li class="menu-item">
+            <a href="~/Urunler">Ürünler</a>
+            <ul>
+                <li>
+                    <a href="~/Urunler/Cepheler">Cepheler</a>
+                </li>
+                <li>
+                    <a href="~/Urunler/Kapi_ve_Pencere_Sistemleri">Kapı ve Pencereler</a>
+                </li>
+                <li>
+                    <a href="~/Urunler/Surme_Sistemleri">Sürme Sistemler</a>
+                </li>
+                <li>
+                    <a href="~/Urunler/Katlanir_Kapi_Sistemleri">Katlanır Kapı Sistemleri</a>
+                </li>
+            </ul>
+        </li>
+        <li class="menu-item">
+            <a href="~/Home/Yesil_Aluminyum">Yeşil Alüminyum</a>
+            <ul>
+                @{
+
+                    System.Data.SqlClient.SqlConnection con2 = new System.Data.SqlClient.SqlConnection(WebApplication5.Models.General.ConnectionString);
+                    System.Data.SqlClient.SqlCommand com2 = new System.Data.SqlClient.SqlCommand("SELECT * FROM Pages where Controller=@cont AND Action= @act", con2);
+                    com2.Parameters.AddWithValue("act", "Yesil_Aluminyum");
+                    com2.Parameters.AddWithValue("cont", "Home");
+                    con2.Open();
+                    System.Data.SqlClient.SqlDataReader rdr2 = com2.ExecuteReader();
+                    while (rdr2.Read())
+                    {
+                        <li>
+                            <a href="~/Home/Yesil_Aluminyum/@rdr2["SubID"].ToString()">@rdr2["PageTitle"].ToString()</a>
+                        </li>
+                    }
+                    rdr2.Close();
+                    con2.Close();
+
+
+                }
+
+            </ul>
+
+        </li>
+        <li class="menu-item">
+            <a href="~/Home/Distributor/Optimal_Aluminyum">Distribütörler</a>
+            <ul>
+                @{
+
+                    System.Data.SqlClient.SqlConnection con3 = new System.Data.SqlClient.SqlConnection(WebApplication5.Models.General.ConnectionString);
+                    System.Data.SqlClient.SqlCommand com3 = new System.Data.SqlClient.SqlCommand("SELECT * FROM Pages where Controller=@cont AND Action= @act", con3);
+                    com3.Parameters.AddWithValue("act", "Distributor");
+                    com3.Parameters.AddWithValue("cont", "Home");
+                    con3.Open();
+                    System.Data.SqlClient.SqlDataReader rdr3 = com3.ExecuteReader();
+                    while (rdr3.Read())
+                    {
+                        <li>
+                            <a href="~/Home/Distributor/@rdr3["SubID"].ToString()">@rdr3["PageTitle"].ToString()</a>
+                        </li>
+                    }
+                    rdr3.Close();
+                    con3.Close();
+
+
+                }
+            </ul>
+        </li>
+        <li class="menu-item">
+            <a href="~/Home/Iletisim">İletişim</a>
+        </li>
+    </ul>
+</div>

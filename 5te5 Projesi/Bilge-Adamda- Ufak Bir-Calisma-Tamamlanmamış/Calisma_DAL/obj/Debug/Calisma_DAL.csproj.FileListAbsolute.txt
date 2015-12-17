@@ -1,0 +1,12 @@
+c:\Users\hp\documents\visual studio 2013\Projects\Calisma\Calisma_DAL\bin\Debug\Calisma_DAL.dll.config
+c:\Users\hp\documents\visual studio 2013\Projects\Calisma\Calisma_DAL\bin\Debug\Calisma_DAL.dll
+c:\Users\hp\documents\visual studio 2013\Projects\Calisma\Calisma_DAL\bin\Debug\Calisma_DAL.pdb
+c:\Users\hp\documents\visual studio 2013\Projects\Calisma\Calisma_DAL\bin\Debug\EntityFramework.dll
+c:\Users\hp\documents\visual studio 2013\Projects\Calisma\Calisma_DAL\bin\Debug\EntityFramework.SqlServer.dll
+c:\Users\hp\documents\visual studio 2013\Projects\Calisma\Calisma_DAL\bin\Debug\EntityFramework.xml
+c:\Users\hp\documents\visual studio 2013\Projects\Calisma\Calisma_DAL\bin\Debug\EntityFramework.SqlServer.xml
+c:\Users\hp\documents\visual studio 2013\Projects\Calisma\Calisma_DAL\obj\Debug\Calisma_DAL.csprojResolveAssemblyReference.cache
+c:\Users\hp\documents\visual studio 2013\Projects\Calisma\Calisma_DAL\obj\Debug\Calisma_DAL.dll
+c:\Users\hp\documents\visual studio 2013\Projects\Calisma\Calisma_DAL\obj\Debug\Calisma_DAL.pdb
+c:\Users\hp\documents\visual studio 2013\Projects\Calisma\Calisma_DAL\obj\Debug\Calisma_DAL.Migrations.calismadb.resources
+c:\Users\hp\documents\visual studio 2013\Projects\Calisma\Calisma_DAL\obj\Debug\Calisma_DAL.csproj.GenerateResource.Cache

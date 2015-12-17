@@ -1,0 +1,19 @@
+C:\Users\ogrenci\documents\visual studio 2013\Projects\MVC_SimpleBlog\MVC_SimpleBlog.DTO\bin\Debug\MVC_SimpleBlog.DTO.dll
+C:\Users\ogrenci\documents\visual studio 2013\Projects\MVC_SimpleBlog\MVC_SimpleBlog.DTO\bin\Debug\MVC_SimpleBlog.DTO.pdb
+C:\Users\ogrenci\documents\visual studio 2013\Projects\MVC_SimpleBlog\MVC_SimpleBlog.DTO\bin\Debug\MVC_SimpleBlog.Data.dll
+C:\Users\ogrenci\documents\visual studio 2013\Projects\MVC_SimpleBlog\MVC_SimpleBlog.DTO\bin\Debug\EntityFramework.dll
+C:\Users\ogrenci\documents\visual studio 2013\Projects\MVC_SimpleBlog\MVC_SimpleBlog.DTO\bin\Debug\MVC_SimpleBlog.Data.pdb
+C:\Users\ogrenci\documents\visual studio 2013\Projects\MVC_SimpleBlog\MVC_SimpleBlog.DTO\bin\Debug\EntityFramework.xml
+C:\Users\ogrenci\documents\visual studio 2013\Projects\MVC_SimpleBlog\MVC_SimpleBlog.DTO\obj\Debug\MVC_SimpleBlog.DTO.csprojResolveAssemblyReference.cache
+C:\Users\ogrenci\documents\visual studio 2013\Projects\MVC_SimpleBlog\MVC_SimpleBlog.DTO\obj\Debug\MVC_SimpleBlog.DTO.dll
+C:\Users\ogrenci\documents\visual studio 2013\Projects\MVC_SimpleBlog\MVC_SimpleBlog.DTO\obj\Debug\MVC_SimpleBlog.DTO.pdb
+C:\Users\irem\Documents\Visual Studio 2013\Projects\MVC_SimpleBlog\MVC_SimpleBlog.DTO\bin\Debug\MVC_SimpleBlog.DTO.dll
+C:\Users\irem\Documents\Visual Studio 2013\Projects\MVC_SimpleBlog\MVC_SimpleBlog.DTO\bin\Debug\MVC_SimpleBlog.DTO.pdb
+C:\Users\irem\Documents\Visual Studio 2013\Projects\MVC_SimpleBlog\MVC_SimpleBlog.DTO\obj\Debug\MVC_SimpleBlog.DTO.dll
+C:\Users\irem\Documents\Visual Studio 2013\Projects\MVC_SimpleBlog\MVC_SimpleBlog.DTO\obj\Debug\MVC_SimpleBlog.DTO.pdb
+C:\Users\irem\Documents\Visual Studio 2013\Projects\MVC_SimpleBlog\MVC_SimpleBlog.DTO\obj\Debug\MVC_SimpleBlog.DTO.csprojResolveAssemblyReference.cache
+C:\Users\hp\Desktop\MVC_SimpleBlog\MVC_SimpleBlog.DTO\bin\Debug\MVC_SimpleBlog.DTO.dll
+C:\Users\hp\Desktop\MVC_SimpleBlog\MVC_SimpleBlog.DTO\bin\Debug\MVC_SimpleBlog.DTO.pdb
+C:\Users\hp\Desktop\MVC_SimpleBlog\MVC_SimpleBlog.DTO\obj\Debug\MVC_SimpleBlog.DTO.csprojResolveAssemblyReference.cache
+C:\Users\hp\Desktop\MVC_SimpleBlog\MVC_SimpleBlog.DTO\obj\Debug\MVC_SimpleBlog.DTO.dll
+C:\Users\hp\Desktop\MVC_SimpleBlog\MVC_SimpleBlog.DTO\obj\Debug\MVC_SimpleBlog.DTO.pdb

@@ -1,0 +1,27 @@
+﻿<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+
+    <link href="~/Component/general.min.css" rel="stylesheet" />
+    <link href="~/External/font-awesome.css" rel="stylesheet" />
+
+    <script src="~/External/jquery-2.1.4.min.js"></script>
+    <script src="~/Component/general.js"></script>
+
+    <title>@ViewBag.Title</title>
+</head>
+<body>
+    @Html.Partial("~/Views/Partials/TopBar.cshtml")
+
+    <div class="body clearfix">
+        @Html.Partial("~/Views/Partials/PageTop.cshtml")
+        @Html.Partial("~/Views/Partials/ReferansBody.cshtml")
+    </div>
+    <div class="d-footer">
+        <a href="#">&copy; Telif Hakları</a>
+        <a href="#">Gizlilik</a>
+    </div>
+</body>
+</html>

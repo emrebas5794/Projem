@@ -1,0 +1,14 @@
+C:\Users\hp\documents\visual studio 2013\Projects\Calisma\CalismaBLL\bin\Debug\CalismaBLL.dll.config
+C:\Users\hp\documents\visual studio 2013\Projects\Calisma\CalismaBLL\bin\Debug\CalismaBLL.dll
+C:\Users\hp\documents\visual studio 2013\Projects\Calisma\CalismaBLL\bin\Debug\CalismaBLL.pdb
+C:\Users\hp\documents\visual studio 2013\Projects\Calisma\CalismaBLL\bin\Debug\Calisma_DAL.dll
+C:\Users\hp\documents\visual studio 2013\Projects\Calisma\CalismaBLL\bin\Debug\Calisma_DTO.dll
+C:\Users\hp\documents\visual studio 2013\Projects\Calisma\CalismaBLL\bin\Debug\EntityFramework.dll
+C:\Users\hp\documents\visual studio 2013\Projects\Calisma\CalismaBLL\bin\Debug\EntityFramework.SqlServer.dll
+C:\Users\hp\documents\visual studio 2013\Projects\Calisma\CalismaBLL\bin\Debug\Calisma_DAL.pdb
+C:\Users\hp\documents\visual studio 2013\Projects\Calisma\CalismaBLL\bin\Debug\Calisma_DTO.pdb
+C:\Users\hp\documents\visual studio 2013\Projects\Calisma\CalismaBLL\bin\Debug\EntityFramework.xml
+C:\Users\hp\documents\visual studio 2013\Projects\Calisma\CalismaBLL\bin\Debug\EntityFramework.SqlServer.xml
+C:\Users\hp\documents\visual studio 2013\Projects\Calisma\CalismaBLL\obj\Debug\CalismaBLL.csprojResolveAssemblyReference.cache
+C:\Users\hp\documents\visual studio 2013\Projects\Calisma\CalismaBLL\obj\Debug\CalismaBLL.dll
+C:\Users\hp\documents\visual studio 2013\Projects\Calisma\CalismaBLL\obj\Debug\CalismaBLL.pdb

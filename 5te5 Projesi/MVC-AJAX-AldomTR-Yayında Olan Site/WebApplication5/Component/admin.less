@@ -1,0 +1,215 @@
+﻿* {
+    -moz-box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
+}
+
+a {
+    text-decoration: none;
+}
+
+.required-label {
+    position: relative;
+
+    &:before {
+        content: "*";
+        display: block;
+        position: absolute;
+        left: -10px;
+        top: -3px;
+        color: red;
+    }
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+
+    .left {
+        width: 140px;
+        height: 100vh;
+        background: #333;
+        overflow: auto;
+        padding-top: 20px;
+        font-family: Verdana;
+        font-size: 14px;
+        position: absolute;
+        top: 0;
+        left: 0;
+
+        ul {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+
+            li {
+
+                a {
+                    color: #f0f0f0;
+                    display: block;
+                    padding: 10px;
+                }
+
+                &:hover {
+                    box-shadow: 0 0 8px 0 #000 inset;
+                }
+
+                &:not(:last-child) {
+                    border-bottom: 1px solid #444;
+                }
+            }
+        }
+    }
+
+    .right {
+        width: calc(~"100% - 140px");
+        height: 100%;
+        overflow: auto;
+        position: absolute;
+        top: 0;
+        left: 140px;
+    }
+}
+
+
+.panels {
+    display: flex;
+    -ms-flex-flow: row wrap;
+    -webkit-flex-flow: row wrap;
+    flex-flow: row wrap;
+
+    .panel {
+        min-width: 400px;
+        -ms-flex: 1 1 auto;
+        -webkit-flex: 1 1 auto;
+        flex: 1 1 auto;
+        margin: 10px;
+        padding: 10px;
+        box-shadow: 0 0 4px -1px #aaa;
+        background-color: #fafafa;
+        display: flex;
+        -ms-flex-flow: column nowrap;
+        -webkit-flex-flow: column nowrap;
+        flex-flow: column nowrap;
+
+        h2 {
+            border-bottom: 1px solid #ddd;
+            margin: 0;
+            padding: 10px;
+            margin-bottom: 15px;
+            font-size: 16px;
+        }
+
+        .body {
+            -ms-flex: 1 1 auto;
+            -webkit-flex: 1 1 auto;
+            flex: 1 1 auto;
+
+            table {
+                td {
+                    padding: 10px;
+
+                    &:first-child {
+                        &:after {
+                            content: ":";
+                            float: right;
+                            margin-left: 10px;
+                        }
+                    }
+
+                    textarea {
+                        width: 500px;
+                        height: 200px;
+                    }
+                   
+                    select, input {
+                        min-width: 200px;
+                    }
+
+                    .image-container {
+                        .image-wrapper {
+                            display: inline-block;
+                            height: 120px;
+                            margin: 5px;
+                            position: relative;
+                            cursor: pointer;
+
+                            img {
+                                height: 120px;
+                            }
+
+                            &:hover {
+
+                                &:before {
+                                    content: "";
+                                    position: absolute;
+                                    width: 100%;
+                                    height: 100%;
+                                    display: block;
+                                    top: 0;
+                                    left: 0;
+                                    background-color: rgba(0,0,0,.4);
+                                }
+
+                                &:after {
+                                    content: "SİL";
+                                    color: white;
+                                    position: absolute;
+                                    left: 50%;
+                                    margin-left: -16px;
+                                    top: 50%;
+                                    margin-top: -8px;
+                                }
+                            }
+
+                            &.silinecek:hover:after {
+                                content: "SİLME";
+                                margin-left: -24px;
+                            }
+
+                            .sil-label {
+                                position: absolute;
+                                top: -10px;
+                                left: -10px;
+                                padding: 5px;
+                                background: #933;
+                                box-shadow: 0 0 2px 0 #000;
+
+                                &:after {
+                                    content: "Silinecek";
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+
+        .actions {
+            border-top: 1px solid #ddd;
+            width: 100%;
+            margin-top: 15px;
+            padding-top: 10px;
+
+            &:before, &:after {
+                content: "";
+                display: block;
+                clear: both;
+            }
+
+            button {
+                padding: 10px;
+                float: right;
+
+                &:not(:first-child) {
+                    margin-right: 4px;
+                }
+            }
+        }
+    }
+}

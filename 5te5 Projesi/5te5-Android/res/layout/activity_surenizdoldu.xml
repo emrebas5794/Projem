@@ -1,0 +1,99 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              xmlns:ads="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/futbol"
+   >
+
+<Button
+    android:id="@+id/sureticketsayisi"
+    android:layout_width="match_parent"
+    android:layout_height="35dp"
+
+   android:layout_marginLeft="25dp"
+    android:layout_marginRight="15dp"
+    android:layout_marginTop="30dp"
+    android:gravity="center"
+    
+    android:background="#1f1f1f"
+    android:text="      5te5 i Kaybettiniz "
+    android:textColor="#FFFFFF" />
+
+<Button
+    android:id="@+id/imageView1"
+    android:layout_width="75dp"
+    android:layout_height="75dp"
+    android:layout_marginTop="15dp"
+    android:layout_marginLeft="15dp"
+    android:background="@drawable/logo" />
+
+<LinearLayout
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+   android:layout_marginTop="100dp"
+    android:orientation="vertical" >
+   
+<Button
+    android:id="@+id/sureresim"
+    android:layout_width="match_parent"
+    android:layout_height="190dp"
+  android:layout_marginLeft="15dp"
+  android:layout_marginRight="15dp"
+    android:layout_weight="1"
+   
+    android:background="@drawable/sure" />
+
+
+<LinearLayout
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+ android:layout_weight="1"
+    android:orientation="horizontal" >,
+    
+  
+
+<Button
+    android:id="@+id/facepaylas"
+    android:layout_width="match_parent"
+    android:layout_height="40dp"
+  
+    android:layout_weight="1"
+  
+ android:layout_marginLeft="10dp"
+  android:layout_marginRight="5dp"
+  android:layout_gravity="center"
+    android:background="#1f1f1f"
+    android:text="Paylaş"
+    android:textColor="#ffffff" />
+
+<Button
+    android:id="@+id/suretekrardene"
+    android:layout_width="match_parent"
+    android:layout_height="40dp"
+  android:layout_weight="1"
+  android:layout_marginRight="10dp"
+  android:layout_marginLeft="5dp"
+   android:layout_gravity="center"
+    android:background="#1f1f1f"
+    android:text="Tekrar Dene"
+    android:textColor="#ffffff" />
+  </LinearLayout>
+
+<LinearLayout
+    android:layout_width="match_parent"
+    android:layout_height="100dp"
+	android:layout_weight="1"
+    android:orientation="horizontal" >
+
+     <com.rekmob.ads.RekmobView 
+  		android:id="@+id/rekmobAdView"
+  		android:layout_width="fill_parent"
+  		android:layout_height="100dp"
+  		android:layout_gravity="center" 
+	/>
+</LinearLayout>
+
+
+</LinearLayout>
+
+</RelativeLayout>

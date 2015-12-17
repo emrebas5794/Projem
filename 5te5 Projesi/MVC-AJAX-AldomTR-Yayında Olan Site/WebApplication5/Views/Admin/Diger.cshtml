@@ -1,0 +1,114 @@
+﻿
+@{
+
+    Layout = "~/Views/Admin/_AdminLayout.cshtml";
+}
+
+<div id="s-diger">
+    <div class="panels">
+        <div class="panel diger-ekle">
+            <h2>Sayfa Kategori Ekle</h2>
+
+            <div class="body">
+                <table>
+                    <tr>
+                        <td>
+                            <label class="required-label">Sayfalar</label>
+                        </td>
+                        <td>
+                            <select class="required parent">
+                                <option value="Aldom">Aldom</option>
+                                <option value="Yesil_Aluminyum">Yeşil Alüminyum</option>
+                                <option value="Distributor">Distribütörler</option>
+                               
+                            </select>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <label class="required-label">Kategori Adı</label>
+                        </td>
+                        <td>
+                            <input class="required name" type="text" />
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <label>Yazı Gövdesi</label>
+                        </td>
+                        <td>
+                            <textarea class="text"></textarea>
+                        </td>
+                    </tr>
+                </table>
+            </div>
+
+            <div class="actions">
+                <button class="kaydet">Kaydet</button>
+            </div>
+        </div>
+        <div class="panel diger-duzenle">
+            <h2>Sayfa Kategori Düzenle</h2>
+
+            <div class="body">
+                <table>
+                    <tr>
+                        <td>
+                            <label class="required-label">
+                                Sayfa Başlıkları
+                            </label>
+                        </td>
+                        <td>
+                            <select class="required parent">
+                                <option class="null" value="">Seçiniz...</option>
+                                <option value="Aldom">Aldom</option>
+                                <option value="Yesil_Aluminyum">Yeşil Alüminyum</option>
+                                <option value="Distributor">Distribütörler</option>
+                            </select>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <label class="required-label">
+                                Kategori Adı
+                            </label>
+                        </td>
+                        <td>
+                            <select class="required id" disabled></select>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <label class="required-label">
+                                Yeni Kategori Adı
+                            </label>
+                        </td>
+                        <td>
+                            <input type="text" class="required name" />
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>Yazı Gövdesi</td>
+                        <td>
+                            <textarea class="text"></textarea>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>Resimler</td>
+                        <td>
+                            <div class="image-container"></div>
+                            <input class="images" type="file" multiple accept="image/*" />
+                        </td>
+                    </tr>
+                </table>
+            </div>
+
+            <div class="actions">
+                <button class="kaydet">Kaydet</button>
+                <button class="sil">Sil</button>
+            </div>
+        </div>
+    </div>
+</div>
+
+

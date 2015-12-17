@@ -1,0 +1,786 @@
+﻿<?xml version="1.0"?>
+<doc>
+<assembly>
+<name>
+otel_proje
+</name>
+</assembly>
+<members>
+<member name="T:otel_proje.vtDataSet1.menu_ekleDataTable">
+	<summary>
+Represents the strongly named DataTable class.
+</summary>
+</member><member name="T:otel_proje.vtDataSet1.yemek_ekleDataTable">
+	<summary>
+Represents the strongly named DataTable class.
+</summary>
+</member><member name="T:otel_proje.vtDataSet1.menu_ekleRow">
+	<summary>
+Represents strongly named DataRow class.
+</summary>
+</member><member name="T:otel_proje.vtDataSet1.yemek_ekleRow">
+	<summary>
+Represents strongly named DataRow class.
+</summary>
+</member><member name="T:otel_proje.vtDataSet1.menu_ekleRowChangeEvent">
+	<summary>
+Row event argument class
+</summary>
+</member><member name="T:otel_proje.vtDataSet1.yemek_ekleRowChangeEvent">
+	<summary>
+Row event argument class
+</summary>
+</member><member name="T:otel_proje.vtDataSet1">
+	<summary>
+Represents a strongly typed in-memory cache of data.
+</summary>
+</member><member name="T:otel_proje.vtDataSet1TableAdapters.menu_ekleTableAdapter">
+	<summary>
+Represents the connection and commands used to retrieve and save data.
+</summary>
+</member><member name="T:otel_proje.vtDataSet1TableAdapters.yemek_ekleTableAdapter">
+	<summary>
+Represents the connection and commands used to retrieve and save data.
+</summary>
+</member><member name="M:otel_proje.vtDataSet1TableAdapters.TableAdapterManager.UpdateUpdatedRows(otel_proje.vtDataSet1,System.Collections.Generic.List{System.Data.DataRow},System.Collections.Generic.List{System.Data.DataRow})">
+	<summary>
+Update rows in top-down order.
+</summary>
+</member><member name="M:otel_proje.vtDataSet1TableAdapters.TableAdapterManager.UpdateInsertedRows(otel_proje.vtDataSet1,System.Collections.Generic.List{System.Data.DataRow})">
+	<summary>
+Insert rows in top-down order.
+</summary>
+</member><member name="M:otel_proje.vtDataSet1TableAdapters.TableAdapterManager.UpdateDeletedRows(otel_proje.vtDataSet1,System.Collections.Generic.List{System.Data.DataRow})">
+	<summary>
+Delete rows in bottom-up order.
+</summary>
+</member><member name="M:otel_proje.vtDataSet1TableAdapters.TableAdapterManager.GetRealUpdatedRows(System.Data.DataRow[],System.Collections.Generic.List{System.Data.DataRow})">
+	<summary>
+Remove inserted rows that become updated rows after calling TableAdapter.Update(inserted rows) first
+</summary>
+</member><member name="M:otel_proje.vtDataSet1TableAdapters.TableAdapterManager.UpdateAll(otel_proje.vtDataSet1)">
+	<summary>
+Update all changes to the dataset.
+</summary>
+</member><member name="T:otel_proje.vtDataSet1TableAdapters.TableAdapterManager.UpdateOrderOption">
+	<summary>
+Update Order Option
+</summary>
+</member><member name="T:otel_proje.vtDataSet1TableAdapters.TableAdapterManager.SelfReferenceComparer">
+	<summary>
+Used to sort self-referenced table's rows
+</summary>
+</member><member name="T:otel_proje.vtDataSet1TableAdapters.TableAdapterManager">
+	<summary>
+TableAdapterManager is used to coordinate TableAdapters in the dataset to enable Hierarchical Update scenarios
+</summary>
+</member><member name="T:otel_proje.satislarDataSet.satislarDataTable">
+	<summary>
+Represents the strongly named DataTable class.
+</summary>
+</member><member name="T:otel_proje.satislarDataSet.siparisDataTable">
+	<summary>
+Represents the strongly named DataTable class.
+</summary>
+</member><member name="T:otel_proje.satislarDataSet.satislarRow">
+	<summary>
+Represents strongly named DataRow class.
+</summary>
+</member><member name="T:otel_proje.satislarDataSet.siparisRow">
+	<summary>
+Represents strongly named DataRow class.
+</summary>
+</member><member name="T:otel_proje.satislarDataSet.satislarRowChangeEvent">
+	<summary>
+Row event argument class
+</summary>
+</member><member name="T:otel_proje.satislarDataSet.siparisRowChangeEvent">
+	<summary>
+Row event argument class
+</summary>
+</member><member name="T:otel_proje.satislarDataSet">
+	<summary>
+Represents a strongly typed in-memory cache of data.
+</summary>
+</member><member name="T:otel_proje.satislarDataSetTableAdapters.satislarTableAdapter">
+	<summary>
+Represents the connection and commands used to retrieve and save data.
+</summary>
+</member><member name="T:otel_proje.satislarDataSetTableAdapters.siparisTableAdapter">
+	<summary>
+Represents the connection and commands used to retrieve and save data.
+</summary>
+</member><member name="M:otel_proje.satislarDataSetTableAdapters.TableAdapterManager.UpdateUpdatedRows(otel_proje.satislarDataSet,System.Collections.Generic.List{System.Data.DataRow},System.Collections.Generic.List{System.Data.DataRow})">
+	<summary>
+Update rows in top-down order.
+</summary>
+</member><member name="M:otel_proje.satislarDataSetTableAdapters.TableAdapterManager.UpdateInsertedRows(otel_proje.satislarDataSet,System.Collections.Generic.List{System.Data.DataRow})">
+	<summary>
+Insert rows in top-down order.
+</summary>
+</member><member name="M:otel_proje.satislarDataSetTableAdapters.TableAdapterManager.UpdateDeletedRows(otel_proje.satislarDataSet,System.Collections.Generic.List{System.Data.DataRow})">
+	<summary>
+Delete rows in bottom-up order.
+</summary>
+</member><member name="M:otel_proje.satislarDataSetTableAdapters.TableAdapterManager.GetRealUpdatedRows(System.Data.DataRow[],System.Collections.Generic.List{System.Data.DataRow})">
+	<summary>
+Remove inserted rows that become updated rows after calling TableAdapter.Update(inserted rows) first
+</summary>
+</member><member name="M:otel_proje.satislarDataSetTableAdapters.TableAdapterManager.UpdateAll(otel_proje.satislarDataSet)">
+	<summary>
+Update all changes to the dataset.
+</summary>
+</member><member name="T:otel_proje.satislarDataSetTableAdapters.TableAdapterManager.UpdateOrderOption">
+	<summary>
+Update Order Option
+</summary>
+</member><member name="T:otel_proje.satislarDataSetTableAdapters.TableAdapterManager.SelfReferenceComparer">
+	<summary>
+Used to sort self-referenced table's rows
+</summary>
+</member><member name="T:otel_proje.satislarDataSetTableAdapters.TableAdapterManager">
+	<summary>
+TableAdapterManager is used to coordinate TableAdapters in the dataset to enable Hierarchical Update scenarios
+</summary>
+</member><member name="T:otel_proje.vtDataSet.menu_ekleDataTable">
+	<summary>
+Represents the strongly named DataTable class.
+</summary>
+</member><member name="T:otel_proje.vtDataSet.yemek_ekleDataTable">
+	<summary>
+Represents the strongly named DataTable class.
+</summary>
+</member><member name="T:otel_proje.vtDataSet.menu_ekleRow">
+	<summary>
+Represents strongly named DataRow class.
+</summary>
+</member><member name="T:otel_proje.vtDataSet.yemek_ekleRow">
+	<summary>
+Represents strongly named DataRow class.
+</summary>
+</member><member name="T:otel_proje.vtDataSet.menu_ekleRowChangeEvent">
+	<summary>
+Row event argument class
+</summary>
+</member><member name="T:otel_proje.vtDataSet.yemek_ekleRowChangeEvent">
+	<summary>
+Row event argument class
+</summary>
+</member><member name="T:otel_proje.vtDataSet">
+	<summary>
+Represents a strongly typed in-memory cache of data.
+</summary>
+</member><member name="T:otel_proje.vtDataSetTableAdapters.menu_ekleTableAdapter">
+	<summary>
+Represents the connection and commands used to retrieve and save data.
+</summary>
+</member><member name="T:otel_proje.vtDataSetTableAdapters.yemek_ekleTableAdapter">
+	<summary>
+Represents the connection and commands used to retrieve and save data.
+</summary>
+</member><member name="M:otel_proje.vtDataSetTableAdapters.TableAdapterManager.UpdateUpdatedRows(otel_proje.vtDataSet,System.Collections.Generic.List{System.Data.DataRow},System.Collections.Generic.List{System.Data.DataRow})">
+	<summary>
+Update rows in top-down order.
+</summary>
+</member><member name="M:otel_proje.vtDataSetTableAdapters.TableAdapterManager.UpdateInsertedRows(otel_proje.vtDataSet,System.Collections.Generic.List{System.Data.DataRow})">
+	<summary>
+Insert rows in top-down order.
+</summary>
+</member><member name="M:otel_proje.vtDataSetTableAdapters.TableAdapterManager.UpdateDeletedRows(otel_proje.vtDataSet,System.Collections.Generic.List{System.Data.DataRow})">
+	<summary>
+Delete rows in bottom-up order.
+</summary>
+</member><member name="M:otel_proje.vtDataSetTableAdapters.TableAdapterManager.GetRealUpdatedRows(System.Data.DataRow[],System.Collections.Generic.List{System.Data.DataRow})">
+	<summary>
+Remove inserted rows that become updated rows after calling TableAdapter.Update(inserted rows) first
+</summary>
+</member><member name="M:otel_proje.vtDataSetTableAdapters.TableAdapterManager.UpdateAll(otel_proje.vtDataSet)">
+	<summary>
+Update all changes to the dataset.
+</summary>
+</member><member name="T:otel_proje.vtDataSetTableAdapters.TableAdapterManager.UpdateOrderOption">
+	<summary>
+Update Order Option
+</summary>
+</member><member name="T:otel_proje.vtDataSetTableAdapters.TableAdapterManager.SelfReferenceComparer">
+	<summary>
+Used to sort self-referenced table's rows
+</summary>
+</member><member name="T:otel_proje.vtDataSetTableAdapters.TableAdapterManager">
+	<summary>
+TableAdapterManager is used to coordinate TableAdapters in the dataset to enable Hierarchical Update scenarios
+</summary>
+</member><member name="T:otel_proje.vtDataSet3.kullanici_ekleDataTable">
+	<summary>
+Represents the strongly named DataTable class.
+</summary>
+</member><member name="T:otel_proje.vtDataSet3.menu_ekleDataTable">
+	<summary>
+Represents the strongly named DataTable class.
+</summary>
+</member><member name="T:otel_proje.vtDataSet3.yemek_ekleDataTable">
+	<summary>
+Represents the strongly named DataTable class.
+</summary>
+</member><member name="T:otel_proje.vtDataSet3.kullanici_ekleRow">
+	<summary>
+Represents strongly named DataRow class.
+</summary>
+</member><member name="T:otel_proje.vtDataSet3.menu_ekleRow">
+	<summary>
+Represents strongly named DataRow class.
+</summary>
+</member><member name="T:otel_proje.vtDataSet3.yemek_ekleRow">
+	<summary>
+Represents strongly named DataRow class.
+</summary>
+</member><member name="T:otel_proje.vtDataSet3.kullanici_ekleRowChangeEvent">
+	<summary>
+Row event argument class
+</summary>
+</member><member name="T:otel_proje.vtDataSet3.menu_ekleRowChangeEvent">
+	<summary>
+Row event argument class
+</summary>
+</member><member name="T:otel_proje.vtDataSet3.yemek_ekleRowChangeEvent">
+	<summary>
+Row event argument class
+</summary>
+</member><member name="T:otel_proje.vtDataSet3">
+	<summary>
+Represents a strongly typed in-memory cache of data.
+</summary>
+</member><member name="T:otel_proje.vtDataSet3TableAdapters.kullanici_ekleTableAdapter">
+	<summary>
+Represents the connection and commands used to retrieve and save data.
+</summary>
+</member><member name="T:otel_proje.vtDataSet3TableAdapters.menu_ekleTableAdapter">
+	<summary>
+Represents the connection and commands used to retrieve and save data.
+</summary>
+</member><member name="T:otel_proje.vtDataSet3TableAdapters.yemek_ekleTableAdapter">
+	<summary>
+Represents the connection and commands used to retrieve and save data.
+</summary>
+</member><member name="M:otel_proje.vtDataSet3TableAdapters.TableAdapterManager.UpdateUpdatedRows(otel_proje.vtDataSet3,System.Collections.Generic.List{System.Data.DataRow},System.Collections.Generic.List{System.Data.DataRow})">
+	<summary>
+Update rows in top-down order.
+</summary>
+</member><member name="M:otel_proje.vtDataSet3TableAdapters.TableAdapterManager.UpdateInsertedRows(otel_proje.vtDataSet3,System.Collections.Generic.List{System.Data.DataRow})">
+	<summary>
+Insert rows in top-down order.
+</summary>
+</member><member name="M:otel_proje.vtDataSet3TableAdapters.TableAdapterManager.UpdateDeletedRows(otel_proje.vtDataSet3,System.Collections.Generic.List{System.Data.DataRow})">
+	<summary>
+Delete rows in bottom-up order.
+</summary>
+</member><member name="M:otel_proje.vtDataSet3TableAdapters.TableAdapterManager.GetRealUpdatedRows(System.Data.DataRow[],System.Collections.Generic.List{System.Data.DataRow})">
+	<summary>
+Remove inserted rows that become updated rows after calling TableAdapter.Update(inserted rows) first
+</summary>
+</member><member name="M:otel_proje.vtDataSet3TableAdapters.TableAdapterManager.UpdateAll(otel_proje.vtDataSet3)">
+	<summary>
+Update all changes to the dataset.
+</summary>
+</member><member name="T:otel_proje.vtDataSet3TableAdapters.TableAdapterManager.UpdateOrderOption">
+	<summary>
+Update Order Option
+</summary>
+</member><member name="T:otel_proje.vtDataSet3TableAdapters.TableAdapterManager.SelfReferenceComparer">
+	<summary>
+Used to sort self-referenced table's rows
+</summary>
+</member><member name="T:otel_proje.vtDataSet3TableAdapters.TableAdapterManager">
+	<summary>
+TableAdapterManager is used to coordinate TableAdapters in the dataset to enable Hierarchical Update scenarios
+</summary>
+</member><member name="P:otel_proje.My.Resources.Resources.ResourceManager">
+	<summary>
+  Returns the cached ResourceManager instance used by this class.
+</summary>
+</member><member name="P:otel_proje.My.Resources.Resources.Culture">
+	<summary>
+  Overrides the current thread's CurrentUICulture property for all
+  resource lookups using this strongly typed resource class.
+</summary>
+</member><member name="P:otel_proje.My.Resources.Resources.alttasarim">
+	<summary>
+  Looks up a localized resource of type System.Drawing.Bitmap.
+</summary>
+</member><member name="P:otel_proje.My.Resources.Resources.arkaplan">
+	<summary>
+  Looks up a localized resource of type System.Drawing.Bitmap.
+</summary>
+</member><member name="P:otel_proje.My.Resources.Resources.guncelle">
+	<summary>
+  Looks up a localized resource of type System.Drawing.Bitmap.
+</summary>
+</member><member name="P:otel_proje.My.Resources.Resources.Images_icon">
+	<summary>
+  Looks up a localized resource of type System.Drawing.Bitmap.
+</summary>
+</member><member name="P:otel_proje.My.Resources.Resources.k_ekle">
+	<summary>
+  Looks up a localized resource of type System.Drawing.Bitmap.
+</summary>
+</member><member name="P:otel_proje.My.Resources.Resources.kaydet">
+	<summary>
+  Looks up a localized resource of type System.Drawing.Bitmap.
+</summary>
+</member><member name="P:otel_proje.My.Resources.Resources.Menu_icon">
+	<summary>
+  Looks up a localized resource of type System.Drawing.Bitmap.
+</summary>
+</member><member name="P:otel_proje.My.Resources.Resources.Menu_icon2">
+	<summary>
+  Looks up a localized resource of type System.Drawing.Bitmap.
+</summary>
+</member><member name="P:otel_proje.My.Resources.Resources.sil">
+	<summary>
+  Looks up a localized resource of type System.Drawing.Bitmap.
+</summary>
+</member><member name="P:otel_proje.My.Resources.Resources.siparis">
+	<summary>
+  Looks up a localized resource of type System.Drawing.Bitmap.
+</summary>
+</member><member name="P:otel_proje.My.Resources.Resources.siparisyenile">
+	<summary>
+  Looks up a localized resource of type System.Drawing.Bitmap.
+</summary>
+</member><member name="P:otel_proje.My.Resources.Resources.Untitled_2">
+	<summary>
+  Looks up a localized resource of type System.Drawing.Bitmap.
+</summary>
+</member><member name="P:otel_proje.My.Resources.Resources.yemekicinResimEkle">
+	<summary>
+  Looks up a localized resource of type System.Drawing.Bitmap.
+</summary>
+</member><member name="T:otel_proje.My.Resources.Resources">
+	<summary>
+  A strongly-typed resource class, for looking up localized strings, etc.
+</summary>
+</member><member name="T:otel_proje.vtDataSet2.kullanici_ekleDataTable">
+	<summary>
+Represents the strongly named DataTable class.
+</summary>
+</member><member name="T:otel_proje.vtDataSet2.menu_ekleDataTable">
+	<summary>
+Represents the strongly named DataTable class.
+</summary>
+</member><member name="T:otel_proje.vtDataSet2.yemek_ekleDataTable">
+	<summary>
+Represents the strongly named DataTable class.
+</summary>
+</member><member name="T:otel_proje.vtDataSet2.kullanici_ekleRow">
+	<summary>
+Represents strongly named DataRow class.
+</summary>
+</member><member name="T:otel_proje.vtDataSet2.menu_ekleRow">
+	<summary>
+Represents strongly named DataRow class.
+</summary>
+</member><member name="T:otel_proje.vtDataSet2.yemek_ekleRow">
+	<summary>
+Represents strongly named DataRow class.
+</summary>
+</member><member name="T:otel_proje.vtDataSet2.kullanici_ekleRowChangeEvent">
+	<summary>
+Row event argument class
+</summary>
+</member><member name="T:otel_proje.vtDataSet2.menu_ekleRowChangeEvent">
+	<summary>
+Row event argument class
+</summary>
+</member><member name="T:otel_proje.vtDataSet2.yemek_ekleRowChangeEvent">
+	<summary>
+Row event argument class
+</summary>
+</member><member name="T:otel_proje.vtDataSet2">
+	<summary>
+Represents a strongly typed in-memory cache of data.
+</summary>
+</member><member name="T:otel_proje.vtDataSet2TableAdapters.kullanici_ekleTableAdapter">
+	<summary>
+Represents the connection and commands used to retrieve and save data.
+</summary>
+</member><member name="T:otel_proje.vtDataSet2TableAdapters.menu_ekleTableAdapter">
+	<summary>
+Represents the connection and commands used to retrieve and save data.
+</summary>
+</member><member name="T:otel_proje.vtDataSet2TableAdapters.yemek_ekleTableAdapter">
+	<summary>
+Represents the connection and commands used to retrieve and save data.
+</summary>
+</member><member name="M:otel_proje.vtDataSet2TableAdapters.TableAdapterManager.UpdateUpdatedRows(otel_proje.vtDataSet2,System.Collections.Generic.List{System.Data.DataRow},System.Collections.Generic.List{System.Data.DataRow})">
+	<summary>
+Update rows in top-down order.
+</summary>
+</member><member name="M:otel_proje.vtDataSet2TableAdapters.TableAdapterManager.UpdateInsertedRows(otel_proje.vtDataSet2,System.Collections.Generic.List{System.Data.DataRow})">
+	<summary>
+Insert rows in top-down order.
+</summary>
+</member><member name="M:otel_proje.vtDataSet2TableAdapters.TableAdapterManager.UpdateDeletedRows(otel_proje.vtDataSet2,System.Collections.Generic.List{System.Data.DataRow})">
+	<summary>
+Delete rows in bottom-up order.
+</summary>
+</member><member name="M:otel_proje.vtDataSet2TableAdapters.TableAdapterManager.GetRealUpdatedRows(System.Data.DataRow[],System.Collections.Generic.List{System.Data.DataRow})">
+	<summary>
+Remove inserted rows that become updated rows after calling TableAdapter.Update(inserted rows) first
+</summary>
+</member><member name="M:otel_proje.vtDataSet2TableAdapters.TableAdapterManager.UpdateAll(otel_proje.vtDataSet2)">
+	<summary>
+Update all changes to the dataset.
+</summary>
+</member><member name="T:otel_proje.vtDataSet2TableAdapters.TableAdapterManager.UpdateOrderOption">
+	<summary>
+Update Order Option
+</summary>
+</member><member name="T:otel_proje.vtDataSet2TableAdapters.TableAdapterManager.SelfReferenceComparer">
+	<summary>
+Used to sort self-referenced table's rows
+</summary>
+</member><member name="T:otel_proje.vtDataSet2TableAdapters.TableAdapterManager">
+	<summary>
+TableAdapterManager is used to coordinate TableAdapters in the dataset to enable Hierarchical Update scenarios
+</summary>
+</member><member name="M:otel_proje.com.otelservisi.www.Service1.#ctor">
+	<remarks/>
+</member><member name="E:otel_proje.com.otelservisi.www.Service1.HelloWorldCompleted">
+	<remarks/>
+</member><member name="E:otel_proje.com.otelservisi.www.Service1.loginCompleted">
+	<remarks/>
+</member><member name="E:otel_proje.com.otelservisi.www.Service1.asdCompleted">
+	<remarks/>
+</member><member name="E:otel_proje.com.otelservisi.www.Service1.calistirCompleted">
+	<remarks/>
+</member><member name="E:otel_proje.com.otelservisi.www.Service1.sipariskayitCompleted">
+	<remarks/>
+</member><member name="E:otel_proje.com.otelservisi.www.Service1.yemekhanesilCompleted">
+	<remarks/>
+</member><member name="E:otel_proje.com.otelservisi.www.Service1.servissilCompleted">
+	<remarks/>
+</member><member name="E:otel_proje.com.otelservisi.www.Service1.servisekleCompleted">
+	<remarks/>
+</member><member name="E:otel_proje.com.otelservisi.www.Service1.yemekgosteridCompleted">
+	<remarks/>
+</member><member name="E:otel_proje.com.otelservisi.www.Service1.yemekgosterisimCompleted">
+	<remarks/>
+</member><member name="E:otel_proje.com.otelservisi.www.Service1.yemekgosterresimCompleted">
+	<remarks/>
+</member><member name="E:otel_proje.com.otelservisi.www.Service1.vericekmeCompleted">
+	<remarks/>
+</member><member name="E:otel_proje.com.otelservisi.www.Service1.yemeklerigosteridCompleted">
+	<remarks/>
+</member><member name="E:otel_proje.com.otelservisi.www.Service1.yemeklerigosterisimCompleted">
+	<remarks/>
+</member><member name="E:otel_proje.com.otelservisi.www.Service1.yemeklerigosterfiyatCompleted">
+	<remarks/>
+</member><member name="E:otel_proje.com.otelservisi.www.Service1.yemeklerigosterresimCompleted">
+	<remarks/>
+</member><member name="E:otel_proje.com.otelservisi.www.Service1.yemekhaneodanoCompleted">
+	<remarks/>
+</member><member name="E:otel_proje.com.otelservisi.www.Service1.yemekhaneyemekidCompleted">
+	<remarks/>
+</member><member name="E:otel_proje.com.otelservisi.www.Service1.yemekhaneyemekadiCompleted">
+	<remarks/>
+</member><member name="E:otel_proje.com.otelservisi.www.Service1.yemekhaneyemekadetCompleted">
+	<remarks/>
+</member><member name="E:otel_proje.com.otelservisi.www.Service1.serviselamanidCompleted">
+	<remarks/>
+</member><member name="E:otel_proje.com.otelservisi.www.Service1.serviselamanodaCompleted">
+	<remarks/>
+</member><member name="E:otel_proje.com.otelservisi.www.Service1.kullaniciidCompleted">
+	<remarks/>
+</member><member name="E:otel_proje.com.otelservisi.www.Service1.kullaniciadiCompleted">
+	<remarks/>
+</member><member name="M:otel_proje.com.otelservisi.www.Service1.HelloWorld">
+	<remarks/>
+</member><member name="M:otel_proje.com.otelservisi.www.Service1.HelloWorldAsync">
+	<remarks/>
+</member><member name="M:otel_proje.com.otelservisi.www.Service1.HelloWorldAsync(System.Object)">
+	<remarks/>
+</member><member name="M:otel_proje.com.otelservisi.www.Service1.login(System.String)">
+	<remarks/>
+</member><member name="M:otel_proje.com.otelservisi.www.Service1.loginAsync(System.String)">
+	<remarks/>
+</member><member name="M:otel_proje.com.otelservisi.www.Service1.loginAsync(System.String,System.Object)">
+	<remarks/>
+</member><member name="M:otel_proje.com.otelservisi.www.Service1.asd(System.String)">
+	<remarks/>
+</member><member name="M:otel_proje.com.otelservisi.www.Service1.asdAsync(System.String)">
+	<remarks/>
+</member><member name="M:otel_proje.com.otelservisi.www.Service1.asdAsync(System.String,System.Object)">
+	<remarks/>
+</member><member name="M:otel_proje.com.otelservisi.www.Service1.calistir(System.String)">
+	<remarks/>
+</member><member name="M:otel_proje.com.otelservisi.www.Service1.calistirAsync(System.String)">
+	<remarks/>
+</member><member name="M:otel_proje.com.otelservisi.www.Service1.calistirAsync(System.String,System.Object)">
+	<remarks/>
+</member><member name="M:otel_proje.com.otelservisi.www.Service1.sipariskayit(System.String,System.String,System.String,System.String)">
+	<remarks/>
+</member><member name="M:otel_proje.com.otelservisi.www.Service1.sipariskayitAsync(System.String,System.String,System.String,System.String)">
+	<remarks/>
+</member><member name="M:otel_proje.com.otelservisi.www.Service1.sipariskayitAsync(System.String,System.String,System.String,System.String,System.Object)">
+	<remarks/>
+</member><member name="M:otel_proje.com.otelservisi.www.Service1.yemekhanesil(System.String)">
+	<remarks/>
+</member><member name="M:otel_proje.com.otelservisi.www.Service1.yemekhanesilAsync(System.String)">
+	<remarks/>
+</member><member name="M:otel_proje.com.otelservisi.www.Service1.yemekhanesilAsync(System.String,System.Object)">
+	<remarks/>
+</member><member name="M:otel_proje.com.otelservisi.www.Service1.servissil(System.String)">
+	<remarks/>
+</member><member name="M:otel_proje.com.otelservisi.www.Service1.servissilAsync(System.String)">
+	<remarks/>
+</member><member name="M:otel_proje.com.otelservisi.www.Service1.servissilAsync(System.String,System.Object)">
+	<remarks/>
+</member><member name="M:otel_proje.com.otelservisi.www.Service1.servisekle(System.String)">
+	<remarks/>
+</member><member name="M:otel_proje.com.otelservisi.www.Service1.servisekleAsync(System.String)">
+	<remarks/>
+</member><member name="M:otel_proje.com.otelservisi.www.Service1.servisekleAsync(System.String,System.Object)">
+	<remarks/>
+</member><member name="M:otel_proje.com.otelservisi.www.Service1.yemekgosterid">
+	<remarks/>
+</member><member name="M:otel_proje.com.otelservisi.www.Service1.yemekgosteridAsync">
+	<remarks/>
+</member><member name="M:otel_proje.com.otelservisi.www.Service1.yemekgosteridAsync(System.Object)">
+	<remarks/>
+</member><member name="M:otel_proje.com.otelservisi.www.Service1.yemekgosterisim">
+	<remarks/>
+</member><member name="M:otel_proje.com.otelservisi.www.Service1.yemekgosterisimAsync">
+	<remarks/>
+</member><member name="M:otel_proje.com.otelservisi.www.Service1.yemekgosterisimAsync(System.Object)">
+	<remarks/>
+</member><member name="M:otel_proje.com.otelservisi.www.Service1.yemekgosterresim">
+	<remarks/>
+</member><member name="M:otel_proje.com.otelservisi.www.Service1.yemekgosterresimAsync">
+	<remarks/>
+</member><member name="M:otel_proje.com.otelservisi.www.Service1.yemekgosterresimAsync(System.Object)">
+	<remarks/>
+</member><member name="M:otel_proje.com.otelservisi.www.Service1.vericekme(System.String)">
+	<remarks/>
+</member><member name="M:otel_proje.com.otelservisi.www.Service1.vericekmeAsync(System.String)">
+	<remarks/>
+</member><member name="M:otel_proje.com.otelservisi.www.Service1.vericekmeAsync(System.String,System.Object)">
+	<remarks/>
+</member><member name="M:otel_proje.com.otelservisi.www.Service1.yemeklerigosterid(System.Int32)">
+	<remarks/>
+</member><member name="M:otel_proje.com.otelservisi.www.Service1.yemeklerigosteridAsync(System.Int32)">
+	<remarks/>
+</member><member name="M:otel_proje.com.otelservisi.www.Service1.yemeklerigosteridAsync(System.Int32,System.Object)">
+	<remarks/>
+</member><member name="M:otel_proje.com.otelservisi.www.Service1.yemeklerigosterisim(System.Int32)">
+	<remarks/>
+</member><member name="M:otel_proje.com.otelservisi.www.Service1.yemeklerigosterisimAsync(System.Int32)">
+	<remarks/>
+</member><member name="M:otel_proje.com.otelservisi.www.Service1.yemeklerigosterisimAsync(System.Int32,System.Object)">
+	<remarks/>
+</member><member name="M:otel_proje.com.otelservisi.www.Service1.yemeklerigosterfiyat(System.Int32)">
+	<remarks/>
+</member><member name="M:otel_proje.com.otelservisi.www.Service1.yemeklerigosterfiyatAsync(System.Int32)">
+	<remarks/>
+</member><member name="M:otel_proje.com.otelservisi.www.Service1.yemeklerigosterfiyatAsync(System.Int32,System.Object)">
+	<remarks/>
+</member><member name="M:otel_proje.com.otelservisi.www.Service1.yemeklerigosterresim(System.Int32)">
+	<remarks/>
+</member><member name="M:otel_proje.com.otelservisi.www.Service1.yemeklerigosterresimAsync(System.Int32)">
+	<remarks/>
+</member><member name="M:otel_proje.com.otelservisi.www.Service1.yemeklerigosterresimAsync(System.Int32,System.Object)">
+	<remarks/>
+</member><member name="M:otel_proje.com.otelservisi.www.Service1.yemekhaneodano">
+	<remarks/>
+</member><member name="M:otel_proje.com.otelservisi.www.Service1.yemekhaneodanoAsync">
+	<remarks/>
+</member><member name="M:otel_proje.com.otelservisi.www.Service1.yemekhaneodanoAsync(System.Object)">
+	<remarks/>
+</member><member name="M:otel_proje.com.otelservisi.www.Service1.yemekhaneyemekid">
+	<remarks/>
+</member><member name="M:otel_proje.com.otelservisi.www.Service1.yemekhaneyemekidAsync">
+	<remarks/>
+</member><member name="M:otel_proje.com.otelservisi.www.Service1.yemekhaneyemekidAsync(System.Object)">
+	<remarks/>
+</member><member name="M:otel_proje.com.otelservisi.www.Service1.yemekhaneyemekadi">
+	<remarks/>
+</member><member name="M:otel_proje.com.otelservisi.www.Service1.yemekhaneyemekadiAsync">
+	<remarks/>
+</member><member name="M:otel_proje.com.otelservisi.www.Service1.yemekhaneyemekadiAsync(System.Object)">
+	<remarks/>
+</member><member name="M:otel_proje.com.otelservisi.www.Service1.yemekhaneyemekadet">
+	<remarks/>
+</member><member name="M:otel_proje.com.otelservisi.www.Service1.yemekhaneyemekadetAsync">
+	<remarks/>
+</member><member name="M:otel_proje.com.otelservisi.www.Service1.yemekhaneyemekadetAsync(System.Object)">
+	<remarks/>
+</member><member name="M:otel_proje.com.otelservisi.www.Service1.serviselamanid">
+	<remarks/>
+</member><member name="M:otel_proje.com.otelservisi.www.Service1.serviselamanidAsync">
+	<remarks/>
+</member><member name="M:otel_proje.com.otelservisi.www.Service1.serviselamanidAsync(System.Object)">
+	<remarks/>
+</member><member name="M:otel_proje.com.otelservisi.www.Service1.serviselamanoda">
+	<remarks/>
+</member><member name="M:otel_proje.com.otelservisi.www.Service1.serviselamanodaAsync">
+	<remarks/>
+</member><member name="M:otel_proje.com.otelservisi.www.Service1.serviselamanodaAsync(System.Object)">
+	<remarks/>
+</member><member name="M:otel_proje.com.otelservisi.www.Service1.kullaniciid">
+	<remarks/>
+</member><member name="M:otel_proje.com.otelservisi.www.Service1.kullaniciidAsync">
+	<remarks/>
+</member><member name="M:otel_proje.com.otelservisi.www.Service1.kullaniciidAsync(System.Object)">
+	<remarks/>
+</member><member name="M:otel_proje.com.otelservisi.www.Service1.kullaniciadi">
+	<remarks/>
+</member><member name="M:otel_proje.com.otelservisi.www.Service1.kullaniciadiAsync">
+	<remarks/>
+</member><member name="M:otel_proje.com.otelservisi.www.Service1.kullaniciadiAsync(System.Object)">
+	<remarks/>
+</member><member name="M:otel_proje.com.otelservisi.www.Service1.CancelAsync(System.Object)">
+	<remarks/>
+</member><member name="T:otel_proje.com.otelservisi.www.Service1">
+	<remarks/>
+</member><member name="T:otel_proje.com.otelservisi.www.HelloWorldCompletedEventHandler">
+	<remarks/>
+</member><member name="P:otel_proje.com.otelservisi.www.HelloWorldCompletedEventArgs.Result">
+	<remarks/>
+</member><member name="T:otel_proje.com.otelservisi.www.HelloWorldCompletedEventArgs">
+	<remarks/>
+</member><member name="T:otel_proje.com.otelservisi.www.loginCompletedEventHandler">
+	<remarks/>
+</member><member name="P:otel_proje.com.otelservisi.www.loginCompletedEventArgs.Result">
+	<remarks/>
+</member><member name="T:otel_proje.com.otelservisi.www.loginCompletedEventArgs">
+	<remarks/>
+</member><member name="T:otel_proje.com.otelservisi.www.asdCompletedEventHandler">
+	<remarks/>
+</member><member name="P:otel_proje.com.otelservisi.www.asdCompletedEventArgs.Result">
+	<remarks/>
+</member><member name="T:otel_proje.com.otelservisi.www.asdCompletedEventArgs">
+	<remarks/>
+</member><member name="T:otel_proje.com.otelservisi.www.calistirCompletedEventHandler">
+	<remarks/>
+</member><member name="T:otel_proje.com.otelservisi.www.sipariskayitCompletedEventHandler">
+	<remarks/>
+</member><member name="P:otel_proje.com.otelservisi.www.sipariskayitCompletedEventArgs.Result">
+	<remarks/>
+</member><member name="T:otel_proje.com.otelservisi.www.sipariskayitCompletedEventArgs">
+	<remarks/>
+</member><member name="T:otel_proje.com.otelservisi.www.yemekhanesilCompletedEventHandler">
+	<remarks/>
+</member><member name="P:otel_proje.com.otelservisi.www.yemekhanesilCompletedEventArgs.Result">
+	<remarks/>
+</member><member name="T:otel_proje.com.otelservisi.www.yemekhanesilCompletedEventArgs">
+	<remarks/>
+</member><member name="T:otel_proje.com.otelservisi.www.servissilCompletedEventHandler">
+	<remarks/>
+</member><member name="P:otel_proje.com.otelservisi.www.servissilCompletedEventArgs.Result">
+	<remarks/>
+</member><member name="T:otel_proje.com.otelservisi.www.servissilCompletedEventArgs">
+	<remarks/>
+</member><member name="T:otel_proje.com.otelservisi.www.servisekleCompletedEventHandler">
+	<remarks/>
+</member><member name="P:otel_proje.com.otelservisi.www.servisekleCompletedEventArgs.Result">
+	<remarks/>
+</member><member name="T:otel_proje.com.otelservisi.www.servisekleCompletedEventArgs">
+	<remarks/>
+</member><member name="T:otel_proje.com.otelservisi.www.yemekgosteridCompletedEventHandler">
+	<remarks/>
+</member><member name="P:otel_proje.com.otelservisi.www.yemekgosteridCompletedEventArgs.Result">
+	<remarks/>
+</member><member name="T:otel_proje.com.otelservisi.www.yemekgosteridCompletedEventArgs">
+	<remarks/>
+</member><member name="T:otel_proje.com.otelservisi.www.yemekgosterisimCompletedEventHandler">
+	<remarks/>
+</member><member name="P:otel_proje.com.otelservisi.www.yemekgosterisimCompletedEventArgs.Result">
+	<remarks/>
+</member><member name="T:otel_proje.com.otelservisi.www.yemekgosterisimCompletedEventArgs">
+	<remarks/>
+</member><member name="T:otel_proje.com.otelservisi.www.yemekgosterresimCompletedEventHandler">
+	<remarks/>
+</member><member name="P:otel_proje.com.otelservisi.www.yemekgosterresimCompletedEventArgs.Result">
+	<remarks/>
+</member><member name="T:otel_proje.com.otelservisi.www.yemekgosterresimCompletedEventArgs">
+	<remarks/>
+</member><member name="T:otel_proje.com.otelservisi.www.vericekmeCompletedEventHandler">
+	<remarks/>
+</member><member name="P:otel_proje.com.otelservisi.www.vericekmeCompletedEventArgs.Result">
+	<remarks/>
+</member><member name="T:otel_proje.com.otelservisi.www.vericekmeCompletedEventArgs">
+	<remarks/>
+</member><member name="T:otel_proje.com.otelservisi.www.yemeklerigosteridCompletedEventHandler">
+	<remarks/>
+</member><member name="P:otel_proje.com.otelservisi.www.yemeklerigosteridCompletedEventArgs.Result">
+	<remarks/>
+</member><member name="T:otel_proje.com.otelservisi.www.yemeklerigosteridCompletedEventArgs">
+	<remarks/>
+</member><member name="T:otel_proje.com.otelservisi.www.yemeklerigosterisimCompletedEventHandler">
+	<remarks/>
+</member><member name="P:otel_proje.com.otelservisi.www.yemeklerigosterisimCompletedEventArgs.Result">
+	<remarks/>
+</member><member name="T:otel_proje.com.otelservisi.www.yemeklerigosterisimCompletedEventArgs">
+	<remarks/>
+</member><member name="T:otel_proje.com.otelservisi.www.yemeklerigosterfiyatCompletedEventHandler">
+	<remarks/>
+</member><member name="P:otel_proje.com.otelservisi.www.yemeklerigosterfiyatCompletedEventArgs.Result">
+	<remarks/>
+</member><member name="T:otel_proje.com.otelservisi.www.yemeklerigosterfiyatCompletedEventArgs">
+	<remarks/>
+</member><member name="T:otel_proje.com.otelservisi.www.yemeklerigosterresimCompletedEventHandler">
+	<remarks/>
+</member><member name="P:otel_proje.com.otelservisi.www.yemeklerigosterresimCompletedEventArgs.Result">
+	<remarks/>
+</member><member name="T:otel_proje.com.otelservisi.www.yemeklerigosterresimCompletedEventArgs">
+	<remarks/>
+</member><member name="T:otel_proje.com.otelservisi.www.yemekhaneodanoCompletedEventHandler">
+	<remarks/>
+</member><member name="P:otel_proje.com.otelservisi.www.yemekhaneodanoCompletedEventArgs.Result">
+	<remarks/>
+</member><member name="T:otel_proje.com.otelservisi.www.yemekhaneodanoCompletedEventArgs">
+	<remarks/>
+</member><member name="T:otel_proje.com.otelservisi.www.yemekhaneyemekidCompletedEventHandler">
+	<remarks/>
+</member><member name="P:otel_proje.com.otelservisi.www.yemekhaneyemekidCompletedEventArgs.Result">
+	<remarks/>
+</member><member name="T:otel_proje.com.otelservisi.www.yemekhaneyemekidCompletedEventArgs">
+	<remarks/>
+</member><member name="T:otel_proje.com.otelservisi.www.yemekhaneyemekadiCompletedEventHandler">
+	<remarks/>
+</member><member name="P:otel_proje.com.otelservisi.www.yemekhaneyemekadiCompletedEventArgs.Result">
+	<remarks/>
+</member><member name="T:otel_proje.com.otelservisi.www.yemekhaneyemekadiCompletedEventArgs">
+	<remarks/>
+</member><member name="T:otel_proje.com.otelservisi.www.yemekhaneyemekadetCompletedEventHandler">
+	<remarks/>
+</member><member name="P:otel_proje.com.otelservisi.www.yemekhaneyemekadetCompletedEventArgs.Result">
+	<remarks/>
+</member><member name="T:otel_proje.com.otelservisi.www.yemekhaneyemekadetCompletedEventArgs">
+	<remarks/>
+</member><member name="T:otel_proje.com.otelservisi.www.serviselamanidCompletedEventHandler">
+	<remarks/>
+</member><member name="P:otel_proje.com.otelservisi.www.serviselamanidCompletedEventArgs.Result">
+	<remarks/>
+</member><member name="T:otel_proje.com.otelservisi.www.serviselamanidCompletedEventArgs">
+	<remarks/>
+</member><member name="T:otel_proje.com.otelservisi.www.serviselamanodaCompletedEventHandler">
+	<remarks/>
+</member><member name="P:otel_proje.com.otelservisi.www.serviselamanodaCompletedEventArgs.Result">
+	<remarks/>
+</member><member name="T:otel_proje.com.otelservisi.www.serviselamanodaCompletedEventArgs">
+	<remarks/>
+</member><member name="T:otel_proje.com.otelservisi.www.kullaniciidCompletedEventHandler">
+	<remarks/>
+</member><member name="P:otel_proje.com.otelservisi.www.kullaniciidCompletedEventArgs.Result">
+	<remarks/>
+</member><member name="T:otel_proje.com.otelservisi.www.kullaniciidCompletedEventArgs">
+	<remarks/>
+</member><member name="T:otel_proje.com.otelservisi.www.kullaniciadiCompletedEventHandler">
+	<remarks/>
+</member><member name="P:otel_proje.com.otelservisi.www.kullaniciadiCompletedEventArgs.Result">
+	<remarks/>
+</member><member name="T:otel_proje.com.otelservisi.www.kullaniciadiCompletedEventArgs">
+	<remarks/>
+</member>
+</members>
+</doc>

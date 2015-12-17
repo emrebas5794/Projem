@@ -1,0 +1,26 @@
+﻿
+@model Calisma.Models.Credential
+
+<br /><br />
+<table align="center">
+@using (Html.BeginForm("index", "Home", FormMethod.Post))
+                        {
+    <tr>
+        <td colspan="2" align="center"><h2>Üye Giriş</h2></td>
+      
+    </tr>
+    <tr>
+        <td>E_Postanı Gir</td>
+        <td>@Html.TextBoxFor(m => m.Email)</td>
+    </tr>
+    <tr>
+        <td></td>
+        <td><input id="Submit1" type="submit" value="Giriş Yap" /></td>
+    </tr>
+    <tr>
+        <td></td>
+        <td>@Html.ActionLink("Üye Ol", "Create")</td>
+    </tr>
+}
+</table>
+

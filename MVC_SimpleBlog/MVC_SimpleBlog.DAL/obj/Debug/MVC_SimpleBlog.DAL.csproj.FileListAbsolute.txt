@@ -1,0 +1,13 @@
+C:\Users\hp\Desktop\MVC_SimpleBlog\MVC_SimpleBlog.DAL\bin\Debug\MVC_SimpleBlog.DAL.dll.config
+C:\Users\hp\Desktop\MVC_SimpleBlog\MVC_SimpleBlog.DAL\bin\Debug\MVC_SimpleBlog.DAL.dll
+C:\Users\hp\Desktop\MVC_SimpleBlog\MVC_SimpleBlog.DAL\bin\Debug\MVC_SimpleBlog.DAL.pdb
+C:\Users\hp\Desktop\MVC_SimpleBlog\MVC_SimpleBlog.DAL\bin\Debug\EntityFramework.dll
+C:\Users\hp\Desktop\MVC_SimpleBlog\MVC_SimpleBlog.DAL\bin\Debug\EntityFramework.SqlServer.dll
+C:\Users\hp\Desktop\MVC_SimpleBlog\MVC_SimpleBlog.DAL\bin\Debug\EntityFramework.xml
+C:\Users\hp\Desktop\MVC_SimpleBlog\MVC_SimpleBlog.DAL\bin\Debug\EntityFramework.SqlServer.xml
+C:\Users\hp\Desktop\MVC_SimpleBlog\MVC_SimpleBlog.DAL\obj\Debug\MVC_SimpleBlog.DAL.csprojResolveAssemblyReference.cache
+C:\Users\hp\Desktop\MVC_SimpleBlog\MVC_SimpleBlog.DAL\obj\Debug\MVC_SimpleBlog.DAL.Migrations.DbCreate.resources
+C:\Users\hp\Desktop\MVC_SimpleBlog\MVC_SimpleBlog.DAL\obj\Debug\MVC_SimpleBlog.DAL.Migrations.AddCategory.resources
+C:\Users\hp\Desktop\MVC_SimpleBlog\MVC_SimpleBlog.DAL\obj\Debug\MVC_SimpleBlog.DAL.csproj.GenerateResource.Cache
+C:\Users\hp\Desktop\MVC_SimpleBlog\MVC_SimpleBlog.DAL\obj\Debug\MVC_SimpleBlog.DAL.dll
+C:\Users\hp\Desktop\MVC_SimpleBlog\MVC_SimpleBlog.DAL\obj\Debug\MVC_SimpleBlog.DAL.pdb

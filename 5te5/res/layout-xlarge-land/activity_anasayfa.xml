@@ -1,0 +1,105 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/LinearLayout1"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/futbol"
+    android:orientation="vertical" >
+    
+    <LinearLayout 
+     android:layout_width="match_parent"
+    android:layout_height="match_parent"
+     android:orientation="vertical"
+     android:layout_weight="1"
+     >
+
+        <ImageView
+            android:id="@+id/imageView1"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="@dimen/logobosluk"
+            android:layout_marginRight="@dimen/logobosluk"
+            android:layout_weight="1"
+            android:src="@drawable/s1" />
+
+    <EditText
+        android:id="@+id/kullaniciadi_edit"
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        android:layout_marginLeft="@dimen/anasayfaedittext"
+        android:layout_marginRight="@dimen/anasayfaedittext"
+        android:layout_marginTop="20dp"
+      
+        android:background="@drawable/menu"
+        android:ems="10"
+        android:gravity="center"
+        android:hint="@string/kuladi"
+        android:textColor="@color/beyaz"
+        android:textColorHint="@color/beyaz" >
+
+        <requestFocus />
+    </EditText>
+
+    <EditText
+        android:id="@+id/sifre_edit"
+        android:layout_width="match_parent"
+         android:layout_height="40dp"
+         android:gravity="center"
+        android:hint="@string/sifre"
+         android:background="@drawable/menu"
+         android:textColor="@color/beyaz"
+         android:textColorHint="@color/beyaz"
+         android:layout_marginLeft="@dimen/anasayfaedittext"
+        android:layout_marginRight="@dimen/anasayfaedittext"
+        android:layout_marginTop="20dp"
+         
+        android:ems="10" />
+
+    <Button
+        android:id="@+id/girisbtn"
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+       android:textColor="@color/beyaz"
+      
+         android:textColorHint="@color/beyaz"
+        android:background="#1f1f1f"
+         android:layout_marginLeft="@dimen/anasayfaedittext"
+        android:layout_marginRight="@dimen/anasayfaedittext"
+        android:layout_marginTop="20dp"
+        android:text="Giriş Yap" />
+
+    <TextView
+        android:id="@+id/sifremiunuttumbtn"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="@dimen/sifremiunutumayar"
+        android:layout_marginRight="@dimen/sifremiunutumayarsag"
+        android:layout_marginTop="@dimen/sifremiunutumayarust"
+        android:gravity="center"
+        android:text="Şifreni mi Unuttun ?"
+        android:textColor="@color/beyaz"
+        android:textSize="20dp" />
+        
+   </LinearLayout>
+ <LinearLayout 
+     android:layout_width="match_parent"
+    android:layout_height="match_parent"
+     android:orientation="vertical"
+    android:layout_weight="3"
+     >
+
+    <Button
+        android:id="@+id/kayitolbtn"
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+          android:layout_marginLeft="@dimen/anasayfaedittext"
+        android:layout_marginRight="@dimen/anasayfaedittext"
+       android:layout_marginTop="60dp"
+       android:layout_gravity="center"
+        android:background="@drawable/menu"
+        android:text="Hesabınız yok mu ?             Kayıt Ol"
+        android:textColor="#ffffff"
+        android:textSize="10sp" />
+    
+      </LinearLayout>
+</LinearLayout>

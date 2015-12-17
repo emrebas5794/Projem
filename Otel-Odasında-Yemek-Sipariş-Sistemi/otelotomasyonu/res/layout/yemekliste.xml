@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:gravity="center_vertical"
+                android:minHeight="64dp">
+     
+<ImageView
+            android:id="@+id/resim"
+            android:layout_width="64dp"
+            android:layout_height="64dp"
+            android:layout_alignParentLeft="true"
+            android:layout_marginLeft="12dp"
+            android:layout_alignParentTop="true"
+            android:contentDescription="@string/app_name" />
+
+    <TextView
+        android:id="@+id/isim"
+        android:layout_width="50dp"
+        android:layout_height="64dp"
+        android:layout_alignBottom="@+id/thumbNail"
+        android:layout_alignParentLeft="true"
+        android:layout_marginLeft="80dp"
+        android:layout_toLeftOf="@+id/yemeklistefiyat"
+        android:gravity="center_vertical"
+        android:textSize="18sp" />
+
+    <TextView
+        android:id="@+id/yemeklistefiyat"
+        android:layout_width="50dp"
+        android:layout_height="64dp"
+        android:layout_alignBottom="@+id/thumbNail"
+        android:layout_alignParentRight="true"
+        android:gravity="center_vertical"
+        android:textSize="18sp" />
+
+ </RelativeLayout>  

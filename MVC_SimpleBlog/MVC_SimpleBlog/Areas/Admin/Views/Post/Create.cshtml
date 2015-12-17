@@ -1,0 +1,67 @@
+﻿@model MVC_SimpleBlog.DTO.PostDTO
+
+<div class="container-fluid">
+
+    <div class="row">
+        <div class="col-lg-12">
+            <h1 class="page-header">
+                Yazılar <small>/ Yeni</small>
+            </h1>
+            <ol class="breadcrumb">
+                <li>
+                    <i class="fa fa-dashboard"></i>  <a href="/Admin">Anasayfa</a>
+                </li>
+                <li>
+                    <i class="fa fa-table"></i> @Html.ActionLink("Yazılar", "Index")
+                </li>
+                <li class="active">
+                    <i class="fa fa-edit"></i> Yeni
+                </li>
+            </ol>
+        </div>
+    </div>
+
+    <div class="row">
+
+        <div class="col-sm-8">
+
+            @using (Html.BeginForm("Create", "Post", FormMethod.Post))
+            {
+                <div class="form-group">
+
+                    @Html.LabelFor(m => m.Title)
+
+                    @Html.TextBoxFor(m => m.Title, new { @class = "form-control" })
+
+                </div>
+
+                <div class="form-group">
+
+                    @Html.LabelFor(m => m.CategoryId)
+
+                    @Html.DropDownListFor(m => m.CategoryId, (SelectList)ViewBag.Categories, new { @class = "form-control" })
+
+                </div>
+
+                <div class="form-group">
+
+                    @Html.LabelFor(m => m.Content)
+
+                    @Html.TextAreaFor(m => m.Content, new { @class = "form-control" })
+
+                </div>
+
+                <div class="form-group">
+
+                    <button type="submit" class="btn btn-primary pull-right">
+                        Kaydet
+                    </button>
+
+                </div>
+            }
+
+        </div>
+
+    </div>
+
+</div>

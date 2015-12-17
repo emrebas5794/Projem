@@ -1,0 +1,94 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="fill_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/futbol"
+    tools:context="${relativePackage}.${activityClass}" >
+
+    <Button
+        android:id="@+id/button1111"
+        style="?android:attr/buttonStyleSmall"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentRight="true"
+        android:background="@drawable/sorucevapback" />
+
+    <TextView
+        android:id="@+id/siralamaad1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBaseline="@+id/button1111"
+        android:layout_alignBottom="@+id/button1111"
+        android:layout_alignParentLeft="true"
+        android:layout_marginLeft="14dp"
+          android:textSize="10sp"
+        android:text="SIRA"
+        android:textColor="#ffffff" />
+
+    <TextView
+        android:id="@+id/siralamasayi1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBaseline="@+id/button1111"
+        android:layout_alignBottom="@+id/button1111"
+        android:layout_alignParentRight="true"
+        android:layout_marginRight="16dp"
+        android:text="5te5 SAYISI"
+        android:textColor="#ffffff"
+        android:textSize="10sp" />
+
+    <TextView
+        android:id="@+id/siralamasoyad1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBaseline="@+id/button1111"
+        android:layout_alignBottom="@+id/button1111"
+        android:layout_marginRight="38dp"
+        android:layout_toLeftOf="@+id/siralamasayi1"
+        android:text="KULLANICI"
+        android:textColor="#ffffff"
+        android:textSize="10sp" />
+
+    <TextView
+        android:id="@+id/textView1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBaseline="@+id/button1111"
+        android:layout_alignBottom="@+id/button1111"
+        android:layout_marginLeft="60dp"
+        android:layout_toRightOf="@+id/siralamaad1"
+        android:text="Takım"
+        android:textColor="#ffffff"
+        android:textSize="10sp" />
+
+    <Button
+        android:id="@+id/btnpuanyenile"
+        android:layout_width="fill_parent"
+        android:layout_height="50dp"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentLeft="true"
+        android:textColor="#ffffff"
+        android:background="#1f1f1f"
+        android:text="Sıralamayı Yenile" />
+
+    <Button
+        android:id="@+id/ayliksiralama"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentRight="true"
+        android:layout_below="@+id/button1111"
+        android:text="Aylık Sıralamaya Geç" />
+
+    <ListView
+        android:id="@+id/siralamalistesi"
+        android:layout_width="fill_parent"
+        android:layout_height="200dp"
+        android:layout_above="@+id/btnpuanyenile"
+        android:layout_alignParentLeft="true"
+        android:layout_below="@+id/ayliksiralama" >
+
+    </ListView>
+
+</RelativeLayout>

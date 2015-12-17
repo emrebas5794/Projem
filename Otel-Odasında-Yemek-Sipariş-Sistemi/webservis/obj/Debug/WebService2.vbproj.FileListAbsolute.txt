@@ -1,0 +1,24 @@
+c:\users\emre\documents\visual studio 2010\Projects\WebService2\WebService2\bin\WebService2.dll
+c:\users\emre\documents\visual studio 2010\Projects\WebService2\WebService2\bin\WebService2.pdb
+c:\users\emre\documents\visual studio 2010\Projects\WebService2\WebService2\bin\WebService2.xml
+c:\users\emre\documents\visual studio 2010\Projects\WebService2\WebService2\obj\Debug\WebService2.Resources.resources
+c:\users\emre\documents\visual studio 2010\Projects\WebService2\WebService2\obj\Debug\WebService2.vbproj.GenerateResource.Cache
+c:\users\emre\documents\visual studio 2010\Projects\WebService2\WebService2\obj\Debug\WebService2.dll
+c:\users\emre\documents\visual studio 2010\Projects\WebService2\WebService2\obj\Debug\WebService2.xml
+c:\users\emre\documents\visual studio 2010\Projects\WebService2\WebService2\obj\Debug\WebService2.pdb
+C:\Users\emre\Desktop\wwwroot\bin\WebService2.dll
+C:\Users\emre\Desktop\wwwroot\bin\WebService2.pdb
+C:\Users\emre\Desktop\wwwroot\bin\WebService2.xml
+C:\Users\emre\Desktop\wwwroot\obj\Debug\WebService2.Resources.resources
+C:\Users\emre\Desktop\wwwroot\obj\Debug\WebService2.vbproj.GenerateResource.Cache
+C:\Users\emre\Desktop\wwwroot\obj\Debug\WebService2.dll
+C:\Users\emre\Desktop\wwwroot\obj\Debug\WebService2.xml
+C:\Users\emre\Desktop\wwwroot\obj\Debug\WebService2.pdb
+C:\Users\emre\Desktop\Sistem_Analizi\webservis\bin\WebService2.dll
+C:\Users\emre\Desktop\Sistem_Analizi\webservis\bin\WebService2.pdb
+C:\Users\emre\Desktop\Sistem_Analizi\webservis\bin\WebService2.xml
+C:\Users\emre\Desktop\Sistem_Analizi\webservis\obj\Debug\WebService2.Resources.resources
+C:\Users\emre\Desktop\Sistem_Analizi\webservis\obj\Debug\WebService2.vbproj.GenerateResource.Cache
+C:\Users\emre\Desktop\Sistem_Analizi\webservis\obj\Debug\WebService2.dll
+C:\Users\emre\Desktop\Sistem_Analizi\webservis\obj\Debug\WebService2.xml
+C:\Users\emre\Desktop\Sistem_Analizi\webservis\obj\Debug\WebService2.pdb

@@ -1,0 +1,67 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:paddingBottom="@dimen/activity_vertical_margin"
+    android:paddingLeft="@dimen/activity_horizontal_margin"
+    android:paddingRight="@dimen/activity_horizontal_margin"
+    android:paddingTop="@dimen/activity_vertical_margin"
+    android:background="@drawable/siparis"
+     
+    tools:context=".MainSiparisActivity" >
+
+    <ListView
+        android:id="@+id/siparislistesi"
+        android:layout_width="match_parent"
+        android:layout_height="300dp"
+        android:layout_above="@+id/kaydet"
+        android:layout_alignParentLeft="true" >
+    </ListView>
+<Button
+        android:id="@+id/menulerr"
+        android:layout_width="wrap_content"
+        android:layout_height="42dp"
+       android:layout_marginTop="20dp"
+       android:gravity="center"
+       
+        android:text="Menü" />
+
+ <Button
+     android:id="@+id/siparisler11"
+     android:layout_width="wrap_content"
+     android:layout_height="42dp"
+     android:layout_alignTop="@+id/menulerr"
+     android:layout_toRightOf="@+id/menulerr"
+      android:gravity="center"
+     android:text="Siparişlerim" />
+    <Button
+        android:id="@+id/kaydet"
+        android:layout_width="80dp"
+        android:layout_height="30dp"
+        android:layout_alignLeft="@+id/siparislistesi"
+        android:layout_alignParentBottom="true"
+        android:background="@drawable/kaydet" />
+
+    <TextView
+        android:id="@+id/textView1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBaseline="@+id/kaydet"
+        android:layout_alignBottom="@+id/kaydet"
+        android:layout_marginLeft="14dp"
+        android:layout_toRightOf="@+id/kaydet"
+        android:textColor="@android:color/white"
+        android:text="Genel Toplam =" />
+
+    <TextView
+        android:id="@+id/geneltoplam"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBaseline="@+id/textView1"
+        android:layout_alignBottom="@+id/textView1"
+        android:layout_marginLeft="16dp"
+        android:layout_toRightOf="@+id/textView1"
+         android:textColor="@android:color/white"
+        android:text="0" />
+
+</RelativeLayout>

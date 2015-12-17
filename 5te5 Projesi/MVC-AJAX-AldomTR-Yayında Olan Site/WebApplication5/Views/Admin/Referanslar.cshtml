@@ -1,0 +1,111 @@
+﻿@{
+    Layout = "~/Views/Admin/_AdminLayout.cshtml";
+}
+
+<div id="s-referans">
+    <div class="panels">
+        <div class="panel referans-ekle">
+            <h2>Yeni Referans Ekle</h2>
+
+            <div class="body">
+                <table>
+                    <tr>
+                        <td>
+                            <label class="required-label">Konut Tipi</label>
+                        </td>
+                        <td>
+                            <select class="required parent">
+                                <option>Kamu Binaları</option>
+                                <option>Konutlar</option>
+                                <option>Ticari Binalar</option>
+                                <option>Endüstriyel Binalar</option>
+                            </select>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <label class="required-label">Referans Adı</label>
+                        </td>
+                        <td>
+                            <input class="required name" type="text" />
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <label>Yazı Gövdesi</label>
+                        </td>
+                        <td>
+                            <textarea class="text"></textarea>
+                        </td>
+                    </tr>
+                </table>
+            </div>
+
+            <div class="actions">
+                <button class="kaydet">Kaydet</button>
+            </div>
+        </div>
+        <div class="panel referans-duzenle">
+            <h2>Referans Düzenle</h2>
+
+            <div class="body">
+                <table>
+                    <tr>
+                        <td>
+                            <label class="required-label">
+                                Konut Tipi
+                            </label>
+                        </td>
+                        <td>
+                            <select class="required parent">
+                                <option class="null" value="">Seçiniz...</option>
+                                <option>Kamu Binaları</option>
+                                <option>Konutlar</option>
+                                <option>Ticari Binalar</option>
+                                <option>Endüstriyel Binalar</option>
+                            </select>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <label class="required-label">
+                                Referans Adı
+                            </label>
+                        </td>
+                        <td>
+                            <select class="required id" disabled></select>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <label class="required-label">
+                                Yeni Referans Adı
+                            </label>
+                        </td>
+                        <td>
+                            <input type="text" class="required name" />
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>Yazı Gövdesi</td>
+                        <td>
+                            <textarea class="text"></textarea>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>Resimler</td>
+                        <td>
+                            <div class="image-container"></div>
+                            <input class="images" type="file" multiple accept="image/*" />
+                        </td>
+                    </tr>
+                </table>
+            </div>
+
+            <div class="actions">
+                <button class="kaydet">Kaydet</button>
+                <button class="sil">Sil</button>
+            </div>
+        </div>
+    </div>
+</div>

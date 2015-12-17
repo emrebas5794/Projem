@@ -1,0 +1,63 @@
+﻿@{
+    ViewBag.Title = "Aldom";
+    Layout = "~/Views/_Layout.cshtml";
+}
+
+<style>
+    .left-container {
+        float: left;
+        width: 727px;
+    }
+
+    .right-container {
+        float: right;
+        width: 229px;
+        padding-left: 9px;
+    }
+
+    .news {
+        background-color: #F7F7F8;
+        border: 1px solid #E7E7E8;
+        padding: 10px;
+    }
+
+        .news a {
+            display: block;
+            color: #b7c72a;
+            font-size: 16px;
+        }
+
+        .news span.date {
+            display: block;
+        }
+</style>
+<div class="left-container">
+    <div class="image-container">
+        <img src="~/images/main_image_10.jpg" class="main-photo" />
+    </div>
+</div>
+<div class="right-container">
+    <div class="uncsaal">
+        
+    </div>
+    <div class="news-container">
+        <h2>Son Haberler</h2>
+        <div class="news">
+            <a href="/" target="_blank" class="dots-before">Aldom Türkiye Lansmanı</a>
+            <span class="text">Aldom Türkiye lansmanı 20 Kasım 2015 tarihinde yapılacaktır.</span>
+        </div>
+    </div>
+</div>
+<script>
+    $(".main-menu > li").on("mouseenter", function () {
+        var img = $(".body .left-container .image-container img");
+        img.attr("src", img.attr("src").replace(/main_image_\d+/, "main_image_{0}".format($(this).closest("li").index())));
+    });
+    $(".main-menu > li").on("mouseout", function (e) {
+        if ($(this).find(e.relatedTarget).length)
+            return;
+        var img = $(".body .left-container .image-container img");
+        img.attr("src", img.attr("src").replace(/main_image_\d+/, "main_image_10"));
+    });
+</script>
+

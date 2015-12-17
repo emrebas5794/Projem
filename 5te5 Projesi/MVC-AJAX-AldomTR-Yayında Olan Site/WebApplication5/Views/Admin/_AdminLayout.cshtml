@@ -1,0 +1,37 @@
+﻿<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>AldomTR Yönetici Paneli</title>
+
+    <link href="~/External/font-awesome.css" rel="stylesheet" />
+    <link href="~/External/sweetalert.css" rel="stylesheet" />
+    <link href="~/Component/admin.min.css" rel="stylesheet" />
+
+    <script src="~/External/jquery-2.1.4.min.js"></script>
+    <script src="~/External/sweetalert.min.js"></script>
+    <script src="~/Component/admin.js"></script>
+</head>
+<body>
+    <div class="left">
+        <ul>
+            <li>
+                <a href="~/Admin/Referanslar">Referanslar</a>
+                
+            </li>
+            <li>
+               
+                <a href="~/Admin/Urunler">Ürünler</a>
+            </li>
+            <li>
+
+                <a href="~/Admin/Diger">Diğer Sayfalar</a>
+            </li>
+        </ul>
+    </div>
+    <div class="right">
+        @RenderBody()
+    </div>
+</body>
+</html>

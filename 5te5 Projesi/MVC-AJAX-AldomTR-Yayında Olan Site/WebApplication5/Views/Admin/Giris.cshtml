@@ -1,0 +1,129 @@
+﻿@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>AldomTR Yönetici Paneli</title>
+
+    <link href="~/External/font-awesome.css" rel="stylesheet" />
+
+    <script src="~/External/jquery-2.1.4.min.js"></script>
+</head>
+<body>
+    <style>
+        * {
+            -moz-box-sizing: border-box;
+            -webkit-box-sizing: border-box;
+            box-sizing: border-box;
+        }
+
+        body {
+            position: fixed;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            margin: 0;
+            padding: 0;
+            background: url("../../images/texture.jpg");
+        }
+
+        .wrapper {
+            height: 280px;
+            width: 100%;
+            position: absolute;
+            top: 50%;
+            margin-top: -140px;
+            background: rgba(0,0,0,.1);
+        }
+
+        .panel {
+            width: 400px;
+            height: 100%;
+            margin: 0 auto;
+            background: rgba(0,0,0,.2);
+            position: relative;
+        }
+
+        .error {
+            position: absolute;
+            height: 30px;
+            bottom: -30px;
+            background: #c00;
+            width: 100%;
+            color: white;
+            text-align: center;
+            line-height: 30px;
+        }
+
+        .img-wrap {
+            text-align: center;
+        }
+
+        form {
+            padding: 10px;
+        }
+
+            form > div {
+                margin: 4px 0;
+            }
+
+            form input {
+                width: calc(100% - 24px);
+                padding: 5px;
+            }
+
+            form .fa {
+                width: 20px;
+                text-align: center;
+            }
+
+            form button {
+                width: 100%;
+                padding: 10px;
+                font-size: 16px;
+                color: white;
+                background: #363;
+                border: none;
+                margin-top: 10px;
+                cursor: pointer;
+            }
+
+                form button:active {
+                    box-shadow: 0 0 8px 0 #000 inset;
+                }
+    </style>
+    <div class="wrapper">
+        <div class="panel">
+            <form action="~/Admin/Index" method="post" enctype="application/x-www-form-urlencoded">
+                <div class="img-wrap">
+                    <img src="~/images/user_male.png" width="120" height="120" />
+                </div>
+                <div>
+                    <span class="fa fa-user"></span>
+                    <input type="text" placeholder="Kullanıcı Adı" name="username" />
+                </div>
+                <div>
+                    <span class="fa fa-lock"></span>
+                    <input type="password" placeholder="Şifre" name="password" />
+                </div>
+                <div>
+                    <button type="submit">Giriş Yap</button>
+                </div>
+            </form>
+            @if (!String.IsNullOrEmpty(ViewBag.error))
+            {
+                <div class="error">
+                    <span class="message">
+                        @ViewBag.error
+                    </span>
+                </div>
+            }
+        </div>
+    </div>
+</body>
+</html>

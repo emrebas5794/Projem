@@ -1,0 +1,320 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="12.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>
+    </ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{63104180-D588-479C-96C1-633BBF888233}</ProjectGuid>
+    <ProjectTypeGuids>{349c5851-65df-11da-9384-00065b846f21};{fae04ec0-301f-11d3-bf4b-00c04f79efbc}</ProjectTypeGuids>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>MVC_SimpleBlog</RootNamespace>
+    <AssemblyName>MVC_SimpleBlog</AssemblyName>
+    <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
+    <UseIISExpress>true</UseIISExpress>
+    <IISExpressSSLPort />
+    <IISExpressAnonymousAuthentication />
+    <IISExpressWindowsAuthentication />
+    <IISExpressUseClassicPipelineMode />
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="EntityFramework">
+      <HintPath>..\packages\EntityFramework.6.1.3\lib\net45\EntityFramework.dll</HintPath>
+    </Reference>
+    <Reference Include="EntityFramework.SqlServer">
+      <HintPath>..\packages\EntityFramework.6.1.3\lib\net45\EntityFramework.SqlServer.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Web.DynamicData" />
+    <Reference Include="System.Web.Entity" />
+    <Reference Include="System.Web.ApplicationServices" />
+    <Reference Include="System.ComponentModel.DataAnnotations" />
+    <Reference Include="System" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="System.Web.Extensions" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Web" />
+    <Reference Include="System.Xml" />
+    <Reference Include="System.Configuration" />
+    <Reference Include="System.Web.Services" />
+    <Reference Include="System.EnterpriseServices" />
+  </ItemGroup>
+  <ItemGroup>
+    <Reference Include="System.Web.Razor">
+      <HintPath>..\packages\Microsoft.AspNet.Razor.3.2.2\lib\net45\System.Web.Razor.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.Webpages">
+      <HintPath>..\packages\Microsoft.AspNet.Webpages.3.2.2\lib\net45\System.Web.Webpages.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.Webpages.Deployment">
+      <HintPath>..\packages\Microsoft.AspNet.Webpages.3.2.2\lib\net45\System.Web.Webpages.Deployment.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.Webpages.Razor">
+      <HintPath>..\packages\Microsoft.AspNet.Webpages.3.2.2\lib\net45\System.Web.Webpages.Razor.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.Helpers">
+      <HintPath>..\packages\Microsoft.AspNet.Webpages.3.2.2\lib\net45\System.Web.Helpers.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Web.Infrastructure">
+      <HintPath>..\packages\Microsoft.Web.Infrastructure.1.0.0.0\lib\net40\Microsoft.Web.Infrastructure.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.Mvc">
+      <HintPath>..\packages\Microsoft.AspNet.Mvc.5.2.2\lib\net45\System.Web.Mvc.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="assets\business-casual\css\bootstrap.css" />
+    <Content Include="assets\business-casual\css\bootstrap.min.css" />
+    <Content Include="assets\business-casual\css\business-casual.css" />
+    <Content Include="assets\business-casual\fonts\glyphicons-halflings-regular.svg" />
+    <Content Include="assets\business-casual\img\bg.jpg" />
+    <Content Include="assets\business-casual\img\intro-pic.jpg" />
+    <Content Include="assets\business-casual\img\slide-1.jpg" />
+    <Content Include="assets\business-casual\img\slide-2.jpg" />
+    <Content Include="assets\business-casual\img\slide-3.jpg" />
+    <Content Include="assets\business-casual\js\bootstrap.js" />
+    <Content Include="assets\business-casual\js\bootstrap.min.js" />
+    <Content Include="assets\business-casual\js\jquery.js" />
+    <Content Include="assets\sb-admin\css\bootstrap-rtl.css" />
+    <Content Include="assets\sb-admin\css\bootstrap-rtl.min.css" />
+    <Content Include="assets\sb-admin\css\bootstrap.css" />
+    <Content Include="assets\sb-admin\css\bootstrap.min.css" />
+    <Content Include="assets\sb-admin\css\plugins\morris.css" />
+    <Content Include="assets\sb-admin\css\sb-admin-rtl.css" />
+    <Content Include="assets\sb-admin\css\sb-admin.css" />
+    <Content Include="assets\sb-admin\font-awesome\css\font-awesome.css" />
+    <Content Include="assets\sb-admin\font-awesome\css\font-awesome.min.css" />
+    <Content Include="assets\sb-admin\font-awesome\fonts\fontawesome-webfont.svg" />
+    <Content Include="assets\sb-admin\fonts\glyphicons-halflings-regular.svg" />
+    <Content Include="assets\sb-admin\js\bootstrap.js" />
+    <Content Include="assets\sb-admin\js\bootstrap.min.js" />
+    <Content Include="assets\sb-admin\js\jquery.js" />
+    <Content Include="assets\sb-admin\js\plugins\flot\excanvas.min.js" />
+    <Content Include="assets\sb-admin\js\plugins\flot\flot-data.js" />
+    <Content Include="assets\sb-admin\js\plugins\flot\jquery.flot.js" />
+    <Content Include="assets\sb-admin\js\plugins\flot\jquery.flot.pie.js" />
+    <Content Include="assets\sb-admin\js\plugins\flot\jquery.flot.resize.js" />
+    <Content Include="assets\sb-admin\js\plugins\flot\jquery.flot.tooltip.min.js" />
+    <Content Include="assets\sb-admin\js\plugins\morris\morris-data.js" />
+    <Content Include="assets\sb-admin\js\plugins\morris\morris.js" />
+    <Content Include="assets\sb-admin\js\plugins\morris\morris.min.js" />
+    <Content Include="assets\sb-admin\js\plugins\morris\raphael.min.js" />
+    <Content Include="Global.asax" />
+    <Content Include="Web.config" />
+    <Content Include="_template\blank-page.html" />
+    <Content Include="_template\bootstrap-elements.html" />
+    <Content Include="_template\bootstrap-grid.html" />
+    <Content Include="_template\charts.html" />
+    <Content Include="_template\css\bootstrap-rtl.css" />
+    <Content Include="_template\css\bootstrap-rtl.min.css" />
+    <Content Include="_template\css\bootstrap.css" />
+    <Content Include="_template\css\bootstrap.min.css" />
+    <Content Include="_template\css\plugins\morris.css" />
+    <Content Include="_template\css\sb-admin-rtl.css" />
+    <Content Include="_template\css\sb-admin.css" />
+    <Content Include="_template\font-awesome\css\font-awesome.css" />
+    <Content Include="_template\font-awesome\css\font-awesome.min.css" />
+    <Content Include="_template\font-awesome\fonts\fontawesome-webfont.svg" />
+    <Content Include="_template\fonts\glyphicons-halflings-regular.svg" />
+    <Content Include="_template\forms.html" />
+    <Content Include="_template\index-rtl.html" />
+    <Content Include="_template\index.html" />
+    <Content Include="_template\js\bootstrap.js" />
+    <Content Include="_template\js\bootstrap.min.js" />
+    <Content Include="_template\js\jquery.js" />
+    <Content Include="_template\js\plugins\flot\excanvas.min.js" />
+    <Content Include="_template\js\plugins\flot\flot-data.js" />
+    <Content Include="_template\js\plugins\flot\jquery.flot.js" />
+    <Content Include="_template\js\plugins\flot\jquery.flot.pie.js" />
+    <Content Include="_template\js\plugins\flot\jquery.flot.resize.js" />
+    <Content Include="_template\js\plugins\flot\jquery.flot.tooltip.min.js" />
+    <Content Include="_template\js\plugins\morris\morris-data.js" />
+    <Content Include="_template\js\plugins\morris\morris.js" />
+    <Content Include="_template\js\plugins\morris\morris.min.js" />
+    <Content Include="_template\js\plugins\morris\raphael.min.js" />
+    <Content Include="_template\sign-in.html" />
+    <Content Include="_template\tables.html" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="App_Start\RouteConfig.cs" />
+    <Compile Include="Areas\Admin\AdminAreaRegistration.cs" />
+    <Compile Include="Areas\Admin\Controllers\HomeController.cs" />
+    <Compile Include="Areas\Admin\Controllers\PostController.cs" />
+    <Compile Include="Areas\Admin\Controllers\UserController.cs" />
+    <Compile Include="Areas\Admin\Models\Credential.cs" />
+    <Compile Include="Controllers\BlogController.cs" />
+    <Compile Include="Controllers\HomeController.cs" />
+    <Compile Include="Global.asax.cs">
+      <DependentUpon>Global.asax</DependentUpon>
+    </Compile>
+    <Compile Include="Properties\AssemblyInfo.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Views\web.config" />
+    <Content Include="packages.config" />
+    <Content Include="Views\Shared\_Layout.cshtml" />
+    <Content Include="Views\Home\Index.cshtml" />
+    <Content Include="assets\business-casual\fonts\glyphicons-halflings-regular.eot" />
+    <Content Include="assets\business-casual\fonts\glyphicons-halflings-regular.ttf" />
+    <Content Include="assets\business-casual\fonts\glyphicons-halflings-regular.woff" />
+    <Content Include="assets\business-casual\fonts\glyphicons-halflings-regular.woff2" />
+    <Content Include="Views\Home\About.cshtml" />
+    <Content Include="Views\Home\Contact.cshtml" />
+    <Content Include="Views\Blog\Index.cshtml" />
+    <Content Include="Areas\Admin\Views\web.config" />
+    <Content Include="Areas\Admin\Views\Home\Index.cshtml" />
+    <Content Include="Areas\Admin\Views\Shared\_Layout.cshtml" />
+    <Content Include="assets\sb-admin\font-awesome\fonts\fontawesome-webfont.eot" />
+    <Content Include="assets\sb-admin\font-awesome\fonts\fontawesome-webfont.ttf" />
+    <Content Include="assets\sb-admin\font-awesome\fonts\fontawesome-webfont.woff" />
+    <Content Include="assets\sb-admin\font-awesome\fonts\FontAwesome.otf" />
+    <Content Include="assets\sb-admin\font-awesome\less\bordered-pulled.less" />
+    <Content Include="assets\sb-admin\font-awesome\less\core.less" />
+    <Content Include="assets\sb-admin\font-awesome\less\fixed-width.less" />
+    <Content Include="assets\sb-admin\font-awesome\less\font-awesome.less" />
+    <Content Include="assets\sb-admin\font-awesome\less\icons.less" />
+    <Content Include="assets\sb-admin\font-awesome\less\larger.less" />
+    <Content Include="assets\sb-admin\font-awesome\less\list.less" />
+    <Content Include="assets\sb-admin\font-awesome\less\mixins.less" />
+    <Content Include="assets\sb-admin\font-awesome\less\path.less" />
+    <Content Include="assets\sb-admin\font-awesome\less\rotated-flipped.less" />
+    <Content Include="assets\sb-admin\font-awesome\less\spinning.less" />
+    <Content Include="assets\sb-admin\font-awesome\less\stacked.less" />
+    <Content Include="assets\sb-admin\font-awesome\less\variables.less" />
+    <Content Include="assets\sb-admin\font-awesome\scss\_bordered-pulled.scss" />
+    <Content Include="assets\sb-admin\font-awesome\scss\_core.scss" />
+    <Content Include="assets\sb-admin\font-awesome\scss\_fixed-width.scss" />
+    <Content Include="assets\sb-admin\font-awesome\scss\_icons.scss" />
+    <Content Include="assets\sb-admin\font-awesome\scss\_larger.scss" />
+    <Content Include="assets\sb-admin\font-awesome\scss\_list.scss" />
+    <Content Include="assets\sb-admin\font-awesome\scss\_mixins.scss" />
+    <Content Include="assets\sb-admin\font-awesome\scss\_path.scss" />
+    <Content Include="assets\sb-admin\font-awesome\scss\_rotated-flipped.scss" />
+    <Content Include="assets\sb-admin\font-awesome\scss\_spinning.scss" />
+    <Content Include="assets\sb-admin\font-awesome\scss\_stacked.scss" />
+    <Content Include="assets\sb-admin\font-awesome\scss\_variables.scss" />
+    <Content Include="assets\sb-admin\font-awesome\scss\font-awesome.scss" />
+    <Content Include="assets\sb-admin\fonts\glyphicons-halflings-regular.eot" />
+    <Content Include="assets\sb-admin\fonts\glyphicons-halflings-regular.ttf" />
+    <Content Include="assets\sb-admin\fonts\glyphicons-halflings-regular.woff" />
+    <Content Include="assets\sb-admin\fonts\glyphicons-halflings-regular.woff2" />
+    <Content Include="Areas\Admin\Views\_ViewStart.cshtml" />
+    <Content Include="Areas\Admin\Views\Post\Index.cshtml" />
+    <Content Include="Areas\Admin\Views\Post\Create.cshtml" />
+    <Content Include="Areas\Admin\Views\User\Login.cshtml" />
+    <None Include="Web.Debug.config">
+      <DependentUpon>Web.config</DependentUpon>
+    </None>
+    <None Include="Web.Release.config">
+      <DependentUpon>Web.config</DependentUpon>
+    </None>
+    <Content Include="_template\font-awesome\fonts\fontawesome-webfont.eot" />
+    <Content Include="_template\font-awesome\fonts\fontawesome-webfont.ttf" />
+    <Content Include="_template\font-awesome\fonts\fontawesome-webfont.woff" />
+    <Content Include="_template\font-awesome\fonts\FontAwesome.otf" />
+    <Content Include="_template\font-awesome\less\bordered-pulled.less" />
+    <Content Include="_template\font-awesome\less\core.less" />
+    <Content Include="_template\font-awesome\less\fixed-width.less" />
+    <Content Include="_template\font-awesome\less\font-awesome.less" />
+    <Content Include="_template\font-awesome\less\icons.less" />
+    <Content Include="_template\font-awesome\less\larger.less" />
+    <Content Include="_template\font-awesome\less\list.less" />
+    <Content Include="_template\font-awesome\less\mixins.less" />
+    <Content Include="_template\font-awesome\less\path.less" />
+    <Content Include="_template\font-awesome\less\rotated-flipped.less" />
+    <Content Include="_template\font-awesome\less\spinning.less" />
+    <Content Include="_template\font-awesome\less\stacked.less" />
+    <Content Include="_template\font-awesome\less\variables.less" />
+    <Content Include="_template\font-awesome\scss\font-awesome.scss" />
+    <Content Include="_template\font-awesome\scss\_bordered-pulled.scss" />
+    <Content Include="_template\font-awesome\scss\_core.scss" />
+    <Content Include="_template\font-awesome\scss\_fixed-width.scss" />
+    <Content Include="_template\font-awesome\scss\_icons.scss" />
+    <Content Include="_template\font-awesome\scss\_larger.scss" />
+    <Content Include="_template\font-awesome\scss\_list.scss" />
+    <Content Include="_template\font-awesome\scss\_mixins.scss" />
+    <Content Include="_template\font-awesome\scss\_path.scss" />
+    <Content Include="_template\font-awesome\scss\_rotated-flipped.scss" />
+    <Content Include="_template\font-awesome\scss\_spinning.scss" />
+    <Content Include="_template\font-awesome\scss\_stacked.scss" />
+    <Content Include="_template\font-awesome\scss\_variables.scss" />
+    <Content Include="_template\fonts\glyphicons-halflings-regular.eot" />
+    <Content Include="_template\fonts\glyphicons-halflings-regular.ttf" />
+    <Content Include="_template\fonts\glyphicons-halflings-regular.woff" />
+    <Content Include="_template\fonts\glyphicons-halflings-regular.woff2" />
+    <Content Include="_template\LICENSE" />
+    <Content Include="_template\README.md" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="App_Data\" />
+    <Folder Include="assets\site\css\" />
+    <Folder Include="assets\site\img\" />
+    <Folder Include="assets\site\js\" />
+    <Folder Include="Models\" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\MVC_SimpleBlog.BLL\MVC_SimpleBlog.BLL.csproj">
+      <Project>{ca2f1897-e409-473a-a43c-2b54ca8cdd45}</Project>
+      <Name>MVC_SimpleBlog.BLL</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\MVC_SimpleBlog.DTO\MVC_SimpleBlog.DTO.csproj">
+      <Project>{a127df42-b32e-42af-add2-90c26d7cf621}</Project>
+      <Name>MVC_SimpleBlog.DTO</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <PropertyGroup>
+    <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
+    <VSToolsPath Condition="'$(VSToolsPath)' == ''">$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)</VSToolsPath>
+  </PropertyGroup>
+  <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
+  <Import Project="$(VSToolsPath)\WebApplications\Microsoft.WebApplication.targets" Condition="'$(VSToolsPath)' != ''" />
+  <Import Project="$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v10.0\WebApplications\Microsoft.WebApplication.targets" Condition="false" />
+  <ProjectExtensions>
+    <VisualStudio>
+      <FlavorProperties GUID="{349c5851-65df-11da-9384-00065b846f21}">
+        <WebProjectProperties>
+          <UseIIS>True</UseIIS>
+          <AutoAssignPort>True</AutoAssignPort>
+          <DevelopmentServerPort>56512</DevelopmentServerPort>
+          <DevelopmentServerVPath>/</DevelopmentServerVPath>
+          <IISUrl>http://localhost:56512/</IISUrl>
+          <NTLMAuthentication>False</NTLMAuthentication>
+          <UseCustomServer>False</UseCustomServer>
+          <CustomServerUrl>
+          </CustomServerUrl>
+          <SaveServerSettingsInUserFile>False</SaveServerSettingsInUserFile>
+        </WebProjectProperties>
+      </FlavorProperties>
+    </VisualStudio>
+  </ProjectExtensions>
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

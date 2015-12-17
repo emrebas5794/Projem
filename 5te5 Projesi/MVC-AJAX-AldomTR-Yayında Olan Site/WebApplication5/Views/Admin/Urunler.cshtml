@@ -1,0 +1,182 @@
+﻿@{
+
+    Layout = "~/Views/Admin/_AdminLayout.cshtml";
+}
+
+<div id="s-urun">
+    <div class="panels">
+        <div class="panel urun-ekle">
+            <h2>Ürün Ekle</h2>
+
+            <div class="body">
+                <table>
+                    <tr>
+                        <td>
+                            <label class="required-label">Kategori</label>
+                        </td>
+                        <td>
+                            <select class="required parent">
+                                <option>Cepheler</option>
+                                <option>Kapı ve Pencere Sistemleri</option>
+                                <option>Sürme Sistemleri</option>
+                                <option>Katlanır Kapı Sistemleri</option>
+                            </select>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <label class="required-label">Ürün Adı</label>
+                        </td>
+                        <td>
+                            <input class="required name" type="text" />
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <label>Yazı Gövdesi</label>
+                        </td>
+                        <td>
+                            <textarea class="text"></textarea>
+                        </td>
+                    </tr>
+                </table>
+            </div>
+
+            <div class="actions">
+                <button class="kaydet">Kaydet</button>
+            </div>
+        </div>
+        <div class="panel urun-duzenle">
+            <h2>Ürün Düzenle</h2>
+
+            <div class="body">
+                <table>
+                    <tr>
+                        <td>
+                            <label class="required-label">
+                                Kategori
+                            </label>
+                        </td>
+                        <td>
+                            <select class="required parent">
+                                <option class="null" value="">Seçiniz...</option>
+                                <option>Cepheler</option>
+                                <option>Kapı ve Pencere Sistemleri</option>
+                                <option>Sürme Sistemleri</option>
+                                <option>Katlanır Kapı Sistemleri</option>
+                            </select>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <label class="required-label">
+                                Ürün Adı
+                            </label>
+                        </td>
+                        <td>
+                            <select class="required id" disabled></select>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <label class="required-label">
+                                Yeni Ürün Adı
+                            </label>
+                        </td>
+                        <td>
+                            <input type="text" class="required name" />
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>Yazı Gövdesi</td>
+                        <td>
+                            <textarea class="text"></textarea>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>Resimler</td>
+                        <td>
+                            <div class="image-container"></div>
+                            <input class="images" type="file" multiple accept="image/*" />
+                        </td>
+                    </tr>
+                </table>
+            </div>
+
+            <div class="actions">
+                <button class="kaydet">Kaydet</button>
+                <button class="sil">Sil</button>
+            </div>
+        </div>
+       
+        <div  class="panel kategori-ekle" >
+            <h2>Ürün Kategori Düzenle</h2>
+
+            <div class="body" >
+                <table>
+                    <tr>
+                        <td>
+                            <label class="required-label">Kategori</label>
+                        </td>
+                        <td>
+                            <select class="required parent">
+                                <option class="null" value="">Seçiniz...</option>
+                                <option>Cepheler</option>
+                                <option>Kapı ve Pencere Sistemleri</option>
+                                <option>Sürme Sistemleri</option>
+                                <option>Katlanır Kapı Sistemleri</option>
+                            </select>
+                        </td>
+                    </tr>
+                    <tr id="secradio">
+                        <td>
+                            <label class="required-label">Görüntülenecek Tür </label>
+                        </td>
+                        <td>
+                            Yazı Ekle <input type="radio" class="required yaziekle" id="yaziekle" value="yaziekle" name="gtur" onclick="goster()" checked="checked" />
+                            Yönlendir <input type="radio" class="required yonlendirme" id="yonlendirme" value="yonlendirme" name="gtur" onclick="gizle()" />
+                        </td>
+                    </tr>
+                    <tr id="katebaslik">
+                        <td>
+                            <label class="required-label" id="labelbaslik">Kategori Başlık </label>
+                        </td>
+                        <td>
+                            <input class="name" id="name" type="text" />
+                        </td>
+                    </tr>
+                    <tr id="yadres" style="display:none;">
+                        <td>
+                            <label class="required-label" id="labelbaslik">Yönlenecek Adres </label>
+                        </td>
+                        <td>
+                            http://www.aldomtr.com/<input class="yname" id="yname" type="text" />
+                        </td>
+                    </tr>
+                    <tr id="yazigovde">
+                        <td>
+                            <label>Yazı Gövdesi</label>
+                        </td>
+                        <td>
+                            <textarea class="text" id="text"></textarea>
+                        </td>
+                    </tr>
+
+
+
+                </table>
+
+            </div>
+
+
+
+            <div class="actions" style="width:680px;">
+                <button class="kaydet">Kaydet</button>
+            </div>
+        </div>
+
+    </div>
+</div>
+
+
+   

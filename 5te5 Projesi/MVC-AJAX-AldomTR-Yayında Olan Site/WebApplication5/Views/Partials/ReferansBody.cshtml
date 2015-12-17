@@ -1,0 +1,107 @@
+﻿<div class="page-content clearfix">
+    <div class="left-container">
+        @if (ViewBag.MenuItems != null && ViewBag.MenuItems.Count > 0)
+        {
+            <ul class="left-menu">
+                @foreach (WebApplication5.Models.Link link in ViewBag.MenuItems)
+                {
+                    <li>
+                        <a href="@Url.Content(link.Url)">@link.Caption</a>
+                    </li>
+                    if (link.Submenu != null && link.Submenu.Count > 0)
+                    {
+                        <li class="submenu">
+                            <ul>
+                                @foreach (WebApplication5.Models.Link sublink in link.Submenu)
+                                {
+                                    <li>
+                                        <a href="@Url.Content(sublink.Url)">@sublink.Caption</a>
+                                    </li>
+                                }
+                            </ul>
+                        </li>
+                    }
+                }
+            </ul>
+        }
+    </div>
+    <div class="middle-container">
+        @if (ViewBag.Main == true)
+        {
+            <div class="thumbnails-container">
+                @if (ViewBag.Images != null && ViewBag.Images.Count > 0)
+                {
+                    <ul>
+                        @foreach (WebApplication5.Models.ImageInfo image in ViewBag.Images)
+                        {
+                            <li>
+                                <a href="@Url.Content(image.href)">
+                                    <img src="@Url.Content(image.url)" alt="@image.alt" title="@image.alt" />
+                                </a>
+                            </li>
+                        }
+                    </ul>
+                }
+            </div>
+            <script>
+                $(".body .page-content .middle-container .thumbnails-container li a").on("mouseenter", function () {
+                    $(".body .page-content .right-container > p").remove();
+                    $("<p>").appendTo(".body .page-content .right-container").css({
+                        color: "#d4d741",
+                        "font-weight": "bold",
+                        margin: "20px",
+                        "font-size": "11px"
+                    }).text($("img", this).attr("title"));
+                });
+                $(".body .page-content .middle-container .thumbnails-container li a").on("mouseleave", function () {
+                    $(".body .page-content .right-container > p").remove();
+                });
+            </script>
+        }
+        else
+        {
+            <h2>@ViewBag.PageTitle2</h2>
+            <span>@ViewBag.PageText</span>
+            if (ViewBag.PageImages != null && ViewBag.PageImages.Count > 0)
+            {
+                <div class="image-container clearfix">
+                    <div class="image-view">
+                        <img src="@Url.Content(ViewBag.PageImages[0].url)" />
+                    </div>
+                    <div class="thumbnails">
+                        <ul>
+                            @foreach (WebApplication5.Models.ImageInfo image in ViewBag.PageImages)
+                            {
+                                <li>
+                                    <img src="@Url.Content(image.url)" />
+                                </li>
+                            }
+                        </ul>
+                    </div>
+                </div>
+            }
+        }
+    </div>
+    <div class="right-container">
+        <div class="image-container">
+            @if (ViewBag.RightImages != null && ViewBag.RightImages.Count > 0)
+            {
+                foreach (WebApplication5.Models.ImageInfo image in ViewBag.RightImages)
+                {
+                    <img src="@Url.Content(image.url)" alt="@image.alt" title="@image.alt" />
+                }
+            }
+        </div>
+    </div>
+</div>
+<script>
+    $(".body .page-content .middle-container .image-container .thumbnails li").on("click", function () {
+        var src = $("img", this).attr("src");
+        $(this).closest(".image-container").find(".image-view img").attr("src", src);
+    });
+    $(".body .page-content .middle-container .image-container .image-view img").on("click", function () {
+        var src = $(this).attr("src"),
+            overlay = $("<div>").addClass("overlay").appendTo("body");
+        overlay.append($("<div>").addClass("content-container").append($("<img>").attr("src", src)).append($("<div>").addClass("close-button").append($("<i>").addClass("fa fa-close"))));
+    });
+</script>

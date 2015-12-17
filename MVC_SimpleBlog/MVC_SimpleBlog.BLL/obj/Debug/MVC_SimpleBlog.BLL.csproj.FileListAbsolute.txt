@@ -1,0 +1,39 @@
+C:\Users\ogrenci\documents\visual studio 2013\Projects\MVC_SimpleBlog\MVC_SimpleBlog.BLL\bin\Debug\MVC_SimpleBlog.BLL.dll
+C:\Users\ogrenci\documents\visual studio 2013\Projects\MVC_SimpleBlog\MVC_SimpleBlog.BLL\bin\Debug\MVC_SimpleBlog.BLL.pdb
+C:\Users\ogrenci\documents\visual studio 2013\Projects\MVC_SimpleBlog\MVC_SimpleBlog.BLL\bin\Debug\MVC_SimpleBlog.DTO.dll
+C:\Users\ogrenci\documents\visual studio 2013\Projects\MVC_SimpleBlog\MVC_SimpleBlog.BLL\bin\Debug\MVC_SimpleBlog.Data.dll
+C:\Users\ogrenci\documents\visual studio 2013\Projects\MVC_SimpleBlog\MVC_SimpleBlog.BLL\bin\Debug\EntityFramework.dll
+C:\Users\ogrenci\documents\visual studio 2013\Projects\MVC_SimpleBlog\MVC_SimpleBlog.BLL\bin\Debug\MVC_SimpleBlog.DTO.pdb
+C:\Users\ogrenci\documents\visual studio 2013\Projects\MVC_SimpleBlog\MVC_SimpleBlog.BLL\bin\Debug\MVC_SimpleBlog.Data.pdb
+C:\Users\ogrenci\documents\visual studio 2013\Projects\MVC_SimpleBlog\MVC_SimpleBlog.BLL\bin\Debug\EntityFramework.xml
+C:\Users\ogrenci\documents\visual studio 2013\Projects\MVC_SimpleBlog\MVC_SimpleBlog.BLL\obj\Debug\MVC_SimpleBlog.BLL.csprojResolveAssemblyReference.cache
+C:\Users\ogrenci\documents\visual studio 2013\Projects\MVC_SimpleBlog\MVC_SimpleBlog.BLL\obj\Debug\MVC_SimpleBlog.BLL.dll
+C:\Users\ogrenci\documents\visual studio 2013\Projects\MVC_SimpleBlog\MVC_SimpleBlog.BLL\obj\Debug\MVC_SimpleBlog.BLL.pdb
+C:\Users\irem\Documents\Visual Studio 2013\Projects\MVC_SimpleBlog\MVC_SimpleBlog.BLL\bin\Debug\MVC_SimpleBlog.BLL.dll.config
+C:\Users\irem\Documents\Visual Studio 2013\Projects\MVC_SimpleBlog\MVC_SimpleBlog.BLL\bin\Debug\MVC_SimpleBlog.BLL.dll
+C:\Users\irem\Documents\Visual Studio 2013\Projects\MVC_SimpleBlog\MVC_SimpleBlog.BLL\bin\Debug\MVC_SimpleBlog.BLL.pdb
+C:\Users\irem\Documents\Visual Studio 2013\Projects\MVC_SimpleBlog\MVC_SimpleBlog.BLL\bin\Debug\EntityFramework.dll
+C:\Users\irem\Documents\Visual Studio 2013\Projects\MVC_SimpleBlog\MVC_SimpleBlog.BLL\bin\Debug\EntityFramework.SqlServer.dll
+C:\Users\irem\Documents\Visual Studio 2013\Projects\MVC_SimpleBlog\MVC_SimpleBlog.BLL\bin\Debug\MVC_SimpleBlog.Data.dll
+C:\Users\irem\Documents\Visual Studio 2013\Projects\MVC_SimpleBlog\MVC_SimpleBlog.BLL\bin\Debug\MVC_SimpleBlog.DTO.dll
+C:\Users\irem\Documents\Visual Studio 2013\Projects\MVC_SimpleBlog\MVC_SimpleBlog.BLL\bin\Debug\MVC_SimpleBlog.Data.pdb
+C:\Users\irem\Documents\Visual Studio 2013\Projects\MVC_SimpleBlog\MVC_SimpleBlog.BLL\bin\Debug\MVC_SimpleBlog.DTO.pdb
+C:\Users\irem\Documents\Visual Studio 2013\Projects\MVC_SimpleBlog\MVC_SimpleBlog.BLL\bin\Debug\EntityFramework.xml
+C:\Users\irem\Documents\Visual Studio 2013\Projects\MVC_SimpleBlog\MVC_SimpleBlog.BLL\bin\Debug\EntityFramework.SqlServer.xml
+C:\Users\irem\Documents\Visual Studio 2013\Projects\MVC_SimpleBlog\MVC_SimpleBlog.BLL\obj\Debug\MVC_SimpleBlog.BLL.csprojResolveAssemblyReference.cache
+C:\Users\irem\Documents\Visual Studio 2013\Projects\MVC_SimpleBlog\MVC_SimpleBlog.BLL\obj\Debug\MVC_SimpleBlog.BLL.dll
+C:\Users\irem\Documents\Visual Studio 2013\Projects\MVC_SimpleBlog\MVC_SimpleBlog.BLL\obj\Debug\MVC_SimpleBlog.BLL.pdb
+C:\Users\hp\Desktop\MVC_SimpleBlog\MVC_SimpleBlog.BLL\bin\Debug\MVC_SimpleBlog.BLL.dll.config
+C:\Users\hp\Desktop\MVC_SimpleBlog\MVC_SimpleBlog.BLL\bin\Debug\MVC_SimpleBlog.BLL.dll
+C:\Users\hp\Desktop\MVC_SimpleBlog\MVC_SimpleBlog.BLL\bin\Debug\MVC_SimpleBlog.BLL.pdb
+C:\Users\hp\Desktop\MVC_SimpleBlog\MVC_SimpleBlog.BLL\bin\Debug\EntityFramework.dll
+C:\Users\hp\Desktop\MVC_SimpleBlog\MVC_SimpleBlog.BLL\bin\Debug\EntityFramework.SqlServer.dll
+C:\Users\hp\Desktop\MVC_SimpleBlog\MVC_SimpleBlog.BLL\bin\Debug\MVC_SimpleBlog.DAL.dll
+C:\Users\hp\Desktop\MVC_SimpleBlog\MVC_SimpleBlog.BLL\bin\Debug\MVC_SimpleBlog.DTO.dll
+C:\Users\hp\Desktop\MVC_SimpleBlog\MVC_SimpleBlog.BLL\bin\Debug\MVC_SimpleBlog.DAL.pdb
+C:\Users\hp\Desktop\MVC_SimpleBlog\MVC_SimpleBlog.BLL\bin\Debug\MVC_SimpleBlog.DTO.pdb
+C:\Users\hp\Desktop\MVC_SimpleBlog\MVC_SimpleBlog.BLL\bin\Debug\EntityFramework.xml
+C:\Users\hp\Desktop\MVC_SimpleBlog\MVC_SimpleBlog.BLL\bin\Debug\EntityFramework.SqlServer.xml
+C:\Users\hp\Desktop\MVC_SimpleBlog\MVC_SimpleBlog.BLL\obj\Debug\MVC_SimpleBlog.BLL.csprojResolveAssemblyReference.cache
+C:\Users\hp\Desktop\MVC_SimpleBlog\MVC_SimpleBlog.BLL\obj\Debug\MVC_SimpleBlog.BLL.dll
+C:\Users\hp\Desktop\MVC_SimpleBlog\MVC_SimpleBlog.BLL\obj\Debug\MVC_SimpleBlog.BLL.pdb

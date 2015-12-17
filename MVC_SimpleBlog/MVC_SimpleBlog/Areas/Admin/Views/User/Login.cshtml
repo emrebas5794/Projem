@@ -1,0 +1,53 @@
+﻿@model MVC_SimpleBlog.Areas.Admin.Models.Credential
+
+@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>Login</title>
+    <link href="~/assets/sb-admin/css/bootstrap.min.css" type="text/css" rel="stylesheet" />
+</head>
+<body>
+    <div class="container">
+        <div class="row" style="margin-top: 100px;">
+            <div class="col-lg-offset-4 col-lg-3 col-md-offset-4 col-md-4 col-sm-offset-3 col-sm-6 col-xs-12">
+                <div class="panel panel-primary">
+                    <div class="panel-heading">
+                        <h2 class="panel-title">Üye Girişi</h2>
+                    </div>
+                    <div class="panel-body">
+
+                        @using (Html.BeginForm("Login", "User", FormMethod.Post))
+                        {
+                            <div class="form-group">
+                                @Html.LabelFor(m => m.Username)
+
+                                @Html.TextBoxFor(m => m.Username, new { @class = "form-control" })
+                            </div>
+
+                            <div class="form-group">
+                                @Html.LabelFor(m => m.Password)
+
+                                @Html.PasswordFor(m => m.Password, new { @class = "form-control" })
+                            </div>
+
+                            <div class="form-group">
+                                <button type="submit" class="btn btn-primary">
+                                    Giriş
+                                </button>
+                            </div>
+                        }
+
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>
